@@ -3,8 +3,8 @@
 
 
 body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 0;
+  padding-bottom: 0;
   color: rgb(var(--bs-tertiary-color-rgb));
 }
 
@@ -40,23 +40,23 @@ body {
 
   /* Estilo general del texto */
   .carousel-caption h1 {
-    font-size: 3rem; /* Tamaño llamativo */
-    font-weight: bold; /* Negrita */
-    text-transform: uppercase; /* Mayúsculas */
-    color: #f9d423; /* Color vibrante */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Sombra difusa */
-    font-family: 'Poppins', sans-serif; /* Cambia según la fuente deseada */
-    letter-spacing: 1.5px; /* Espaciado entre letras */
-    animation: fadeInDown 1s ease-in-out; /* Animación suave */
-  }
+    /*font-size: 3rem; /* Tamaño llamativo */
+    /* font-weight: bold; /* Negrita */
+    /* text-transform: uppercase; /* Mayúsculas */
+     color: #f9d423; /* Color vibrante */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);/* Sombra difusa */ 
+    /* font-family: 'Poppins', sans-serif; Cambia según la fuente deseada */
+     letter-spacing: 2px;/* Espaciado entre letras */
+     animation: fadeInDown 1s ease-in-out;/* Animación suave */
+  } 
 
-  .carousel-caption p {
-    font-size: 1.2rem; /* Tamaño intermedio */
-    color: #ffffff; /* Color blanco */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra suave */
-    font-family: 'Roboto', sans-serif; /* Fuente moderna */
-    animation: fadeInUp 1.2s ease-in-out; /* Animación para párrafos */
-  }
+   .carousel-caption p {
+    /* color: #ffffff; Color blanco */
+     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /*Sombra suave */
+     font-family: 'Roboto', sans-serif; /*Fuente moderna */
+    animation: fadeInUp 1.2s ease-in-out;/* Animación para párrafos */
+   
+   } 
 
   .carousel-caption .btn-warning {
     background-color: #ff8c00; /* Naranja vibrante */
@@ -64,7 +64,7 @@ body {
     font-size: 1rem; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
     border-radius: 5px; /* Botón redondeado */
-    padding: 10px 20px; /* Espaciado interno */
+    padding: 5px 20px; /* Espaciado interno */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto hover */
   }
@@ -133,7 +133,7 @@ body {
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
-  /* Bump up size of carousel content */
+  /* Bump up size of carousel content 640*/
   .carousel-caption p {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
@@ -144,6 +144,10 @@ body {
     font-size: 50px;
   }
 }
+@media (max-width: 22.5em) {
+
+}
+
 
 @media (min-width: 62em) {
   .featurette-heading {
@@ -184,23 +188,6 @@ body {
   fill: currentColor;
 }
 
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
 
 .btn-bd-primary {
   --bd-violet-bg: #712cf9;
@@ -225,4 +212,39 @@ body {
 
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
+}
+
+/* Estilos para el navbar */
+.navbar {
+  background-color: #007bff; /* Color azul similar al de la página original */
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
+}
+/* Estilo de las tarjetas */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card img {
+  border-radius: 15px;
+}
+
+.card-body {
+  background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }

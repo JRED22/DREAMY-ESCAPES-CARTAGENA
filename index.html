@@ -11,30 +11,21 @@
   </head>
   <body>
 
-<header data-bs-theme="light">
- 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">logo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">Cartagena Scape</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="restaurantes.html">Restaurantes</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -49,7 +40,6 @@
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
- 
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -57,9 +47,9 @@
         <div class="overlay"></div>     
           <div class="container">
           <div class="carousel-caption text-start">
-            <h1> Dreamy Escapes + Cartagena. </h1>
+            <h1 class="display-3"> Dreamy Escapes + Cartagena. </h1>
             <p>"Vive la magia de la ciudad amurallada, donde cada rincón cuenta una historia inolvidable."</p>
-            <p><a class="btn btn-sm btn-warning" href="#">Mas Info</a></p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
           </div>
         </div>
       </div>
@@ -68,9 +58,9 @@
         <div class="overlay"></div>
                 <div class="container">
           <div class="carousel-caption text-end">
-            <h1>Playa Relax </h1>
+            <h1 class="display-3">Playa Relax </h1>
             <p>"Sumérgete en las aguas cristalinas de las Islas del Rosario y disfruta del lujo que solo Dreamy Escapes puede ofrecerte."</p>
-            <p><a class="btn btn-sm btn-warning" href="#">Mas Info</a></p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
           </div>
         </div>
       </div>
@@ -79,9 +69,9 @@
         <div class="overlay"></div> 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>Patrimonio Histórico</h1>
+            <h1 class="display-3">Patrimonio Histórico</h1>
             <p>"Descubre la historia detrás de cada piedra en Cartagena, te llevaremos al corazón del Caribe"</p>
-            <p><a class="btn btn-sm btn-warning" href="#">Mas Info</a></p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
           </div>
         </div>
       </div>
@@ -90,9 +80,9 @@
         <div class="overlay"></div> 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>Gastronomía y Cultura</h1>
+            <h1 class="display-3">Gastronomía y Cultura</h1>
             <p>"Saborea los sabores únicos del Caribe colombiano. Te llevamos a los mejores rincones gastronómicos y culturales."</p>
-            <p><a class="btn btn-sm btn-warning" href="#">Mas Info</a></p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
           </div>
         </div>
       </div>
@@ -101,9 +91,9 @@
         <div class="overlay"></div> 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>Reserva Ahora</h1>
+            <h1 class="display-3">Reserva Ahora</h1>
             <p>"Tu próxima aventura comienza aquí. Reserva con Dreamy Escapes Cartagena y vive momentos inolvidables."</p>
-            <p><a class="btn btn-sm btn-warning" href="#">Mas Info</a></p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
           </div>
         </div>
       </div>
@@ -117,6 +107,45 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+  <!-- Sección de tarjetas -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título 1</h5>
+            <p class="card-text">Descripción corta sobre el destino, restaurante o evento.</p>
+            <a href="destinos.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título 2</h5>
+            <p class="card-text">Descripción corta sobre el destino, restaurante o evento.</p>
+            <a href="restaurantes.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título 3</h5>
+            <p class="card-text">Descripción corta sobre el destino, restaurante o evento.</p>
+            <a href="eventos.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
 
 
   <!-- Marketing messaging and featurettes
@@ -194,10 +223,12 @@
 
 
   <!-- FOOTER -->
-  <footer class="container">
+  <footer>
     <p class="float-end"><a href="#">Back to top</a></p>
     <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
+   <!-- Footer -->
+
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
