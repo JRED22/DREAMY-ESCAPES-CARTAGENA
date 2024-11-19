@@ -216,7 +216,7 @@ body {
 
 /* Estilos para el navbar */
 .navbar {
-  background-color: #007bff; /* Color azul similar al de la página original */
+  background-color:#343a40; /* Color azul similar al de la página original */
 }
 
 .navbar .nav-link {
