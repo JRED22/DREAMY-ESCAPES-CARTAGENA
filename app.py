@@ -1,37 +1,39 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def inicio():
-    return "Esta es la pagina d eInicio"
+def index():
+    return render_template("index.html")
 
-@app.route('/destino')
+@app.route('/destinos')
 def destino():
-    return "Pagina de Destino"
+    return render_template("destinos.html")
 
 
 @app.route('/restaurantes')
 def restaurantes():
-    return "Pagina de Restaurantes"
+   return render_template("restaurantes.html")
 
 
 @app.route('/eventos')
 def eventos():
-    return "Pagina de eventos"
+    return render_template("eventos.html")
 
 @app.route('/transportes')
 def transportes():
-    return "Pagina de Tranportes"
+    return render_template("transportes.html")
+
 
 @app.route('/bar-disco')
 def bardisco():
-    return "Pagina de Bar-Disco"
+     return render_template("bardisco.html")
 
 
 @app.route('/contacto')
 def contacto():
-    return "Pagina de Contacto"
+     return render_template("contacto.html")
+
 
 
 @app.route('/saludo/<nombre>')

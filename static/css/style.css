@@ -37,7 +37,9 @@ body {
   z-index: 1; /* Asegura que quede encima de la imagen */
 }
 
-
+.carousel-item img {
+  border-radius: 5px;
+}
   /* Estilo general del texto */
   .carousel-caption h1 {
     /*font-size: 3rem; /* Tamaño llamativo */
