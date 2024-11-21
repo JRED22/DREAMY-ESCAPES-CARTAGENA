@@ -5,7 +5,7 @@
 body {
   padding-top: 0;
   padding-bottom: 0;
-  color: rgb(var(--bs-tertiary-color-rgb));
+ 
 }
 
 
@@ -14,7 +14,8 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
+  margin-top: 3rem;
 }
 /* letras caption imagenes  */
 .carousel-caption {
@@ -25,6 +26,8 @@ body {
 
 .carousel-item {
   height: 32rem;
+  background-color: #ffffff;
+  
 }
 /* oscurecer las imagenes  */
 .overlay {
@@ -35,11 +38,10 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
   z-index: 1; /* Asegura que quede encima de la imagen */
-}
-
-.carousel-item img {
   border-radius: 5px;
 }
+
+
   /* Estilo general del texto */
   .carousel-caption h1 {
     /*font-size: 3rem; /* Tamaño llamativo */
@@ -50,6 +52,7 @@ body {
     /* font-family: 'Poppins', sans-serif; Cambia según la fuente deseada */
      letter-spacing: 2px;/* Espaciado entre letras */
      animation: fadeInDown 1s ease-in-out;/* Animación suave */
+     color: #fff;
   } 
 
    .carousel-caption p {
@@ -218,7 +221,8 @@ body {
 
 /* Estilos para el navbar */
 .navbar {
-  background-color:#343a40; /* Color azul similar al de la página original */
+  background-color:#343a40;
+  padding-right: 7em; /* Color azul similar al de la página original */
 }
 
 .navbar .nav-link {
