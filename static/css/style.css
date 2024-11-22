@@ -25,7 +25,7 @@ body {
 
 
 .carousel-item {
-  height: 32rem;
+  height: 33rem;
   background-color: #ffffff;
   
 }
@@ -222,7 +222,8 @@ body {
 /* Estilos para el navbar */
 .navbar {
   background-color:#343a40;
-  padding-right: 7em; /* Color azul similar al de la página original */
+  padding-right: 7em; 
+  
 }
 
 .navbar .nav-link {
