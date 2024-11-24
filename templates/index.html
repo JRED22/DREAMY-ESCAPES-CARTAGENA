@@ -114,57 +114,61 @@
         </nav>
       </section>
       <!-- Sección de tarjetas -->
-<div class="container my-5">
-  <div class="row">
-    <!-- Tarjeta 1: Santa Cruz de Mompox -->
-    <div class="col-md-4">
-      <div class="card">
-        <!-- Imagen del destino (Mompox) -->
-        <img src="{{ url_for('static', filename='img/mompox-tr.png') }}" class="card-img-top" alt="Santa Cruz de Mompox">
-        <div class="card-body">
-          <h5 class="card-title">¿Qué Hacer fuera de Cartagena?</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Santa Cruz de Mompox, Bolívar</h6>
-          <p class="card-text">
-            Descubre los templos históricos de Mompox, como la Iglesia de San Francisco y la Casa de los Apóstoles, y explora sus talleres de filigrana. En octubre, disfruta del Festival de Jazz, que celebra la música, la cultura y la gastronomía local.
-          </p>
-          <a href="destinos.html" class="btn btn-primary">Ver más</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Tarjeta 2: La Ciénaga de Zapatosa -->
-    <div class="col-md-4">
-      <div class="card">
-        <!-- Imagen del destino (La Ciénaga de Zapatosa) -->
-        <img src="{{ url_for('static', filename='img/cienaga-tr.png') }}" class="card-img-top" alt="La Ciénaga de Zapatosa">
-        <div class="card-body">
-          <h5 class="card-title">Biodiversidad y Naturaleza</h5>
-          <h6 class="card-subtitle mb-2 text-muted">La Ciénaga de Zapatosa</h6>
-          <p class="card-text">
-            Ubicada en el corazón del Magdalena, esta ciénaga es un paraíso para los amantes de la naturaleza. Ideal para avistamiento de aves, disfrutar de un ecosistema único y realizar paseos en lancha por sus aguas tranquilas.
-          </p>
-          <a href="destinos.html" class="btn btn-primary">Ver más</a>
-        </div>
-      </div>
-    </div>
 
-    <!-- Tarjeta 3: Parque Nacional Natural Corales del Rosario -->
-    <div class="col-md-4">
-      <div class="card">
-        <!-- Imagen del destino (Corales del Rosario) -->
-        <img src="{{ url_for('static', filename='img/corales-tr.png') }}" class="card-img-top" alt="Corales del Rosario">
-        <div class="card-body">
-          <h5 class="card-title">Aventura Acuática</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Parque Nacional Natural Corales del Rosario</h6>
-          <p class="card-text">
-            Disfruta de un paraíso tropical lleno de vida marina. Navega entre las islas y explora los hermosos arrecifes coralinos. Un destino ideal para el buceo, snorkeling y relajarse en sus tranquilas playas de arena blanca.
-          </p>
-          <a href="destinos.html" class="btn btn-primary">Ver más</a>
-        </div>
+<!-- Card - index -->
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="card custom-index">
+              <img src="{{ url_for('static', filename='img/mompox-tr.png') }}" class="card-img-top" alt="Imagen 1">
+              <div class="card-body">
+                  <h5 class="card-title">¿Qué Hacer fuera de Cartagena?</h5>
+                  <h6 class="card-subtitle  text-muted">Santa Cruz de Mompox, Bolívar</h6>
+                  <p class="card-text">Descubre los templos históricos de Mompox, como la Iglesia de San Francisco y la Casa de los Apóstoles, y explora sus talleres de filigrana. En octubre, disfruta del Festival de Jazz, que celebra la música, la cultura y la gastronomía local.
+                    .</p>
+                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                      Ver más
+                  </button>
+                  
+              </div>
+          </div>
       </div>
-    </div>
+      <div class="col-md-4">
+          <div class="card custom-index">
+              <img src="{{ url_for('static', filename='img/cienaga-tr.png') }}" class="card-img-top" alt="Imagen 2">
+              <div class="card-body">
+                <h5 class="card-title">Biodiversidad y Naturaleza</h5>
+                <h6 class="card-subtitle text-muted">La Ciénaga de Zapatos</h6>
+                <p class="card-text">
+                  Ubicada en el corazón del Magdalena, esta ciénaga es un paraíso para los amantes de la naturaleza. Ideal para avistamiento de aves, disfrutar de un ecosistema único y realizar paseos en lancha por sus aguas tranquilas.
+                </p>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                  Ver más
+              </button>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card custom-index">
+              <img src="{{ url_for('static', filename='img/corales-tr.png') }}"  class="card-img-top" alt="Imagen 3">
+              <div class="card-body">
+                <h5 class="card-title">Aventura Acuática</h5>
+                <h6 class="card-subtitle  text-muted">Parque Nacional Natural Corales del Rosario</h6>
+                <p class="card-text">
+                  Disfruta de un paraíso tropical lleno de vida marina. Navega entre las islas y explora los hermosos arrecifes coralinos. Un destino ideal para el buceo, snorkeling y relajarse en sus tranquilas playas de arena blanca.
+                </p>
+                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                  Ver más
+              </button>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
+
+<!-- fin card index -->
+
+
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->

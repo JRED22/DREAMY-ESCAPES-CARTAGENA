@@ -42,6 +42,10 @@ def contacto():
 def mapa():
    return render_template ("mapa.html")
 
+@app.route('/teams')
+def teams():
+    return render_template("teams.html",titulo="Grupo de Trabajo")
+
 @app.route('/saludo/<nombre>')
 def saludo_nombre(nombre):
     return "hola, {nombre}"
