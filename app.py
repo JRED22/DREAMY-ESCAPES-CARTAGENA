@@ -28,7 +28,7 @@ def sitiosturisticos():
  
 @app.route('/tours')
 def tours():
-   return render_template("tours.html")
+   return render_template("tours.html",titulo="Tours")
 
 @app.route('/playas')
 def playas():

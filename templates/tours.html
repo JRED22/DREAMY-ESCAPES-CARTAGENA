@@ -1,20 +1,370 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="container my-5">
-    <h1> Explora Cartagena: Los Mejores Tours para Ti</h1>
-    <p>Descubre la magia de Cartagena con nuestras experiencias únicas
-        En Dreamy Escapes Cartagena, ofrecemos una selección de tours diseñados para que conozcas la historia, cultura y belleza de esta increíble ciudad. Desde caminatas por el Centro Histórico hasta escapadas paradisíacas a las Islas del Rosario, tenemos algo para cada tipo de viajero.
-        </p>
-    
-        <div class="card" style="width: 18rem;">
-            <img src= "{{ url_for ('static',filename = 'img/Imagen1.png') }}"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Guía Turística – GUIANZA EXPRESS SAS</h5>
-              <p class="card-text">Servicio de guía turístico privado por horas</p>
-              <a href="#" class="btn btn-primary">Reservar</a>
-            </div>
-          </div>
-          
+<br>
+
+<div class="container-fluid page-header">
+<div class="container">
+  <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+      <h3 class="display-4 text-white text-uppercase" >{{ titulo }}</h3>
+      <div class="d-inline-flex text-white">
+          <!-- <p class="m-0 text-uppercase" ><a class="text-white" href="">Home</a></p>
+          <i class="fa fa-angle-double-right pt-1 px-3"></i>
+          <p class="m-0 text-uppercase" >Services</p> -->
+      </div>
+  </div>
+</div>
+</div>
+
+  <div class="container my-5  ">
+        <h3 class="text-primary text-uppercase" style="letter-spacing: 5px; text-align: center;">Explora Cartagena: Los Mejores Tours para Ti</h3>
+        <p class="lead text-body-secondary px-5 " style="text-align: justify;">Descubre la magia de Cartagena con nuestras experiencias únicas
+          En Dreamy Escapes Cartagena, ofrecemos una selección de tours diseñados para que conozcas la historia, cultura y belleza de esta increíble ciudad. Desde caminatas por el Centro Histórico hasta escapadas paradisíacas a las 
+          Islas del Rosario, tenemos algo para cada tipo de viajero.</p>
+     
+       <hr>
+
+
+        <!-- primer grupo  -->
+            <div class="card-group mb-5">
+              <!-- card 1 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen1.png') }}" class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title">GUIANZA EXPRESS SAS</h5>
+                  <p class="card-text">Servicio de guía turístico privado por horas.</p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen2.png') }}" class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title ">TOURIST ADVISOR</h5>
+                  <p class="card-text"> Conoce las maravillas de Cartagena
+                    Los tours son de diferentes precios
+                    </p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen3.jpg') }}" class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title">PRIVATE GUIDE WORL</h5>
+                  <p class="card-text">Encontrarás personas que hablan diferentes idiomas y podrás disfrutar de una agradable experiencia</p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen4.png') }}"  class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title"> VIATOR</h5>
+                  <p class="card-text">Vive una agradable experiencia conociendo la ciudad de Cartagena</p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              
+            </div> <!-- fin grupo de card -->
+
+            <!-- segundo grupo -->
+            <div class="card-group mb-5">
+              <!-- card 1 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen5.jpg') }}" class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title">GUIANZA EXPRESS SAS</h5>
+                  <p class="card-text">Diviértete aprendiendo, escoge el tour que más te llame la atención y vive una experiencia inolvidable</p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen6.png') }}" class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title ">withlocals</h5>
+                  <p class="card-text"> Sólo tours privados
+                    </p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen7.png') }}" class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title">TÚ TOUR EN CARTAGENA</h5>
+                  <p class="card-text">Conoce Cartagena y vive una experiencia inolvidable</p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="card">  
+                <div class="card-header">
+                  <img src="{{ url_for ('static',filename = 'img/Imagen4.png') }}"  class="card-img-top" alt="..."> 
+                </div>   
+                <div class="card-body">
+                  <h5 class="card-title"> VIATOR</h5>
+                  <p class="card-text">Vive una agradable experiencia conociendo la ciudad de Cartagena</p>              
+                    <div class="d-flex align-items-center ">
+                      <!-- Iconos de puntuación -->
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-secondary"></i>
+                      <span class="ms-2 ">(4.0)</span>
+                    </div>
+                    
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
+                  </div> 
+                </div>
+              </div>
+              
+            </div> <!-- fin grupo de card -->
+            
+            <div class="container-fluid py-5">
+              <div class="container pt-5 pb-3">
+                  <div class="text-center mb-3 pb-3">
+                      <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Paquetes</h6>
+                      <h2>EL MEJOR PAQUETE PARA TI</h2>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-4 col-md-6 mb-4">
+                          <div class="package-item bg-white mb-2">
+                              <img class="img-fluid" src="{{ url_for ('static',filename = 'img/Imagen1.png') }}" alt="">
+                              <div class="p-4">
+                                  <div class="d-flex justify-content-between mb-3">
+                                      <small class="m-0"><i class="bi bi-calendar fs-0 "></i>&nbsp; Ciudad Amurallada</small>
+                                      <small class="m-0"><i class="bi bi-moon"></i>Noche</small>
+                                      <small class="m-0"><i class="bi bi-person"></i>2 Person</small>
+                                  </div>
+                                  <a class="h5 text-decoration-none" href="">Servicio de guía turístico privado por horas</a>
+                                  <div class="border-top mt-4 pt-4">
+                                      <div class="d-flex justify-content-between">
+                                        
+                                          <h6 class="m-0"><i class="bi bi-star"></i>4.5 <small>(250)</small></h6>
+                                          <h5 class="m-0">COP &nbsp; $350</h5>
+                                          <h5 class="m-0">US &nbsp; $70</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Paquete 2 -->
+                      <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="package-item bg-white mb-2">
+                          <img class="img-fluid" src="{{ url_for ('static',filename = 'img/Imagen2.png') }}" alt="">
+                          <div class="p-4">
+                              <div class="d-flex justify-content-between mb-3">
+                                  <small class="m-0"><i class="bi bi-calendar fs-0 "></i>&nbsp; Ciudad Amurallada</small>
+                                  <small class="m-0"><i class="bi bi-moon"></i>Noche</small>
+                                  <small class="m-0"><i class="bi bi-person"></i>2 Person</small>
+                              </div>
+                              <a class="h5 text-decoration-none" href="">Servicio de guía turístico privado por horas</a>
+                              <div class="border-top mt-4 pt-4">
+                                  <div class="d-flex justify-content-between">
+                                    
+                                      <h6 class="m-0"><i class="bi bi-star"></i>4.5 <small>(250)</small></h6>
+                                      <h5 class="m-0">COP &nbsp; $350</h5>
+                                      <h5 class="m-0">US &nbsp; $70</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <!-- Paquete 3 -->
+                      <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="package-item bg-white mb-2">
+                          <img class="img-fluid" src="{{ url_for ('static',filename = 'img/Imagen3.jpg') }}" alt="">
+                          <div class="p-4">
+                              <div class="d-flex justify-content-between mb-3">
+                                  <small class="m-0"><i class="bi bi-calendar fs-0 "></i>&nbsp; Ciudad Amurallada</small>
+                                  <small class="m-0"><i class="bi bi-moon"></i>Noche</small>
+                                  <small class="m-0"><i class="bi bi-person"></i>2 Person</small>
+                              </div>
+                              <a class="h5 text-decoration-none" href="">Servicio de guía turístico privado por horas</a>
+                              <div class="border-top mt-4 pt-4">
+                                  <div class="d-flex justify-content-between">
+                                    
+                                      <h6 class="m-0"><i class="bi bi-star"></i>4.5 <small>(250)</small></h6>
+                                      <h5 class="m-0">COP &nbsp; $350</h5>
+                                      <h5 class="m-0">US &nbsp; $70</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <!-- Paquete 4 -->
+                      <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="package-item bg-white mb-2">
+                          <img class="img-fluid" src="{{ url_for ('static',filename = 'img/Imagen4.png') }}" alt="">
+                          <div class="p-4">
+                              <div class="d-flex justify-content-between mb-3">
+                                  <small class="m-0"><i class="bi bi-calendar fs-0 "></i>&nbsp; Ciudad Amurallada</small>
+                                  <small class="m-0"><i class="bi bi-moon"></i>Noche</small>
+                                  <small class="m-0"><i class="bi bi-person"></i>2 Person</small>
+                              </div>
+                              <a class="h5 text-decoration-none" href="">Servicio de guía turístico privado por horas</a>
+                              <div class="border-top mt-4 pt-4">
+                                  <div class="d-flex justify-content-between">
+                                    
+                                      <h6 class="m-0"><i class="bi bi-star"></i>4.5 <small>(250)</small></h6>
+                                      <h5 class="m-0">COP &nbsp; $350</h5>
+                                      <h5 class="m-0">US &nbsp; $70</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <!-- Paquete 5 -->
+                      <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="package-item bg-white mb-2">
+                          <img class="img-fluid" src="{{ url_for ('static',filename = 'img/Imagen5.jpg') }}" alt="">
+                          <div class="p-4">
+                              <div class="d-flex justify-content-between mb-3">
+                                  <small class="m-0"><i class="bi bi-calendar fs-0 "></i>&nbsp; Ciudad Amurallada</small>
+                                  <small class="m-0"><i class="bi bi-moon"></i>Noche</small>
+                                  <small class="m-0"><i class="bi bi-person"></i>2 Person</small>
+                              </div>
+                              <a class="h5 text-decoration-none" href="">Servicio de guía turístico privado por horas</a>
+                              <div class="border-top mt-4 pt-4">
+                                  <div class="d-flex justify-content-between">
+                                    
+                                      <h6 class="m-0"><i class="bi bi-star"></i>4.5 <small>(250)</small></h6>
+                                      <h5 class="m-0">COP &nbsp; $350</h5>
+                                      <h5 class="m-0">US &nbsp; $70</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <!-- Paquete 6 -->
+                      <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="package-item bg-white mb-2">
+                          <img class="img-fluid" src="{{ url_for ('static',filename = 'img/Imagen6.png') }}" alt="">
+                          <div class="p-4">
+                              <div class="d-flex justify-content-between mb-3">
+                                  <small class="m-0"><i class="bi bi-calendar fs-0 "></i>&nbsp; Ciudad Amurallada</small>
+                                  <small class="m-0"><i class="bi bi-moon"></i>Noche</small>
+                                  <small class="m-0"><i class="bi bi-person"></i>2 Person</small>
+                              </div>
+                              <a class="h5 text-decoration-none" href="">Servicio de guía turístico privado por horas</a>
+                              <div class="border-top mt-4 pt-4">
+                                  <div class="d-flex justify-content-between">
+                                    
+                                      <h6 class="m-0"><i class="bi bi-star"></i>4.5 <small>(250)</small></h6>
+                                      <h5 class="m-0">COP &nbsp; $350</h5>
+                                      <h5 class="m-0">US &nbsp; $70</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+            </div>     
+   
+            
+            
   </div>
 {% endblock %}  
