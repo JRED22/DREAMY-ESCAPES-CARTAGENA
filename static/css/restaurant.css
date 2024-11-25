@@ -1,98 +1,101 @@
-/* Contenedor general de las tarjetas */
+/* Contenedor de las tarjetas */
 .restaurants {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
-    gap: 20px; /* Espacio entre las tarjetas */
-    justify-content: center; /* Centra las tarjetas */
-    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-/* Tarjetas individuales */
+/* Estilo para cada tarjeta */
 .restaurant-card {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Hacer las tarjetas más pequeñas para que se acomoden en filas */
     display: flex;
-    flex-direction: row; /* Imagen a la izquierda y texto a la derecha */
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid #ddd; /* Borde ligero */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    overflow: hidden; /* Oculta contenido que se salga del borde */
-    max-width: 600px; /* Ancho máximo de cada tarjeta */
-    width: 100%; /* Se ajusta al contenedor */
-    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
-}
-
-/* Efecto hover en las tarjetas */
-.restaurant-card:hover {
-    transform: translateY(-5px); /* Se eleva al pasar el mouse */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
-}
-
-/* Imagen de las tarjetas */
-.restaurant-card .restaurant-img {
-    width: 150px; /* Ancho de la imagen */
-    height: 150px; /* Alto de la imagen */
-    object-fit: cover; /* Recorta la imagen para que se ajuste */
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-/* Contenido de texto dentro de las tarjetas */
-.restaurant-card .info {
+    flex-direction: row; /* Organizar contenido en fila (imagen + texto) */
     padding: 15px;
-    flex-grow: 1; /* Asegura que el contenido crezca para ocupar espacio */
+    margin-bottom: 20px;
+}
+
+/* Estilo para la imagen */
+.restaurant-img {
+    max-width: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: 15px; /* Espacio entre imagen y texto */
+}
+
+/* Estilo para la parte del texto dentro de la tarjeta */
+.info {
+    flex-grow: 1; /* Asegura que el texto ocupe el espacio restante */
 }
 
 /* Títulos de los restaurantes */
-.restaurant-card .info h3 {
-    font-size: 18px;
+h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
-    color: #333;
-}
-
-/* Información general */
-.restaurant-card .info p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555;
-}
-
-/* Negritas en los textos */
-.restaurant-card .info p strong {
-    color: #222;
 }
 
 /* Botones de filtro */
+.price-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 .btn-price {
+    background-color: #007BFF;
+    color: white;
     padding: 10px 20px;
+    border-radius: 25px;
     font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    background-color: #f8f9fa;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .btn-price:hover {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #0056b3;
 }
 
 .price-icon {
     width: 20px;
-    height: 20px;
+    margin-right: 10px;
 }
 
-/* Botón "Mostrar todos" centrado */
+/* Centrar el botón "Mostrar Todos" */
 .btn-center {
+    display: block;
+    margin: 0 auto;
     background-color: #28a745;
-    color: white;
+}
+/* Efecto al pasar el mouse por encima de las tarjetas */
+.restaurant-card:hover {
+    transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+    transition: all 0.3s ease; /* Transición suave */
+    background-color: #f1f1f1; /* Cambio de color de fondo al pasar el mouse */
 }
 
-.btn-center:hover {
-    background-color: #218838;
+/* Puedes agregar un cambio en el borde también, si lo prefieres */
+.restaurant-card:hover {
+    border: 2px solid #007BFF; /* Resalta el borde con un color */
+}
+
+/* Estilo para el título con imagen de fondo */
+.title-background {
+    background-image: url("../img/cafe-mar.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }

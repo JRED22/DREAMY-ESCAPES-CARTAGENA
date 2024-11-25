@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- Enlace al CSS exclusivo para la página de restaurantes -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/restaurant.css') }}">
+
 <div class="container my-5">
-    <h1>Restaurantes en Cartagena</h1>
+    <!-- Título con fondo -->
+    <h1 class="title-background">Restaurantes en Cartagena</h1>
     <p>Conoce los mejores lugares para comer en Cartagena, desde platos típicos hasta gastronomía internacional.</p>
 
     <!-- Botones de filtro -->
@@ -34,7 +38,6 @@
 
     <!-- Tarjetas de restaurantes -->
     <div id="restaurants" class="restaurants">
-        <!-- Tarjeta de ejemplo 1 -->
         <div class="restaurant-card $">
             <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo" class="restaurant-img">
             <div class="info">
@@ -44,8 +47,6 @@
                 <p><strong>Dirección:</strong> Cl. 35 #6-69, El Centro, Cartagena</p>
             </div>
         </div>
-
-        <!-- Tarjeta de ejemplo 2 -->
         <div class="restaurant-card $$">
             <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata" class="restaurant-img">
             <div class="info">
@@ -59,17 +60,13 @@
 </div>
 
 <script>
-    /**
-     * Filtra los restaurantes según el rango de precios.
-     * @param {string} priceRange - Categoría de precio ('$','$$','$$$','$$$$') o 'all'.
-     */
     function filterRestaurants(priceRange) {
         const cards = document.querySelectorAll('.restaurant-card');
         cards.forEach(card => {
             if (priceRange === 'all' || card.classList.contains(priceRange)) {
-                card.style.display = 'flex'; // Muestra las tarjetas que coincidan
+                card.style.display = 'block';
             } else {
-                card.style.display = 'none'; // Oculta las que no coincidan
+                card.style.display = 'none';
             }
         });
     }
