@@ -17,9 +17,9 @@
   <body>
     <div class="container">
       <header class="mb-6">
-        <nav class="navbar navbar-expand-lg navbar-dark mb-1 fixed-top"> 
+        <nav class="navbar navbar-expand-lg mb-1 fixed-top "  id="nav-sup"> 
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" style="color: aliceblue;">
               Dreamy Escape +Cartagena
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,31 +54,41 @@
         {% block content %}{% endblock %}
       </main>
 
-      <footer>
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2024 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start">
+    <div class="container">
+      <div class="row">
+        <!-- Logo y descripción -->
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-uppercase">Dreamy Escapes Cartagena</h5>
+          <p>Explora Cartagena con nosotros. Experiencias inolvidables diseñadas para ti.</p>
+        </div>
+        <!-- Enlaces útiles -->
+        <div class="col-lg-4 mb-4 footer-links">
+          <h5 class="text-uppercase">Enlaces útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Teams</a></li>
+            <li><a href="#services">Contacto</a></li>
+            <li><a href="#contact">Tours</a></li>
+          </ul>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-lg-4 mb-4 social-icons">
+          <h5 class="text-uppercase">Síguenos</h5>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Dreamy Escapes Cartagena. Todos los derechos reservados.</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Footer adicional -->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-      </ul>
-    </footer>
-    </main>
-   
-    <footer>
-      <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-    
-
-
+  
     <!-- Botón de WhatsApp flotante -->
     <a href="https://wa.me/573193420374" target="_blank" class="whatsapp-float">
       <img src="{{ url_for('static', filename='img/whatsapp-icon.png') }}" alt="WhatsApp" class="whatsapp-icon">

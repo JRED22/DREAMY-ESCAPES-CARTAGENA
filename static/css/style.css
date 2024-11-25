@@ -5,28 +5,24 @@
 body {
   padding-top: 0;
   padding-bottom: 0;
-  
- 
 }
-
-
 /* CONFIGURACION CARRUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
   margin-bottom: 0rem;
-  margin-top: 3rem;
+  margin-top: 4.5rem;
+
 }
-/* letras caption imagenes  */
+/* letras caption imagenes myCarousel */
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
-
 .carousel-item {
-  height: 33rem;
+  height: 25rem;
   background-color: #ffffff;
   
 }
@@ -39,10 +35,8 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
   z-index: 1; /* Asegura que quede encima de la imagen */
-  border-radius: 5px;
+ 
 }
-
-
   /* Estilo general del texto */
   .carousel-caption h1 {
     /*font-size: 3rem; /* Tamaño llamativo */
@@ -55,7 +49,6 @@ body {
      animation: fadeInDown 1s ease-in-out;/* Animación suave */
      color: #fff;
   } 
-
    .carousel-caption p {
     /* color: #ffffff; Color blanco */
      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /*Sombra suave */
@@ -63,7 +56,6 @@ body {
     animation: fadeInUp 1.2s ease-in-out;/* Animación para párrafos */
    
    } 
-
   .carousel-caption .btn-warning {
     background-color: #ff8c00; /* Naranja vibrante */
     color: #fff; /* Texto blanco */
@@ -74,12 +66,10 @@ body {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto hover */
   }
-
   .carousel-caption .btn-warning:hover {
     background-color: #f9d423; /* Cambio a amarillo vibrante al pasar el mouse */
     transform: scale(1.1); /* Efecto de ampliación */
   }
-
   /* Animaciones carru */
   @keyframes fadeInDown {
     from {
@@ -91,7 +81,6 @@ body {
       transform: translateY(0);
     }
   }
-
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -126,7 +115,6 @@ body {
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
-
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
 .featurette-heading {
@@ -153,8 +141,6 @@ body {
 @media (max-width: 22.5em) {
 
 }
-
-
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
@@ -221,19 +207,39 @@ body {
 }
 
 /* Estilos para el navbar */
-.navbar {
-  background-color:#343a40;
-  padding-right: 7em; 
-  
-}
+#nav-sup {
+  /* background-color: rgba(0, 0, 0, 0.9); Color negro con 70% de opacidad */
+  padding-right: 9em;
+  padding: 1rem; 
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* transition: background-color 0.3s ease, 
+  box-shadow 0.3s ease;
+  background-color: #333; */
+    background-color: rgba(17, 17, 17, 0.8); /* Color rojo con transparencia */
+    transition: background-color 0.3s ease; /* Transición suave */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
 
-.navbar .nav-link {
+}
+#nav-sup .nav-link {
   color: white !important;
 }
-
-.navbar .nav-link:hover {
+#nav-sup .nav-link:hover {
   color: #ffc107 !important;
 }
+#nav-med {
+  padding-right: 9em;
+    background-color: rgba(17, 17, 17, 0.8); /* Color rojo con transparencia */
+    transition: background-color 0.3s ease; /* Transición suave */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+
+}
+#nav-med .nav-link {
+  color: white !important;
+}
+#nav-med .nav-link:hover {
+  color: #ffc107 !important;
+}
+
 /* Estilo de las tarjetas */
 .custom-tour {
   border-radius: 5px;
@@ -276,16 +282,13 @@ height: 2rem;
   text-align:justify;
 }
 
-
-
 /* tarjetas del index */
-
 .custom-index {
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
   overflow: hidden; /* Para que no se salga el contenido */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 0 5rem 0;
+  margin: 0 0 5.4rem 0;
   transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
   
 }
@@ -323,9 +326,11 @@ height: 2rem;
 }
 .custom-index .card-subtitle{
   font-weight: 600;
-  text-align:center;
-  font-size: 1rem; /* Tamaño de la fuente del texto */
-  height: 3rem;
+  text-align:left;
+  font-size: 0.8rem; /* Tamaño de la fuente del texto */
+  height: 1rem;
+  padding-left: 16px;
+
   /*background-color: #6528e0;*/
 }
 
@@ -344,11 +349,8 @@ height: 2rem;
 .page-header-teams{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img10.jpg), no-repeat center center;
   background-size: cover;
-  height: 25rem;
+  height: 20rem;
 }
-
-
-
 /* Estilo para los botones de precio */
 .price-buttons .btn-price {
   display: inline-flex;
@@ -466,13 +468,34 @@ height: 2rem;
 }
 
 /* Footer */
-footer a {
-  color: #1e90ff; /* Color de enlaces */
-  text-decoration: none; /* Quita subrayado */
+footer {
+  background-color:#45494b; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 40px 0;
 }
-
-footer a:hover {
-  text-decoration: underline; /* Subraya al pasar el mouse */
+footer .footer-links a {
+  color: #FFD670; /* Color gris claro para enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+}
+footer .footer-links a:hover {
+  color: #F76C5E; /* Color blanco al pasar el cursor */
+}
+footer .social-icons a {
+  color: #adb5bd;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+footer .social-icons a:hover {
+  color: #00875A; /* Verde Palmera */
+}
+.footer-bottom {
+  border-top: 1px solid #343a40;
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* custom Teams */
@@ -481,12 +504,13 @@ footer a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 0px;
   margin-right: 1.2em;
-  height: 25rem;
+  height: 18rem;
+ 
 }
 .custom-teams:hover{
 
-transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+transform: scale(1.15); /* Aumenta el tamaño al 105% */
 
 }
 .custom-teams .card-header {
@@ -502,11 +526,13 @@ box-shadow: none; /* Elimina cualquier sombra aplicada */
 object-fit: contain; /* Escala la imagen para que quepa dentro */
 width: 7.5rem; /* Ajusta el tamaño de la imagen */
 height: 7.5rem;
+margin-top: 0.25rem;
+border: #00A7D0 1px solid;
 
 }
 .custom-teams .card-body {
   margin-bottom: 3rem;
-  padding: 0 2.5rem 0 3rem;
+  padding: 0 2rem 0 3rem;
   background-color: #ffffff;
   font-family: "Roboto Condensed", sans-serif;
   font-weight:11px ;
@@ -518,18 +544,33 @@ height: 7.5rem;
   padding-top: 0.5rem;
   font-size: 1.2rem;
   font-family: "Roboto Condensed", sans-serif;
-  font-weight:400;
-  height: 3.5rem;
+  font-weight:450;
+  height: 2rem;
+  text-align: center;
+  /* background-color:#00A7D0; */
 
 }
 .custom-teams .card-text{
-  height: 8rem;
-  text-align:justify;
+  height: 0.1rem;
+  text-align:center;
   font-size: 0.85rem;
   font-family: "Roboto Condensed", sans-serif;
   font-weight:180;
 
 }
+.teams-container{
+  background-color: #E5E5E5;
+
+  padding-bottom: 3rem;
+}
+/* .teams-container h1{
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight:300;
+  padding-top: 3rem;
+  color: #0B5ED7;
+} */
 
 /* paquete toursauxiliar */
 .package-item {

@@ -78,7 +78,7 @@
 
       
       <section >
-        <nav class="navbar navbar-expand-lg navbar-dark mb-1  nav col-12 col-md-auto mb-2 justify-content-center mb-md-"> 
+        <nav class="navbar navbar-expand-lg navbar-dark mb-1  nav col-12 col-md-auto mb-2 justify-content-center mb-md-" id="nav-med"> 
           <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Dreamy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,58 +115,58 @@
       </section>
       <!-- Sección de tarjetas -->
 
-<!-- Card - index -->
-<div class="container mt-5">
-  <div class="row">
-      <div class="col-md-4">
-          <div class="card custom-index">
-              <img src="{{ url_for('static', filename='img/mompox-tr.png') }}" class="card-img-top" alt="Imagen 1">
-              <div class="card-body">
-                  <h5 class="card-title">¿Qué Hacer fuera de Cartagena?</h5>
-                  <h6 class="card-subtitle  text-muted">Santa Cruz de Mompox, Bolívar</h6>
-                  <p class="card-text">Descubre los templos históricos de Mompox, como la Iglesia de San Francisco y la Casa de los Apóstoles, y explora sus talleres de filigrana. En octubre, disfruta del Festival de Jazz, que celebra la música, la cultura y la gastronomía local.
-                    .</p>
-                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                      Ver más
-                  </button>
-                  
-              </div>
-          </div>
+      <!-- Card - index -->
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card custom-index">
+                    <img src="{{ url_for('static', filename='img/mompox-tr.png') }}" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Qué Hacer fuera de Cartagena?</h5>
+                        <h6 class="card-subtitle  text-muted">Santa Cruz de Mompox, Bolívar</h6>
+                        <p class="card-text">Descubre los templos históricos de Mompox, como la Iglesia de San Francisco y la Casa de los Apóstoles, y explora sus talleres de filigrana. En octubre, disfruta del Festival de Jazz, que celebra la música, la cultura y la gastronomía local.
+                          .</p>
+                          <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                            Ver más
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-index">
+                    <img src="{{ url_for('static', filename='img/cienaga-tr.png') }}" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Biodiversidad y Naturaleza</h5>
+                      <h6 class="card-subtitle text-muted">La Ciénaga de Zapatos</h6>
+                      <p class="card-text">
+                        Ubicada en el corazón del Magdalena, esta ciénaga es un paraíso para los amantes de la naturaleza. Ideal para avistamiento de aves, disfrutar de un ecosistema único y realizar paseos en lancha por sus aguas tranquilas.
+                      </p>
+                      <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        Ver más
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-index">
+                    <img src="{{ url_for('static', filename='img/corales-tr.png') }}"  class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Aventura Acuática</h5>
+                      <h6 class="card-subtitle  text-muted">Parque Nacional Natural Corales del Rosario</h6>
+                      <p class="card-text">
+                        Disfruta de un paraíso tropical lleno de vida marina. Navega entre las islas y explora los hermosos arrecifes coralinos. Un destino ideal para el buceo, snorkeling y relajarse en sus tranquilas playas de arena blanca.
+                      </p>
+                      <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        Ver más
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
-      <div class="col-md-4">
-          <div class="card custom-index">
-              <img src="{{ url_for('static', filename='img/cienaga-tr.png') }}" class="card-img-top" alt="Imagen 2">
-              <div class="card-body">
-                <h5 class="card-title">Biodiversidad y Naturaleza</h5>
-                <h6 class="card-subtitle text-muted">La Ciénaga de Zapatos</h6>
-                <p class="card-text">
-                  Ubicada en el corazón del Magdalena, esta ciénaga es un paraíso para los amantes de la naturaleza. Ideal para avistamiento de aves, disfrutar de un ecosistema único y realizar paseos en lancha por sus aguas tranquilas.
-                </p>
-                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                  Ver más
-              </button>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-4">
-          <div class="card custom-index">
-              <img src="{{ url_for('static', filename='img/corales-tr.png') }}"  class="card-img-top" alt="Imagen 3">
-              <div class="card-body">
-                <h5 class="card-title">Aventura Acuática</h5>
-                <h6 class="card-subtitle  text-muted">Parque Nacional Natural Corales del Rosario</h6>
-                <p class="card-text">
-                  Disfruta de un paraíso tropical lleno de vida marina. Navega entre las islas y explora los hermosos arrecifes coralinos. Un destino ideal para el buceo, snorkeling y relajarse en sus tranquilas playas de arena blanca.
-                </p>
-                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                  Ver más
-              </button>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
 
-<!-- fin card index -->
+      <!-- fin card index -->
 
 
         <!-- START THE FEATURETTES -->
@@ -215,7 +215,6 @@
     <img src="{{ url_for('static', filename='img/palenquera-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Palenquera" width="500" height="500">
   </div>
 </div>
-<h2>Cartagena de indias lo mejor aca esta la informacion adicional </h2>
 
 
 <hr class="featurette-divider">

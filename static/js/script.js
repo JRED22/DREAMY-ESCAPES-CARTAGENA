@@ -10,4 +10,3 @@ function filterRestaurants(priceRange) {
       }
     });
   }
-  
