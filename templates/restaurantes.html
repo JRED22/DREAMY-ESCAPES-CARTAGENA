@@ -1,16 +1,75 @@
-
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="container my-5">
+<div class="container my-5">
     <h1>Restaurantes en Cartagena</h1>
     <p>Conoce los mejores lugares para comer en Cartagena, desde platos típicos hasta gastronomía internacional.</p>
 
-    <!-- Aquí puedes agregar una lista o galería de restaurantes -->
-    <ul>
-      <li><strong>Restaurante :: </strong>: Cocina tradicional con un toque moderno.</li>
-      <li><strong>Restaurante El Caribeño</strong>: Especializado en mariscos frescos y platos caribeños.</li>
-      <li><strong>Restaurante El Buen Sabor</strong>: Conocido por sus sopas y platos típicos de la región.</li>
-    </ul>
-  </div>
-  {% endblock %}   
+    <!-- Botones de filtro -->
+    <div class="price-buttons my-4">
+        <button class="btn-price" onclick="filterRestaurants('$')">
+            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
+            $: $20,000 - $60,000 COP
+        </button>
+        <button class="btn-price" onclick="filterRestaurants('$$')">
+            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
+            $$: $60,000 - $120,000 COP
+        </button>
+        <button class="btn-price" onclick="filterRestaurants('$$$')">
+            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
+            $$$: $120,000 - $200,000 COP
+        </button>
+        <button class="btn-price" onclick="filterRestaurants('$$$$')">
+            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
+            $$$$: Más de $200,000 COP
+        </button>
+    </div>
+
+    <!-- Botón "Mostrar Todos" centrado -->
+    <div class="text-center my-4">
+        <button class="btn-price btn-center" onclick="filterRestaurants('all')">
+            Mostrar Todos
+        </button>
+    </div>
+
+    <!-- Tarjetas de restaurantes -->
+    <div id="restaurants" class="restaurants">
+        <div class="card $">
+            <div class="card-content">
+                <div class="info">
+                    <h3>Restaurante Espíritu Santo</h3>
+                    <p><strong>Precio:</strong> $20,000 - $30,000 COP</p>
+                    <p><strong>Comidas:</strong> Almuerzo</p>
+                    <p><strong>Dirección:</strong> Cl. 35 #6-69, El Centro, Cartagena</p>
+                </div>
+                <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo" class="restaurant-img">
+            </div>
+        </div>
+        
+        <div class="card $$">
+            <div class="card-content">
+                <div class="info">
+                    <h3>Restaurante La Mulata</h3>
+                    <p><strong>Precio:</strong> $40,000 - $60,000 COP</p>
+                    <p><strong>Comidas:</strong> Almuerzo, Cena</p>
+                    <p><strong>Dirección:</strong> Cl. del Quero #9-58, Cartagena</p>
+                </div>
+                <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata" class="restaurant-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function filterRestaurants(priceRange) {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            if (priceRange === 'all' || card.classList.contains(priceRange)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+{% endblock %}

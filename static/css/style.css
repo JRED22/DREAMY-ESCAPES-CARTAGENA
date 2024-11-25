@@ -358,3 +358,109 @@ footer {
 }
 
 
+
+
+/* Estilo para los botones de precio */
+.price-buttons .btn-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para la imagen dentro del botón */
+.price-buttons .btn-price img.price-icon {
+  width: 16px;
+  height: auto;
+  margin-right: 8px;
+}
+
+/* Estilo cuando el usuario pasa el mouse sobre el botón */
+.price-buttons .btn-price:hover {
+  background-color: #0056b3;
+}
+
+/* Botón "Mostrar Todos" centrado */
+.text-center {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  margin-top: 20px; /* Espaciado superior */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.btn-center {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-center:hover {
+  background-color: #e0e0e0; /* Cambia el color al pasar el mouse */
+}
+
+.restaurant-img {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.info {
+  flex: 1;
+}
+
+.restaurant-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-center {
+  margin: 20px auto; /* Espaciado adicional */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-center:hover {
+  background-color: #0056b3;
+}
