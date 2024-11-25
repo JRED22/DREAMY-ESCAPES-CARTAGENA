@@ -34,40 +34,42 @@
 
     <!-- Tarjetas de restaurantes -->
     <div id="restaurants" class="restaurants">
-        <div class="card $">
-            <div class="card-content">
-                <div class="info">
-                    <h3>Restaurante Espíritu Santo</h3>
-                    <p><strong>Precio:</strong> $20,000 - $30,000 COP</p>
-                    <p><strong>Comidas:</strong> Almuerzo</p>
-                    <p><strong>Dirección:</strong> Cl. 35 #6-69, El Centro, Cartagena</p>
-                </div>
-                <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo" class="restaurant-img">
+        <!-- Tarjeta de ejemplo 1 -->
+        <div class="restaurant-card $">
+            <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo" class="restaurant-img">
+            <div class="info">
+                <h3>Restaurante Espíritu Santo</h3>
+                <p><strong>Precio:</strong> $20,000 - $30,000 COP</p>
+                <p><strong>Comidas:</strong> Almuerzo</p>
+                <p><strong>Dirección:</strong> Cl. 35 #6-69, El Centro, Cartagena</p>
             </div>
         </div>
-        
-        <div class="card $$">
-            <div class="card-content">
-                <div class="info">
-                    <h3>Restaurante La Mulata</h3>
-                    <p><strong>Precio:</strong> $40,000 - $60,000 COP</p>
-                    <p><strong>Comidas:</strong> Almuerzo, Cena</p>
-                    <p><strong>Dirección:</strong> Cl. del Quero #9-58, Cartagena</p>
-                </div>
-                <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata" class="restaurant-img">
+
+        <!-- Tarjeta de ejemplo 2 -->
+        <div class="restaurant-card $$">
+            <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata" class="restaurant-img">
+            <div class="info">
+                <h3>Restaurante La Mulata</h3>
+                <p><strong>Precio:</strong> $40,000 - $60,000 COP</p>
+                <p><strong>Comidas:</strong> Almuerzo, Cena</p>
+                <p><strong>Dirección:</strong> Cl. del Quero #9-58, Cartagena</p>
             </div>
         </div>
     </div>
 </div>
 
 <script>
+    /**
+     * Filtra los restaurantes según el rango de precios.
+     * @param {string} priceRange - Categoría de precio ('$','$$','$$$','$$$$') o 'all'.
+     */
     function filterRestaurants(priceRange) {
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.restaurant-card');
         cards.forEach(card => {
             if (priceRange === 'all' || card.classList.contains(priceRange)) {
-                card.style.display = 'block';
+                card.style.display = 'flex'; // Muestra las tarjetas que coincidan
             } else {
-                card.style.display = 'none';
+                card.style.display = 'none'; // Oculta las que no coincidan
             }
         });
     }

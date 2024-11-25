@@ -1,12 +1,12 @@
-// Función para filtrar restaurantes según el rango de precios
+// Filtrar tarjetas según el rango de precios
 function filterRestaurants(priceRange) {
-    const cards = document.querySelectorAll('.card'); // Selecciona todas las tarjetas
-    cards.forEach((card) => {
-      // Compara el atributo data-price de cada tarjeta con el rango de precios seleccionado
-      if (card.getAttribute('data-price') === priceRange || priceRange === 'all') {
-        card.style.display = 'block'; // Muestra la tarjeta si coincide
+  const cards = document.querySelectorAll('#restaurants .restaurant-card'); // Selección específica
+  cards.forEach(card => {
+      if (priceRange === 'all' || card.classList.contains(priceRange)) {
+          card.style.display = 'flex'; // 'flex' mantiene el diseño
       } else {
-        card.style.display = 'none'; // Oculta la tarjeta si no coincide
+          card.style.display = 'none';
       }
-    });
-  }
+  });
+}
+
