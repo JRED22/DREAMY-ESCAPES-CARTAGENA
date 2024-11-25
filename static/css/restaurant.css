@@ -70,7 +70,7 @@ h3 {
 .btn-center {
     display: block;
     margin: 0 auto;
-    background-color: #28a745;
+    background-color: #007BFF;
 }
 /* Efecto al pasar el mouse por encima de las tarjetas */
 .restaurant-card:hover {
