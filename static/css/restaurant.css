@@ -1,69 +1,98 @@
-/* Estilos generales para la sección de restaurantes */
-#restaurants {
+/* Contenedor general de las tarjetas */
+.restaurants {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas */
     margin-top: 20px;
 }
 
-/* Estilo para las tarjetas de restaurantes */
-#restaurants .restaurant-card {
-    display: flex; /* Para colocar la imagen y el texto lado a lado */
-    align-items: center; /* Centrar el contenido verticalmente */
-    gap: 20px; /* Espacio entre la imagen y el texto */
+/* Tarjetas individuales */
+.restaurant-card {
+    display: flex;
+    flex-direction: row; /* Imagen a la izquierda y texto a la derecha */
+    align-items: center;
+    background-color: #ffffff;
     border: 1px solid #ddd; /* Borde ligero */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espaciado entre tarjetas */
-    background-color: #f9f9f9; /* Fondo claro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para mayor estilo */
-    transition: transform 0.3s; /* Animación al pasar el cursor */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Oculta contenido que se salga del borde */
+    max-width: 600px; /* Ancho máximo de cada tarjeta */
+    width: 100%; /* Se ajusta al contenedor */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
 }
 
-/* Efecto hover para las tarjetas */
-#restaurants .restaurant-card:hover {
-    transform: scale(1.02); /* Ligeramente más grande al pasar el cursor */
+/* Efecto hover en las tarjetas */
+.restaurant-card:hover {
+    transform: translateY(-5px); /* Se eleva al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
 }
 
-/* Imagen dentro de las tarjetas */
-#restaurants .restaurant-card img {
-    width: 150px; /* Ancho fijo */
-    height: 150px; /* Alto fijo */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    border-radius: 8px; /* Bordes redondeados para la imagen */
-    flex-shrink: 0; /* Evita que la imagen cambie de tamaño */
+/* Imagen de las tarjetas */
+.restaurant-card .restaurant-img {
+    width: 150px; /* Ancho de la imagen */
+    height: 150px; /* Alto de la imagen */
+    object-fit: cover; /* Recorta la imagen para que se ajuste */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-/* Contenido textual dentro de las tarjetas */
-#restaurants .restaurant-card .info {
-    flex-grow: 1; /* Permite que el texto ocupe todo el espacio disponible */
-    font-family: Arial, sans-serif;
-    line-height: 1.5; /* Mejora la legibilidad del texto */
+/* Contenido de texto dentro de las tarjetas */
+.restaurant-card .info {
+    padding: 15px;
+    flex-grow: 1; /* Asegura que el contenido crezca para ocupar espacio */
 }
 
-/* Estilo para los botones de filtro */
-#restaurants .btn-price {
-    border: none;
-    padding: 10px 20px;
-    background-color: #007bff; /* Azul */
-    color: #fff; /* Texto blanco */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer;
-    transition: background-color 0.3s; /* Animación de cambio de color */
+/* Títulos de los restaurantes */
+.restaurant-card .info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Información general */
+.restaurant-card .info p {
+    margin: 5px 0;
     font-size: 14px;
+    color: #555;
 }
 
-#restaurants .btn-price:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+/* Negritas en los textos */
+.restaurant-card .info p strong {
+    color: #222;
 }
 
-/* Botón centrado */
-#restaurants .btn-price.btn-center {
-    display: inline-block;
-    margin: 0 auto;
+/* Botones de filtro */
+.btn-price {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Íconos dentro de los botones */
-#restaurants .price-icon {
+.btn-price:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.price-icon {
     width: 20px;
     height: 20px;
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-    vertical-align: middle; /* Alinea el ícono con el texto */
+}
+
+/* Botón "Mostrar todos" centrado */
+.btn-center {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-center:hover {
+    background-color: #218838;
 }
