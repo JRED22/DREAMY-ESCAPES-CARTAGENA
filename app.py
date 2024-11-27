@@ -6,6 +6,11 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/a')
+def index2():
+    return render_template("index2.html")
+
+
 @app.route('/destinos')
 def destino():
     return render_template("destinos.html")
@@ -42,9 +47,9 @@ def contacto():
 def mapa():
    return render_template ("mapa.html")
 
-@app.route('/teams')
+@app.route('/team')
 def teams():
-    return render_template("teams.html",titulo="Grupo de Trabajo")
+    return render_template("team.html",titulo="Grupo de Trabajo")
 
 @app.route('/saludo/<nombre>')
 def saludo_nombre(nombre):
