@@ -434,7 +434,13 @@ background-color: #666;
   .page-header-teams{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img10.jpg), no-repeat center center;
     background-size: cover;
-    height: 20rem;
+    
+  }
+  .page-header-transportes{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img11.jpg), no-repeat center center;
+    background-size: cover;
+    object-position: bottom; /* Muestra la parte inferior de la imagen */
+    
   }
   /* Estilo para los botones de precio */
   .price-buttons .btn-price {
