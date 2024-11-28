@@ -77,15 +77,15 @@
       </div>
 
       
-      <section >
+     <section >
         <nav class="navbar navbar-expand-lg navbar-dark mb-1  nav col-12 col-md-auto mb-2 justify-content-center mb-md-" id="nav-med"> 
           <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Dreamy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
-            <div class="collapse navbar-collapse" id="nav-inferior">
-              <div class="navbar-nav">
+            <div class="collapse navbar-collapse" id="bottomMenu">
+              <div class="navbar-nav pl-5">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Quienes Somos
@@ -112,7 +112,7 @@
             </div>
           </div>
         </nav>
-      </section>
+      </section> 
       <!-- Sección de tarjetas -->
 
       <!-- Card - index -->
@@ -171,58 +171,58 @@
 
         <!-- START THE FEATURETTES -->
 
+      <div class="container mt-5">  
+            <div class="row featurette">
+              <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-0" style="margin:0 auto">La Muralla de Cartagena <span class="text-body-secondary">Un legado histórico que te cautivará.</span></h2>
+                <p class="lead">
+                  La famosa Muralla de Cartagena te transporta al pasado con su imponente estructura que ha resistido siglos de historia. 
+                  Un recorrido por sus rincones te lleva a descubrir la historia detrás de esta fortaleza, mientras disfrutas de vistas impresionantes al mar Caribe. ¡Una visita obligada para todos los viajeros!
+                </p>
+              </div>
+              <div class="col-md-5 order-md-1">
+                <!-- Imagen de la Muralla de Cartagena -->
+                <img src="{{ url_for('static', filename='img/muralla-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Muralla de Cartagena" width="500" height="500">
+              </div>
+            </div>
+        
+            <hr class="featurette-divider">
 
-<div class="row featurette">
-  <div class="col-md-7 order-md-2">
-    <h2 class="featurette-heading fw-normal lh-0" style="margin:0 auto">La Muralla de Cartagena <span class="text-body-secondary">Un legado histórico que te cautivará.</span></h2>
-    <p class="lead">
-      La famosa Muralla de Cartagena te transporta al pasado con su imponente estructura que ha resistido siglos de historia. 
-      Un recorrido por sus rincones te lleva a descubrir la historia detrás de esta fortaleza, mientras disfrutas de vistas impresionantes al mar Caribe. ¡Una visita obligada para todos los viajeros!
-    </p>
-  </div>
-  <div class="col-md-5 order-md-1">
-    <!-- Imagen de la Muralla de Cartagena -->
-    <img src="{{ url_for('static', filename='img/muralla-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Muralla de Cartagena" width="500" height="500">
-  </div>
-</div>
+            <div class="row featurette">
+              <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">Cartagena de Noche <span class="text-body-secondary">La ciudad se ilumina de magia.</span></h2>
+                <p class="lead">
+                  Al caer la noche, Cartagena se transforma. Las calles empedradas y las plazas se llenan de vida, música y color. La brisa fresca del Caribe te acompaña mientras disfrutas de la gastronomía local y la vista a la bahía iluminada. ¡Un espectáculo que no puedes perderte!
+                </p>
+              </div>
+              <div class="col-md-5">
+                <!-- Imagen de Cartagena de Noche -->
+                <img src="{{ url_for('static', filename='img/noche-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="Cartagena de Noche" width="500" height="500">
+              </div>
+            </div>
 
-<hr class="featurette-divider">
+            <hr class="featurette-divider">
 
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">Cartagena de Noche <span class="text-body-secondary">La ciudad se ilumina de magia.</span></h2>
-    <p class="lead">
-      Al caer la noche, Cartagena se transforma. Las calles empedradas y las plazas se llenan de vida, música y color. La brisa fresca del Caribe te acompaña mientras disfrutas de la gastronomía local y la vista a la bahía iluminada. ¡Un espectáculo que no puedes perderte!
-    </p>
-  </div>
-  <div class="col-md-5">
-    <!-- Imagen de Cartagena de Noche -->
-    <img src="{{ url_for('static', filename='img/noche-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="Cartagena de Noche" width="500" height="500">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">La Palenquera <span class="text-body-secondary">Una tradición que endulza el alma.</span></h2>
-    <p class="lead">
-      La figura de la Palenquera es un símbolo icónico de Cartagena. Con sus coloridos trajes y su sonrisa radiante, esta mujer representa la cultura, la tradición y la calidez del pueblo cartagenero. No dejes de conocer a estas mujeres que, con su fruta fresca, mantienen viva una tradición ancestral.
-    </p>
-  </div>
-  <div class="col-md-5">
-    <!-- Imagen de la Palenquera -->
-    <img src="{{ url_for('static', filename='img/palenquera-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Palenquera" width="500" height="500">
-  </div>
-</div>
-
-
-<hr class="featurette-divider">
+            <div class="row featurette">
+              <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">La Palenquera <span class="text-body-secondary">Una tradición que endulza el alma.</span></h2>
+                <p class="lead">
+                  La figura de la Palenquera es un símbolo icónico de Cartagena. Con sus coloridos trajes y su sonrisa radiante, esta mujer representa la cultura, la tradición y la calidez del pueblo cartagenero. No dejes de conocer a estas mujeres que, con su fruta fresca, mantienen viva una tradición ancestral.
+                </p>
+              </div>
+              <div class="col-md-5">
+                <!-- Imagen de la Palenquera -->
+                <img src="{{ url_for('static', filename='img/palenquera-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Palenquera" width="500" height="500">
+              </div>
+            </div>
 
 
-        <!-- /END THE FEATURETTES -->
+            <hr class="featurette-divider">
+      </div>
 
-      </div><!-- /.container -->
+                    <!-- /END THE FEATURETTES -->
+
+                  </div><!-- /.container -->
 
  {% endblock %}    
       
