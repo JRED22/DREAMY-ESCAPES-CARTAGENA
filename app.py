@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("base.html", titulo="Página de Inicio")
 
 @app.route('/a')
 def index2():
@@ -39,9 +39,34 @@ def tours():
 def playas():
     return ("playas")
 
-@app.route('/contacto')
+
+
+@app.route('/contacto', methods=['GET'])
 def contacto():
-    return render_template("contacto.html")
+  return render_template("contacto.html", titulo="Contáctenos!!!")
+
+
+@app.route('/contacto', methods=['POST'])
+def guardar_contacto():
+  name = request.form.get("inputName")
+  email = request.form.get("inputEmail")
+  phone = request.form.get("inputPhone")
+  message = request.form.get("inputMessage")
+
+  # Validaciones
+  if name == "" or email == ""  or phone == ""  :
+    validacion = "Error: No hay datos para contacto."
+  else:
+    # La información se almacenará en la base de datos
+    validacion = "Gracias por contactarnos, pronto nos pondremos en contacto con usted."
+
+  return render_template("base.html",
+                         titulo="Pronto te contactaremos.",
+                         validacion=validacion)
+
+
+
+
 
 @app.route('/mapa')
 def mapa():

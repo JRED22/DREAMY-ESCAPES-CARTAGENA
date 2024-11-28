@@ -27,17 +27,18 @@ body {
     font-family: 'Roboto', sans-serif;
     position: relative;
     padding: 10px 15px;
-    color: var(--bs-white) !important;
+    /* color: var(--bs-white) !important; color letras menu superior fijo*/
     font-size: 17px;
     font-weight: 400;
     outline: none;
     transition: .5s;
+    color: #ff8c00;
    
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 15px;
-    color: var(--bs-success) !important; /* color de las letras menu desplegable */
+    color: var(--bs-success) !important; /* color de las letras menu desplegable con scroll */
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -98,6 +99,7 @@ body {
         border-radius: 10px;
         transition: .5s;
         opacity: 0;
+        color: #f0a500;
     }
 }
 
@@ -151,13 +153,13 @@ body {
 }
 /* determina el estilo sobresaliente del menu  */
 
-@media (min-width: 992px) {/*    ESTE ES EL COLOR DEL NAV FIJO SIN SCROLL */
+@media (min-width: 992px) {/*    ESTE ES EL COLOR DEL NAV FIJO SIN SCROLL  */
     .navbar-light {
         position: absolute;
         width: 100%;
         top: 0;
         left: 0;
-        border-bottom: 1px solid rgba(12, 12, 12, 0.1);
+        border-bottom: 2px solid rgba(12, 12, 12, 0.1);
         z-index: 999;
      
     }
@@ -229,8 +231,7 @@ background-color: #666;
 .topbar a i:hover {
     color: var(--bs-secondary) !important;
 }
-/* CONFIGURACION CARRUSEL
--------------------------------------------------- */
+/* -------------------------------CONFIGURACION CARRUSEL-------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
@@ -238,7 +239,7 @@ background-color: #666;
 
   
   }
-  /* letras caption imagenes myCarousel */
+  /*-------------------------------- letras caption imagenes myCarousel-------------------------------------- */
   .carousel-caption {
     bottom: 3rem;
     z-index: 10;
@@ -249,7 +250,7 @@ background-color: #666;
     background-color: #ffffff;
     
   }
-  /* oscurecer las imagenes  */
+  /*--------------------------------oscurecer las imagenes  -----------------------------------------------*/
   .overlay {
     position: absolute;
     top: 0;
@@ -293,7 +294,7 @@ background-color: #666;
       background-color: #f9d423; /* Cambio a amarillo vibrante al pasar el mouse */
       transform: scale(1.1); /* Efecto de ampliación */
     }
-    /* Animaciones carru */
+    /* Animaciones carru whatsapp-icon*/
     @keyframes fadeInDown {
       from {
         opacity: 0;
@@ -355,7 +356,6 @@ background-color: #666;
     padding: 0 2.5rem 2rem 3rem;
     background-color: #ffffff;
     font-family: "Roboto Condensed", sans-serif;
-    font-weight:11px ;
   }
   
   .custom-tour .card-title{
@@ -396,7 +396,7 @@ background-color: #666;
     font-size: 1.3rem; /* Tamaño de la fuente del título */
     color: #333; /* Color del texto */
     font-weight: 500;
-    padding-bottom: 0 0 3rem 2rem;
+    padding-bottom: 3em;
     height: 2rem;
     text-align:left;
     /* background-color: #f9d423; */
@@ -473,8 +473,8 @@ background-color: #666;
   /* Revisar este elemento ojo .text-center {   
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
-    margin-top: 20px; /* Espaciado superior */
-    margin-bottom: 20px; /* Espaciado inferior */
+    /* margin-top: 20px; Espaciado superior */
+    /* margin-bottom: 20px; Espaciado inferior */
  /* } */
  .btn-center {
     padding: 10px 20px;
@@ -593,7 +593,6 @@ background-color: #666;
     padding: 0 2rem 0 3rem;
     background-color: #ffffff;
     font-family: "Roboto Condensed", sans-serif;
-    font-weight:11px ;
     height: 3rem;
   }
   
@@ -641,7 +640,7 @@ background-color: #666;
   }
   .package-item img{
     height: 3rem;
-    padding-left: 10px 0  020px;
+    padding-left: 20px;
   }
   
 /*** Footer Start ***/

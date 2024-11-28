@@ -1,25 +1,35 @@
-{% extends 'base.html' %}
-
-{% block content %}
-  <div class="container my-5">
+<div class="container my-5" style="padding-top: 5rem;">
     <h1>Contacto</h1>
     <p>Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros.</p>
-    
-    <form>
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="3" placeholder="Tu mensaje"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+        <form id="formulario" action="/contacto" method="post" >
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo:</label>
+            <input type="text" class="form-control" id="inputnombre" placeholder="Tu nombre" name="inputName" required minlength="4" maxlength="30">
+          </div>
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Correo electrónico:</label>
+          <input type="email" class="form-control" id="inputEmail" name="inputEmail" required minlength="4" maxlength="30">
+          </div>
+          <div class="col-6">
+            <label for="inputPhone" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="inputPhone" placeholder="+57 000 00 00000" name="inputPhone" required pattern="[0-9]{10}">
+        </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea type="text" class="form-control" id="inputMessage" name="inputMessage"></textarea>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Autorización para tratamiento de datos personales.
+            </label>
+        </div>
+        <input type="submit" id="enviar" class="btn btn-primary mb-4" name="enviar" value="Enviar">
+        </form>
+        <span id="mensaje"></span>
+     
+
+
+
   </div>
 
-  {% endblock %}   
