@@ -66,8 +66,7 @@ def guardar_contacto():
     # Adicionar la información al archivo desde el formulario de contacto.
     with open(archivo_csv, "a") as archivo:
       archivo.write(f"{name},{email},{phone},{zip},{message}\n") 
-  return render_template("contacto.html",
-                         titulo="Pronto te contactaremos.",
+  return render_template("contacto.html",titulo="Pronto te contactaremos.",
                          validacion=validacion)
 
 

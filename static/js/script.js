@@ -23,10 +23,15 @@ async function cargar(pagina) {
     const equipo = await fetch(`/${pagina}`);
 
     if (equipo.ok) {
-        document.getElementById("contenido").innerHTML = await equipo.text()
-        document.getElementById(pagina).classList.add("menu-activo");
+        document.getElementById("mensaje").innerHTML = await equipo.text()
+      //  document.getElementById(pagina).classList.add("menu-activo");
     }else{
         document.getElementById("contenido").innerHTML = "Error al cargar los datos";
     }
 
     }
+    $(document).ready(function(){
+        setTimeout(function(){
+            $("#mensaje").fadeOut();  // Esto ocultará el div suavemente
+        }, 3000); // 3000 milisegundos = 3 segundos
+    });

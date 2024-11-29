@@ -4,10 +4,12 @@
 {% block content %}
 
 {% if validacion %}
-    <div class="alert alert-success" role="alert" style="margin-top:5rem;" id="alertBox">
+
+    <div class="alert alert-success" role="alert" style="margin-top:5rem;" id="mensaje" >
         {{ validacion }}
     </div>
 {% endif %}
+
 <div class="container my-5">
     <h1>Contacto</h1>
     <p>Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros.</p>
@@ -36,7 +38,11 @@
         </div>
         <input type="submit" id="enviar" class="btn btn-primary mb-4" name="enviar" value="Enviar">
         </form>
-        <span id="mensaje"></span>
+       
   </div>
 
 {% endblock %}
+<!-- {% block scripts %}
+      <script>
+      
+{% endblock %} -->
