@@ -32,7 +32,7 @@ body {
     font-weight: 400;
     outline: none;
     transition: .5s;
-    color: #ff8c00;
+    color: #4d4d4d;
    
 }
 
@@ -161,6 +161,7 @@ body {
         left: 0;
         border-bottom: 2px solid rgba(12, 12, 12, 0.1);
         z-index: 999;
+        background-color: #ffffff;
      
     }
     
@@ -668,3 +669,7 @@ background-color: #666;
     text-align: center;
 }
 /*** copyright end ***/
+
+
+
+
