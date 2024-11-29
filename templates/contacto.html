@@ -2,44 +2,65 @@
 {% extends 'base.html' %}
 
 {% block content %}
+ <!-- Contenedor para el formulario  -->
 
-{% if validacion %}
 
+
+<section class="ftco-section contact-section ftco-degree-bg pt-4 mb-4" >
+  {% if validacion %}
     <div class="alert alert-success" role="alert" style="margin-top:5rem;" id="mensaje" >
         {{ validacion }}
-    </div>
+    </div> 
 {% endif %}
+  <div class="container" >
+    <div class="row d-flex mb-5 contact-info pt-4 ms-6" style="margin-top: 3rem;">
+      <div class="col-md-12 mb-2">
+        <h1>Informacion de Contacto</h1>
+      </div>
+      <div class="w-100"></div>
 
-<div class="container my-5">
-    <h1>Contacto</h1>
-    <p>Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros.</p>
+    <div class="row block-9">
+      <div class="col-md-6 pr-md-3">
         <form id="formulario" action="/contacto" method="post" >
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="nombre" class="form-label">Nombre completo:</label>
             <input type="text" class="form-control" id="inputnombre" placeholder="Tu nombre" name="inputName" required minlength="4" maxlength="30">
           </div>
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="inputEmail" class="form-label">Correo electrónico:</label>
-          <input type="email" class="form-control" id="inputEmail" name="inputEmail" required minlength="4" maxlength="30">
+          <input type="email"  class="form-control" id="inputEmail" name="inputEmail"  required minlength="4" maxlength="30">
           </div>
           <div class="col-6">
             <label for="inputPhone" class="form-label">Teléfono:</label>
             <input type="tel" class="form-control" id="inputPhone" placeholder="+57 000 00 00000" name="inputPhone" required pattern="[0-9]{10}">
         </div>
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="mensaje" class="form-label">Mensaje</label>
             <textarea type="text" class="form-control" id="inputMessage" name="inputMessage"></textarea>
           </div>
-          <div class="form-check">
+          <div class="form-check mb-4">
             <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
             <label class="form-check-label" for="gridCheck">
                 Autorización para tratamiento de datos personales.
             </label>
         </div>
-        <input type="submit" id="enviar" class="btn btn-primary mb-4" name="enviar" value="Enviar">
+        
+         <div class="d-grid gap-2">
+          <input type="submit" id="enviar" class="btn btn-primary mb-2" name="enviar" value="Enviar">
+          </div>
         </form>
-       
+
+      
+      </div>
+
+      <div class="col-md-6" id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7847.983468517023!2d-75.53866224579512!3d10.42223008013601!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1732898599076!5m2!1ses!2sco" width="600" height="400 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div><!--fin mps -->
+    </div>
   </div>
+</section>
+<!-- fin de formulario  -->
+
 
 {% endblock %}
 <!-- {% block scripts %}
