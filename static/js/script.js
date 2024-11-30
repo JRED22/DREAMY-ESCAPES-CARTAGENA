@@ -34,4 +34,6 @@ async function cargar(pagina) {
         setTimeout(function(){
             $("#mensaje").fadeOut();  // Esto ocultará el div suavemente
         }, 3000); // 3000 milisegundos = 3 segundos
+
+       
     });
