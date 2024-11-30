@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- Enlace al CSS exclusivo para la página de restaurantes -->
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/restaurant.css') }}">
 
 <div class="container my-5">
-    <!-- Título con fondo -->
+
     <h1 class="title-background">Restaurantes en Cartagena</h1>
     <p>Conoce los mejores lugares para comer en Cartagena, desde platos típicos hasta gastronomía internacional.</p>
 
-    <!-- Botones de filtro -->
+
     <div class="price-buttons my-4">
         <button class="btn-price" onclick="filterRestaurants('$')">
             <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
@@ -29,17 +29,18 @@
         </button>
     </div>
 
-    <!-- Botón "Mostrar Todos" centrado -->
+
     <div class="text-center my-4">
         <button class="btn-price btn-center" onclick="filterRestaurants('all')">
             Mostrar Todos
         </button>
     </div>
 
-    <!-- Tarjetas de restaurantes -->
+
     <div id="restaurants" class="restaurants">
         <div class="restaurant-card $">
-            <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo" class="restaurant-img">
+            <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo"
+                class="restaurant-img">
             <div class="info">
                 <h3>Restaurante Espíritu Santo</h3>
                 <p><strong>Precio:</strong> $20,000 - $30,000 COP</p>
@@ -48,7 +49,8 @@
             </div>
         </div>
         <div class="restaurant-card $$">
-            <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata" class="restaurant-img">
+            <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata"
+                class="restaurant-img">
             <div class="info">
                 <h3>Restaurante La Mulata</h3>
                 <p><strong>Precio:</strong> $40,000 - $60,000 COP</p>

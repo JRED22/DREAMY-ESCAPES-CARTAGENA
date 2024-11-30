@@ -5,24 +5,23 @@
     <h1>Mapa de Cartagena</h1>
     <p>Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros.</p>
 
-    <!-- Contenedor del mapa -->
     <div id="map" style="height: 400px; width: 100%;"></div>
   </div>
 
-  <!-- Agregar el script de Leaflet y el enlace a OpenStreetMap -->
+  
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <script>
-    // Crear el mapa y centrarlo en las coordenadas de Cartagena
+    
     var map = L.map('map').setView([10.3910, -75.4790], 12);  // Coordenadas de Cartagena
 
-    // Agregar la capa de OpenStreetMap
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Colocar un marcador en la ubicación de Cartagena
+    
     L.marker([10.3910, -75.4790]).addTo(map)
       .bindPopup('¡Estamos en Cartagena!')
       .openPopup();
