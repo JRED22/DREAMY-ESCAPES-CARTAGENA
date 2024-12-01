@@ -75,6 +75,10 @@ def mapa():
 def teams():
     return render_template("team.html",titulo="Grupo de Trabajo")
 
+@app.route('/bardisco')
+def bardisco():
+    return render_template("bardisco.html", titulo="Bares y Discotecas")
+
 @app.route('/saludo/<nombre>')
 def saludo_nombre(nombre):
     return "hola, {nombre}"

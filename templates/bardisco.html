@@ -1,10 +1,98 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container my-5">
+    <h1 class="text-center">Bares y Discotecas en Cartagena</h1>
+    <div class="row">
+        <!-- Filtros -->
+        <div class="col-lg-3 col-12 filters">
+            <h5>Filtrar por</h5>
+            <form id="filters-form">
+                <!-- Filtro por precio -->
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <select id="price" class="form-select">
+                        <option value="">Todos</option>
+                        <option value="economico">Económico</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+            </form>
+        </div>
 
-  <div class="container my-5">
-    <h1>BAr-Disco</h1>
-    <p>Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros.</p>
-    
-  </div>
+        <!-- Tarjetas de bares -->
+        <div class="col-lg-9 col-12">
+            <div class="row" id="bars-container">
+                <!-- Alquímico -->
+                <div class="col-md-4 mb-3" data-price="medio">
+                    <div class="card">
+                        <img src="/static/img/alquimico.jpg" class="card-img-top" alt="Alquímico Bar">
+                        <div class="card-body">
+                            <h5 class="card-title">Alquímico</h5>
+                            <p class="card-text">Cócteles: COP 40,000 - 60,000</p>
+                            <p class="card-text">Ambiente único con tres niveles temáticos.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- El Barón -->
+                <div class="col-md-4 mb-3" data-price="medio">
+                    <div class="card">
+                        <img src="/static/img/el-baron.jpg" class="card-img-top" alt="El Barón">
+                        <div class="card-body">
+                            <h5 class="card-title">El Barón</h5>
+                            <p class="card-text">Cócteles: COP 30,000 - 50,000</p>
+                            <p class="card-text">Innovadores cócteles en un lugar histórico.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cafe Havana -->
+                <div class="col-md-4 mb-3" data-price="medio">
+                    <div class="card">
+                        <img src="/static/img/cafe-havana.jpg" class="card-img-top" alt="Cafe Havana">
+                        <div class="card-body">
+                            <h5 class="card-title">Cafe Havana</h5>
+                            <p class="card-text">Cócteles: COP 35,000</p>
+                            <p class="card-text">Ambiente cubano con música en vivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arsenal -->
+                <div class="col-md-4 mb-3" data-price="medio">
+                    <div class="card">
+                        <img src="/static/img/arsenal.jpg" class="card-img-top" alt="Arsenal: The Rum Box">
+                        <div class="card-body">
+                            <h5 class="card-title">Arsenal: The Rum Box</h5>
+                            <p class="card-text">Cócteles: COP 30,000 - 50,000</p>
+                            <p class="card-text">Especializado en rones y sabores caribeños.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mondo -->
+                <div class="col-md-4 mb-3" data-price="economico">
+                    <div class="card">
+                        <img src="/static/img/mondo.jpg" class="card-img-top" alt="Mondo Cocktail Bar">
+                        <div class="card-body">
+                            <h5 class="card-title">Mondo Cocktail Bar</h5>
+                            <p class="card-text">Cócteles: COP 30,000</p>
+                            <p class="card-text">Cócteles artesanales en un ambiente acogedor.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- El Mirador -->
+                <div class="col-md-4 mb-3" data-price="medio">
+                    <div class="card">
+                        <img src="/static/img/mirador.jpg" class="card-img-top" alt="El Mirador">
+                        <div class="card-body">
+                            <h5 class="card-title">El Mirador</h5>
+                            <p class="card-text">Cócteles: COP 35,000 - 50,000</p>
+                            <p class="card-text">Terraza con vistas al centro histórico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
+
