@@ -1,17 +1,151 @@
-
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="container my-5">
-    <h1>Destinos Turísticos en Cartagena</h1>
-    <p>Explora los mejores destinos turísticos en Cartagena y sus alrededores. Desde parques naturales hasta sitios históricos, hay algo para todos.</p>
+<div style="padding-top: 3rem;"></div>
+<div class="container py-5">
+    <h1 class="text-center mb-4">Descubre Sitios Turísticos de Cartagena</h1>
+    <div class="row">
+        <!-- Filtros -->
+        <div class="col-lg-3 col-12 filters">
+            <h5>Filtrar por</h5>
+            <form id="filters-form">
+                <!-- Filtro por precio -->
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <select id="price" class="form-select">
+                        <option value="">Todos</option>
+                        <option value="gratis">Gratis</option>
+                        <option value="economico">Económico</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+                <!-- Filtro por categoría -->
+                <div class="mb-3">
+                    <label for="category" class="form-label">Categoría</label>
+                    <select id="category" class="form-select">
+                        <option value="">Todas</option>
+                        <option value="historia">Historia</option>
+                        <option value="playa">Playa</option>
+                        <option value="cultura">Cultura</option>
+                        <option value="aventura">Aventura</option>
+                    </select>
+                </div>
+            </form>
+        </div>
 
-    <!-- Aquí puedes agregar contenido sobre los destinos -->
-    <ul>
-      <li><strong>Parque de los 5 Sentidos</strong>: Un parque natural ideal para disfrutar de la fauna y flora local.</li>
-      <li><strong>Plaza de Majagual</strong>: El corazón histórico de la ciudad, rodeado de cultura y arquitectura colonial.</li>
-      <li><strong>Monumento a la Madre</strong>: Un sitio icónico para fotografías y paseos tranquilos.</li>
-      <!-- Puedes añadir más destinos o imágenes aquí -->
-    </ul>
-  </div>
+        <!-- Sitios Turísticos -->
+        <div class="col-lg-9 col-12">
+            <div class="row" id="sites-container">
+                <!-- Ciudad Amurallada -->
+                <div class="col-md-4 mb-3" data-price="gratis" data-category="historia">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/ciudad-amurallada.jpg') }}" class="card-img-top" alt="Ciudad Amurallada">
+                        <div class="card-body">
+                            <h5 class="card-title">Ciudad Amurallada</h5>
+                            <p class="card-text">Explora las calles empedradas y la rica historia colonial de Cartagena.</p>
+                            <p><strong>Precio:</strong> Gratis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Castillo de San Felipe -->
+                <div class="col-md-4 mb-3" data-price="economico" data-category="historia">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/castillo-san-felipe.jpg') }}" class="card-img-top" alt="Castillo de San Felipe">
+                        <div class="card-body">
+                            <h5 class="card-title">Castillo de San Felipe</h5>
+                            <p class="card-text">Fortaleza histórica con vistas impresionantes de la ciudad.</p>
+                            <p><strong>Precio:</strong> COP 25,000.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Islas del Rosario -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="playa">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/islas-del-rosario.jpg') }}" class="card-img-top" alt="Islas del Rosario">
+                        <div class="card-body">
+                            <h5 class="card-title">Islas del Rosario</h5>
+                            <p class="card-text">Archipiélago paradisíaco ideal para buceo y snorkel.</p>
+                            <p><strong>Precio:</strong> Desde COP 100,000.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Playa Blanca -->
+                <div class="col-md-4 mb-3" data-price="gratis" data-category="playa">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/playa-blanca.jpg') }}" class="card-img-top" alt="Playa Blanca">
+                        <div class="card-body">
+                            <h5 class="card-title">Playa Blanca</h5>
+                            <p class="card-text">Hermosa playa de arena blanca y aguas cristalinas.</p>
+                            <p><strong>Precio:</strong> Gratis (actividades extra tienen costo).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cerro de La Popa -->
+                <div class="col-md-4 mb-3" data-price="medio" data-category="historia">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/cerro-de-la-popa.jpg') }}" class="card-img-top" alt="Cerro de La Popa">
+                        <div class="card-body">
+                            <h5 class="card-title">Cerro de La Popa</h5>
+                            <p class="card-text">Disfruta del mirador y del convento histórico.</p>
+                            <p><strong>Precio:</strong> COP 12,000.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Volcán de Lodo El Totumo -->
+                <div class="col-md-4 mb-3" data-price="medio" data-category="aventura">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/volcan-totumo.jpg') }}" class="card-img-top" alt="Volcán El Totumo">
+                        <div class="card-body">
+                            <h5 class="card-title">Volcán de Lodo El Totumo</h5>
+                            <p class="card-text">Baños de lodo terapéuticos en un volcán único.</p>
+                            <p><strong>Precio:</strong> Desde COP 60,000 (tours).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Muelle de Los Pegasos -->
+                <div class="col-md-4 mb-3" data-price="gratis" data-category="cultura">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/muelle-pegasos.jpg') }}" class="card-img-top" alt="Muelle de Los Pegasos">
+                        <div class="card-body">
+                            <h5 class="card-title">Muelle de Los Pegasos</h5>
+                            <p class="card-text">Lugar ideal para paseos al atardecer.</p>
+                            <p><strong>Precio:</strong> Gratis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Centro de Convenciones -->
+                <div class="col-md-4 mb-3" data-price="medio" data-category="cultura">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/centro-convenciones.jpg') }}" class="card-img-top" alt="Centro de Convenciones">
+                        <div class="card-body">
+                            <h5 class="card-title">Centro de Convenciones</h5>
+                            <p class="card-text">Un lugar cultural y empresarial moderno.</p>
+                            <p><strong>Precio:</strong> Variable según evento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const filtersForm = document.getElementById('filters-form');
+    const cards = document.querySelectorAll('#sites-container .col-md-4');
+
+    filtersForm.addEventListener('change', () => {
+        const priceFilter = document.getElementById('price').value;
+        const categoryFilter = document.getElementById('category').value;
+
+        cards.forEach(card => {
+            const matchesPrice = !priceFilter || card.dataset.price === priceFilter;
+            const matchesCategory = !categoryFilter || card.dataset.category === categoryFilter;
+
+            card.style.display = matchesPrice && matchesCategory ? 'block' : 'none';
+        });
+    });
+});
+</script>
