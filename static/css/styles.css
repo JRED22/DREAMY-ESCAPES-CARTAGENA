@@ -213,7 +213,7 @@ background-color: #666;
 }
 
 
-/*** Topbar Start ***/
+/*** ----------------------------------------------------------Topbar Start ***/
 .fixed-top .container {
     transition: 0.5s;
 }
@@ -330,25 +330,66 @@ background-color: #666;
       /* rtl:end:remove */
     /*-------------------------------------------- Estilo de las tarjetas------------------------------------------------- */
    
-   
+    #filters-form {
+      max-width: 600px;
+      margin: 20px auto; /* Centra el formulario */
+  }
+  #filters-form .form-select {
+      background-color: #f8f9fa; /* Fondo claro para el selector */
+      transition: border-color 0.3s ease-in-out;
+  }
+  #filters-form .form-select:focus {
+      border-color: #0d6efd; /* Color de borde azul al enfocar */
+      box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+  }
+  #filters-form .btn-primary {
+      background-color: #0d6efd;
+      border: none;
+  }
+  #filters-form .btn-primary:hover {
+      background-color: #0056b3;
+  }
+  
+  .tour-card img {
+      height: 150px;
+      object-fit: cover;
+  }
+  .tour-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .tour-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+    .tour-card .card-body {
+      font-family: "Roboto Condensed", sans-serif;
+    }
+    
     .tour-card .card-title{
-      height: 3rem;
-
-
+    
+     height: 3rem;
+     font-size: 1rem;
+     font-weight: 400;
     }
-    .tour-card .card-title{
-      height: 3rem;
-
-
+    .tour-card .card-text {
+     background-color: #ff8c00;
     }
-    .tour-card .card-subtitle{
-      height: 2rem;
-      font-size: 1.2rem;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-weight: 500;
+    .tour-card .precio {
 
-    }
-   
+      font-weight:700;
+      font-size: 1.5 rem;
+     }
+     .tour-card .duracion {
+
+      font-weight:lighter;
+      font-size: 0.9rem;
+     }
+     .tour-card .descripcion {
+
+      font-weight:lighter;
+      font-size: 0.9rem;
+     }
+
     
   /* tarjetas del index */
   .custom-index {

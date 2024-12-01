@@ -4,60 +4,82 @@
 
 
 {% block content %}
-
-<!-- -------------------------------------final codigo de prueba ajax flask ----------------------------------->
 <div style="padding-top: 3rem;"></div>
-    <div class="container py-5">
-        <h1 class="text-center mb-4">Explora Nuestros Tours</h1>
-        <div style="padding-top: 1rem;"></div>
-        <div class="row">
-            <!-- Filtros en la columna izquierda -->
-            <div class="col-lg-3 col-12 filters">
-                <h5>Filtrar por</h5>
-                <form id="filters-form">
-                    <!-- Filtro por precio -->
-                    <div class="mb-3">
-                      <label for="price" class="form-label">Precio</label>
-                      <select id="price" class="form-select">
-                          <option value="">Todos</option>
-                          <option value="low">Bajo</option>
-                          <option value="high">Alto</option>
-                      </select>
-                    </div>
-                    <!-- Filtro por duración -->
-                    <div class="mb-3">
-                      <label for="duration" class="form-label">Duración</label>
+<div class="container py-5">
+    <header class="text-center mb-0">
+        <h1 class="display-4">Explora Cartagena</h1>
+        <p class="lead">¡Los mejores tours a precios insuperables!</p>
+        <a href="#tours" class="btn btn-warning btn-lg">Ver Tours</a>
+    </header>
+  </div>
+  
+  <div style="padding-top: 0rem;"></div>
+    <div class="container">
+    
+        <ol class="breadcrumb justify-content-left mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">{{titulo }}</a></li>
+        </ol>    
+          <!-- <p class="lead text-body-secondary px-5 " style="text-align: justify;">
+            Descubre la magia de Cartagena con nuestras experiencias únicas.
+        </p>   -->
+       
+    </div> 
+  
+        <div class="container py-5">
+            <div class="row " >
+                <!-- Filtros en la columna izquierda -->
+                <div class="col-lg-3 col-12 filters">
+                    <h5>Filtrar por</h5>
+                    <form id="filters-form" class="row">
+                        <!-- Filtro por precio -->
+                        <div class="mb-3">
+                            <label for="priceRange" class="form-label">Rango de Precios:</label>
+                            <select id="price" class="form-select">
+                                <option value="">Todos</option>
+                                <option value="low">Bajo</option>
+                                <option value="high">Alto</option>
+                            </select>
+                        </div>
+                        <!-- Filtro por duración -->
+                        <div class="mb-3">
+                            <label for="duration" class="form-label">Duración</label>
                       <select id="duration" class="form-select">
                           <option value="">Todos</option>
                           <option value="half-day">Medio Día</option>
                           <option value="full-day">Día Completo</option>
                       </select>
-                    </div>
-                    <!-- Filtro por categoría -->
-                    <div class="mb-3">
-                      <label for="category" class="form-label">Categoría</label>
-                      <select id="category" class="form-select">
-                          <option value="">Todas</option>
-                          <option value="beach">Playa</option>
-                          <option value="cultural">Cultural</option>
-                      </select>
-                    </div>
-                    
-                </form>
-            </div>
-
-            <!-- Cards de tours en la columna derecha -->
-            <div class="col-lg-9 col-12">
-                <div class="row"id="tours-container" >
+                        </div>
+                        <!-- Filtro por categoría -->
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Categoría</label>
+                            <select id="category" class="form-select">
+                                <option value="">Todas</option>
+                                <option value="beach">Playa</option>
+                                <option value="cultural">Cultural</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+    
+                <!-- Cards de tours en la columna derecha -->
+                <div class="col-lg-9 col-12">
+                    <div class="row">
+                        <div class="row"id="tours-container" >
                                    
                   
                  
+                        </div>
+               
+                        
+                    </div>
                 </div>
-                <!-- fin row -->
             </div>
         </div>
-    </div>
+    
+<!-- -------------------------------------final codigo de prueba ajax flask ----------------------------------->
 
+   
 
 
 {% endblock %}
