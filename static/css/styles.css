@@ -657,3 +657,50 @@ background-color: #666;
   text-decoration: none !important;
   color: #333;
 }
+
+/* Aseguramos que todas las tarjetas tengan el mismo tamaño */
+.card {
+  height: 100%; /* Hace que las tarjetas ocupen todo el espacio disponible */
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos dentro de la tarjeta estén alineados verticalmente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición para el hover */
+}
+
+.card img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: auto; /* La altura se ajusta automáticamente */
+  object-fit: contain; /* Ajusta la imagen sin recortar ni distorsionar */
+  max-height: 200px; /* Asegura que la imagen no supere una altura específica */
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil para resaltar la tarjeta */
+}
+
+/* Ajustes para que las tarjetas tengan un tamaño consistente */
+.col-md-4 {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas dentro de su contenedor */
+  align-items: stretch; /* Asegura que las tarjetas ocupen todo el alto disponible */
+}
+
+.card-body {
+  flex: 1; /* Hace que el contenido de la tarjeta ocupe el espacio restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido esté bien distribuido dentro de la tarjeta */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
