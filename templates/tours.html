@@ -5,239 +5,59 @@
 
 {% block content %}
 
-<!-- <div class="container-fluid page-header">
-<div class="container">
-  <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-      <h3 class="display-4 text-white text-uppercase" >{{ titulo }}</h3>
-      <div class="d-inline-flex text-white">
-          <p class="m-0 text-uppercase" ><a class="text-white" href="">Home</a></p>
-          <i class="fa fa-angle-double-right pt-1 px-3"></i>
-          <p class="m-0 text-uppercase" >Services</p> 
-      </div>
-  </div>
-</div>
-</div> -->
+<!-- -------------------------------------final codigo de prueba ajax flask ----------------------------------->
+<div style="padding-top: 3rem;"></div>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Explora Nuestros Tours</h1>
+        <div style="padding-top: 1rem;"></div>
+        <div class="row">
+            <!-- Filtros en la columna izquierda -->
+            <div class="col-lg-3 col-12 filters">
+                <h5>Filtrar por</h5>
+                <form id="filters-form">
+                    <!-- Filtro por precio -->
+                    <div class="mb-3">
+                      <label for="price" class="form-label">Precio</label>
+                      <select id="price" class="form-select">
+                          <option value="">Todos</option>
+                          <option value="low">Bajo</option>
+                          <option value="high">Alto</option>
+                      </select>
+                    </div>
+                    <!-- Filtro por duración -->
+                    <div class="mb-3">
+                      <label for="duration" class="form-label">Duración</label>
+                      <select id="duration" class="form-select">
+                          <option value="">Todos</option>
+                          <option value="half-day">Medio Día</option>
+                          <option value="full-day">Día Completo</option>
+                      </select>
+                    </div>
+                    <!-- Filtro por categoría -->
+                    <div class="mb-3">
+                      <label for="category" class="form-label">Categoría</label>
+                      <select id="category" class="form-select">
+                          <option value="">Todas</option>
+                          <option value="beach">Playa</option>
+                          <option value="cultural">Cultural</option>
+                      </select>
+                    </div>
+                    
+                </form>
+            </div>
 
-  <div class="container my-5 mt-6">
-        <h3 class="text-primary text-uppercase pt-3" style="letter-spacing: 5px; text-align: center;">Explora Cartagena: Los Mejores Tours para Ti</h3>
-        <p class="lead text-body-secondary px-5 " style="text-align: justify;">
-          Descubre la magia de Cartagena con nuestras experiencias únicas.
-      </p>  
-       <hr>
-    </div> 
-    
-
-      <div class="row">
-        <div class="col" style="background-color: blue;">col</div>
-        <div class="col" >col</div>
-        <div class="col" >col</div>
-        <div class="col">col</div>
-      </div>
-      <div class="row">
-      <!-- inicio col4 -->
-        <div class="col-4"style="width:25%;flex-basis:25%;flex-grow:0;flex-shrink:0;max-width:25%;margin-left:0%;right:auto;left:auto">col-4</div>
-      <!-- fin cola4 -->
-        <!-- inicio col 8 -->
-        <div class="col-8" style=width:75%;flex-basis:75%;flex-grow:0;flex-shrink:0;max-width:75%;margin-left:0%;right:auto;left:auto>
-        <!-- primer grupo  -->
-        <div class="card-group mb-5">
-          <!-- card 1 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen1.png') }}" class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title">GUIANZA EXPRESS SAS</h5>
-              <p class="card-text">Servicio de guía turístico privado por horas.</p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
+            <!-- Cards de tours en la columna derecha -->
+            <div class="col-lg-9 col-12">
+                <div class="row"id="tours-container" >
+                                   
+                  
+                 
                 </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
+                <!-- fin row -->
             </div>
-          </div>
-          <!-- card 2 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen2.png') }}" class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title ">TOURIST ADVISOR</h5>
-              <p class="card-text"> Conoce las maravillas de Cartagena
-                Los tours son de diferentes precios
-                </p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          <!-- card 3 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen3.jpg') }}" class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title">PRIVATE GUIDE WORL</h5>
-              <p class="card-text">Encontrarás personas que hablan diferentes idiomas y podrás disfrutar de una agradable experiencia</p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          <!-- card 4 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen4.png') }}"  class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title"> VIATOR</h5>
-              <p class="card-text">Vive una agradable experiencia conociendo la ciudad de Cartagena</p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          
-        </div> <!-- fin grupo de card -->
-
-        <!-- segundo grupo -->
-        <div class="card-group mb-5">
-          <!-- card 1 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen5.jpg') }}" class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title">GUIANZA EXPRESS SAS</h5>
-              <p class="card-text">Diviértete aprendiendo, escoge el tour que más te llame la atención y vive una experiencia inolvidable</p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          <!-- card 2 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen6.png') }}" class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title ">withlocals</h5>
-              <p class="card-text"> Sólo tours privados
-                </p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          <!-- card 3 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen7.png') }}" class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title">TÚ TOUR EN CARTAGENA</h5>
-              <p class="card-text">Conoce Cartagena y vive una experiencia inolvidable</p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          <!-- card 4 -->
-          <div class="card custom-tour">  
-            <div class="card-header">
-              <img src="{{ url_for ('static',filename = 'img/Imagen4.png') }}"  class="card-img-top" alt="..."> 
-            </div>   
-            <div class="card-body">
-              <h5 class="card-title"> VIATOR</h5>
-              <p class="card-text">Vive una agradable experiencia conociendo la ciudad de Cartagena</p>              
-                <div class="d-flex align-items-center ">
-                  <!-- Iconos de puntuación -->
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <i class="bi bi-star text-secondary"></i>
-                  <span class="ms-2 ">(4.0)</span>
-                </div>
-                
-              <div class="d-grid gap-2 ">
-                <button class="btn btn-block btn-success btn-sm mt-3 " type="button">Precios</button>
-              </div> 
-            </div>
-          </div>
-          
-        </div> <!-- fin grupo de card -->
         </div>
-        <!-- fin col8 -->
+    </div>
 
-      </div>
-  
+
+
 {% endblock %}

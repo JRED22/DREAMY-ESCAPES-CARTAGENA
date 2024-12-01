@@ -262,7 +262,7 @@ background-color: #666;
     z-index: 1; /* Asegura que quede encima de la imagen */
    
   }
-    /* Estilo general del texto */
+    /*-------------------------------- Estilo general del texto */
     .carousel-caption h1 {
       /*font-size: 3rem; /* Tamaño llamativo */
       /* font-weight: bold; /* Negrita */
@@ -329,45 +329,27 @@ background-color: #666;
       
       /* rtl:end:remove */
     /*-------------------------------------------- Estilo de las tarjetas------------------------------------------------- */
-.custom-tour {
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 0px;
-    margin-right: 1em;
-  }
-  .custom-tour .card-header {
-  margin:0 auto;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;   /* Centra verticalmente */
-  height: 4rem;
-  background-color: #fff;
-  border: none;
-  padding: 1.5rem 0 ;
-  
-  }
-  
-  .custom-tour .card-header img {
-  box-shadow: none; /* Elimina cualquier sombra aplicada */
-  object-fit: contain; /* Escala la imagen para que quepa dentro */
-  height: 2rem;
-  
-  }
-  .custom-tour .card-body {
-    margin: 0;
-    padding: 0 2.5rem 2rem 3rem;
-    background-color: #ffffff;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-  
-  .custom-tour .card-title{
-    height: 3rem;
-    text-align: center;
-    padding-top: 0.5rem;
-  }
-  .custom-tour .card-text{
-    height: 6rem;
-    text-align:justify;
-  }
+   
+   
+    .tour-card .card-title{
+      height: 3rem;
+
+
+    }
+    .tour-card .card-title{
+      height: 3rem;
+
+
+    }
+    .tour-card .card-subtitle{
+      height: 2rem;
+      font-size: 1.2rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 500;
+
+    }
+   
+    
   /* tarjetas del index */
   .custom-index {
     border: none; /* Sin borde */
@@ -675,59 +657,3 @@ background-color: #666;
   text-decoration: none !important;
   color: #333;
 }
-
-  .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    text-decoration: none;
-  }
-
-  .whatsapp-button:hover {
-    background-color: #1ebe57;
-    color: #fff;
-    text-decoration: none;
-  }.card {
-    position: relative;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 15px;
-}
-
-.card-title {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 14px;
-    color: #555;
-}
-

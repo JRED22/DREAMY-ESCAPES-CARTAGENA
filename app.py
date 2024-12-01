@@ -1,5 +1,5 @@
-from flask import Flask, render_template,request
-import json, os
+from flask import Flask, render_template,request,jsonify
+import json, os,csv
 
 app = Flask(__name__)
 
@@ -30,14 +30,11 @@ def sitiosturisticos():
  
 @app.route('/tours')
 def tours():
-    return render_template("tours.html",titulo="Tours")
+     return render_template("tours.html",titulo="Tours")
 
 @app.route('/playas')
 def playas():
     return ("playas")
-
-
-
 @app.route('/contacto', methods=['GET'])
 def contacto():
      return render_template("contacto.html", titulo="Contáctenos!!!")
@@ -82,12 +79,47 @@ def teams():
 def saludo_nombre(nombre):
     return "hola, {nombre}"
 
-if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=5000)
+
     
+   
+def load_tours():
+    tours = []
+    with open('data/tours.csv', 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            tours.append(row)
+    return tours 
     
+@app.route('/api/tours', methods=['GET'])
+def get_tours():
     
+   
+     price= request.args.get('price', '')
+     duration = request.args.get('duration', '')
+     category = request.args.get('category', '')
      
+     tours = load_tours()
+
+    # Filtrar por precio
+     if price== 'low':
+         tours = [t for t in tours if int(t['price']) <= 8000]
+     elif price== 'high':
+         tours = [t for t in tours if int(t['price']) > 120000]
+
+     # Filtrar por duración
+     if duration == 'half-day':
+          tours = [t for t in tours if t['duration'] == 'half-day']
+     elif duration == 'full-day':
+          tours = [t for t in tours if t['duration'] == 'full-day']
+
+      # Filtrar por categoría
+     if category:
+         tours = [t for t in tours if t['category'] == category]
+
+     return jsonify(tours)
                  
                  
                 
+
+if __name__ == '__main__':
+    app.run(debug=True, host="0.0.0.0", port=5000)
