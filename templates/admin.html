@@ -8,66 +8,120 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <button type="button" class="btn btn-warning">
-        <a href="/" class="nav-item nav-link">Inicio</a>
-    </button>
-
-    <div class="container mt-5">
-        <h2 class="mb-4">Agregar Nuevo Tour</h2>
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <form id="form_add_tours">
-                    <!-- Title -->
-                    <div class="mb-3">
-                        <label for="titulo_add" class="form-label">Título del Tour</label>
-                        <input type="text" id="titulo_add" class="form-control" placeholder="Nombre del tour" required>
-                    </div>
-                    <!-- Price -->
-                    <div class="mb-3">
-                        <label for="precio_add" class="form-label">Precio</label>
-                        <input type="number" id="precio_add" class="form-control" placeholder="Precio en pesos" required>
-                    </div>
-                    <!-- Duration -->
-                    <div class="mb-3">
-                        <label for="duracion_add" class="form-label">Duración</label>
-                        <!-- <input type="text" id="duracion_add" class="form-control" placeholder="Ej. 2 horas, 1 día" required> -->
-                        <select id="duracion_add" class="form-select" required>
-                            <option value="">Seleccionar</option>
-                            <option value="Medio Dia">Medio Día</option>
-                            <option value="Dia Completo">Día Completo</option>
-                        </select>
-                    </div>
-                    <!-- Category -->
-                    <div class="mb-3">
-                        <label for="categoria_add" class="form-label">Categoría</label>
-                        <select id="categoria_add" class="form-select" required>
-                            <option value="">Seleccionar</option>
-                            <option value="historico">Histórico</option>
-                            <option value="playa">Playa</option>
-                            <option value="cultural">Cultural</option>
-                            <option value="naturaleza">Naturaleza</option>
-                        </select>
-                    </div>
-                    <!-- Image URL -->
-                    <div class="mb-3">
-                        <label for="image_url_add" class="form-label">URL de la Imagen</label>
-                        <input type="url" id="image_url_add" class="form-control" placeholder="Enlace a la imagen" required>
-                    </div>
-                    <!-- Description -->
-                    <div class="mb-3">
-                        <label for="descripcion_add" class="form-label">Descripción</label>
-                        <textarea id="descripcion_add" class="form-control" rows="3" placeholder="Breve descripción del tour" required></textarea>
-                    </div>
-                    <!-- Botón para enviar -->
-                    <button type="button" id="guardar-btn" class="btn btn-primary w-100">Guardar</button>
-                </form>
-            </div>
-        </div>
-        <!-- Mensaje de éxito o error -->
-        <div id="mensaje_add" class="mt-3"></div>
-    </div>
+   
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script></body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+        }
+        .sidebar a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menú lateral -->
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="position-sticky">
+                    <h5 class="text-white">Panel de Administración</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configuraciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-4">            
+                <div class="container mt-5" style="width: 30rem;">
+                    <h2 class="mb-4">Agregar Nuevo Tour</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <form id="form_add_tours">
+                                <!-- Title -->
+                                <div class="mb-3">
+                                    <label for="titulo_add" class="form-label">Título del Tour</label>
+                                    <input type="text" id="titulo_add" class="form-control" placeholder="Nombre del tour" required>
+                                </div>
+                                <!-- Price -->
+                                <div class="mb-3">
+                                    <label for="precio_add" class="form-label">Precio</label>
+                                    <input type="number" id="precio_add" class="form-control" placeholder="Precio en pesos" required>
+                                </div>
+                                <!-- Duration -->
+                                <div class="mb-3">
+                                    <label for="duracion_add" class="form-label">Duración</label>
+                                    <!-- <input type="text" id="duracion_add" class="form-control" placeholder="Ej. 2 horas, 1 día" required> -->
+                                    <select id="duracion_add" class="form-select" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="Medio Dia">Medio Día</option>
+                                        <option value="Dia Completo">Día Completo</option>
+                                    </select>
+                                </div>
+                                <!-- Category -->
+                                <div class="mb-3">
+                                    <label for="categoria_add" class="form-label">Categoría</label>
+                                    <select id="categoria_add" class="form-select" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="historico">Histórico</option>
+                                        <option value="playa">Playa</option>
+                                        <option value="cultural">Cultural</option>
+                                        <option value="naturaleza">Naturaleza</option>
+                                    </select>
+                                </div>
+                                <!-- Image URL -->
+                                <div class="mb-3">
+                                    <label for="image_url_add" class="form-label">URL de la Imagen</label>
+                                    <input type="url" id="image_url_add" class="form-control" placeholder="Enlace a la imagen" required>
+                                </div>
+                                <!-- Description -->
+                                <div class="mb-3">
+                                    <label for="descripcion_add" class="form-label">Descripción</label>
+                                    <textarea id="descripcion_add" class="form-control" rows="3" placeholder="Breve descripción del tour" required></textarea>
+                                </div>
+                                <!-- Botón para enviar -->
+                                <button type="button" id="guardar-btn" class="btn btn-primary w-100">Guardar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Mensaje de éxito o error -->
+                    <div id="mensaje_add" class="mt-3"></div>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+
