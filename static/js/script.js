@@ -14,18 +14,6 @@
  //  });
 
 
-// Filtrar tarjetas según el rango de precios
-function filterRestaurants(priceRange) {
-    const cards = document.querySelectorAll('#restaurants .restaurant-card'); // Selección específica
-    cards.forEach(card => {
-        if (priceRange === 'all' || card.classList.contains(priceRange)) {
-            card.style.display = 'flex'; // 'flex' mantiene el diseño
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
 
 //----------------------------------------------- Ajax para carga de Archivoa ------------------------------------------------
 
@@ -173,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // Asegúrate de que el DOM esté cargado antes de ejecutar el código
-//------------------------------destinoa turisticos 
+//------------------------------destinos turisticos 
 document.addEventListener('DOMContentLoaded', () => {
 const filtersForm = document.getElementById('form_sitios_turisticos'); // Formulario de filtros
 const cards = document.querySelectorAll('#sites-container .col-md-4'); // Tarjetas de sitios turísticos
@@ -204,4 +192,47 @@ filtersForm.addEventListener('change', () => {
         card.style.display = matchesPrice ? 'block' : 'none';
     });
 });
+});
+// Filtrar tarjetas según el rango de precios
+function filterRestaurants(priceRange) {
+    const cards = document.querySelectorAll('#restaurants .restaurant-card'); // Selección específica
+    cards.forEach(card => {
+        if (priceRange === 'all' || card.classList.contains(priceRange)) {
+            card.style.display = 'flex'; // 'flex' mantiene el diseño
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', function () {
+    const priceSelect = document.getElementById('precio_restaurantes');
+    const categorySelect = document.getElementById('categoria_restaurantes');
+    const restaurantsContainer = document.getElementById('restaurants-container');
+    const restaurantCards = restaurantsContainer.getElementsByClassName('col-md-4');
+
+    // Función para filtrar los restaurantes
+    function filterRestaurants() {
+        const selectedPrice = priceSelect.value.toLowerCase();
+        const selectedCategory = categorySelect.value.toLowerCase();
+
+        Array.from(restaurantCards).forEach(card => {
+            const cardPrice = card.getAttribute('data-price').toLowerCase();
+            const cardCategory = card.getAttribute('data-category').toLowerCase();
+
+            // Mostrar u ocultar el restaurante según el filtro de precio y categoría
+            if ((selectedPrice === '' || selectedPrice === cardPrice) &&
+                (selectedCategory === '' || selectedCategory === cardCategory)) {
+                card.style.display = 'block'; // Mostrar restaurante
+            } else {
+                card.style.display = 'none'; // Ocultar restaurante
+            }
+        });
+    }
+
+    // Escuchar cambios en los select de filtros
+    priceSelect.addEventListener('change', filterRestaurants);
+    categorySelect.addEventListener('change', filterRestaurants);
+
+    // Llamar a la función de filtrado al cargar la página para aplicar los filtros iniciales
+    filterRestaurants();
 });
