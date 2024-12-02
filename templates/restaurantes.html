@@ -1,76 +1,164 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/restaurant.css') }}">
-
-<div class="container my-5">
-
-    <h1 class="title-background">Restaurantes en Cartagena</h1>
-    <p>Conoce los mejores lugares para comer en Cartagena, desde platos típicos hasta gastronomía internacional.</p>
-
-
-    <div class="price-buttons my-4">
-        <button class="btn-price" onclick="filterRestaurants('$')">
-            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
-            $: $20,000 - $60,000 COP
-        </button>
-        <button class="btn-price" onclick="filterRestaurants('$$')">
-            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
-            $$: $60,000 - $120,000 COP
-        </button>
-        <button class="btn-price" onclick="filterRestaurants('$$$')">
-            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
-            $$$: $120,000 - $200,000 COP
-        </button>
-        <button class="btn-price" onclick="filterRestaurants('$$$$')">
-            <img src="{{ url_for('static', filename='img/dinero.png') }}" alt="Precio" class="price-icon">
-            $$$$: Más de $200,000 COP
-        </button>
-    </div>
-
-
-    <div class="text-center my-4">
-        <button class="btn-price btn-center" onclick="filterRestaurants('all')">
-            Mostrar Todos
-        </button>
-    </div>
-
-
-    <div id="restaurants" class="restaurants">
-        <div class="restaurant-card $">
-            <img src="{{ url_for('static', filename='img/espiritu-santo.jpg') }}" alt="Restaurante Espíritu Santo"
-                class="restaurant-img">
-            <div class="info">
-                <h3>Restaurante Espíritu Santo</h3>
-                <p><strong>Precio:</strong> $20,000 - $30,000 COP</p>
-                <p><strong>Comidas:</strong> Almuerzo</p>
-                <p><strong>Dirección:</strong> Cl. 35 #6-69, El Centro, Cartagena</p>
-            </div>
+<div style="padding-top: 3rem;"></div>
+<div class="container py-5">
+    <h1 class="text-center mb-4">Restaurantes en Cartagena</h1>
+    <div class="row">
+        <!-- Filtros -->
+        <div class="col-lg-3 col-12 filters">
+            <h5>Filtrar por</h5>
+            <form id="filters-form">
+                <!-- Filtro por precio -->
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <select id="price" class="form-select">
+                        <option value="">Todos</option>
+                        <option value="economico">Económico</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+                <!-- Filtro por categoría -->
+                <div class="mb-3">
+                    <label for="category" class="form-label">Categoría</label>
+                    <select id="category" class="form-select">
+                        <option value="">Todas</option>
+                        <option value="caribena">Caribeña</option>
+                        <option value="latina">Latina</option>
+                        <option value="mariscos">Mariscos</option>
+                        <option value="colombiana">Colombiana</option>
+                        <option value="fusion">Fusión</option>
+                    </select>
+                </div>
+            </form>
         </div>
-        <div class="restaurant-card $$">
-            <img src="{{ url_for('static', filename='img/lamulata.png') }}" alt="Restaurante La Mulata"
-                class="restaurant-img">
-            <div class="info">
-                <h3>Restaurante La Mulata</h3>
-                <p><strong>Precio:</strong> $40,000 - $60,000 COP</p>
-                <p><strong>Comidas:</strong> Almuerzo, Cena</p>
-                <p><strong>Dirección:</strong> Cl. del Quero #9-58, Cartagena</p>
+
+        <!-- Restaurantes -->
+        <div class="col-lg-9 col-12">
+            <div class="row" id="restaurants-container">
+                <!-- Restaurante Espíritu Santo -->
+                <div class="col-md-4 mb-3" data-price="economico" data-category="caribena">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-espiritu-santo.jpg') }}" class="card-img-top" alt="Restaurante Espíritu Santo">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurante Espíritu Santo</h5>
+                            <p class="card-text">Comida Caribeña, Latina, Mariscos, Colombiana.</p>
+                            <p><strong>Precio por Persona:</strong> COP 20,000 - 30,000</p>
+                            <p><strong>Dirección:</strong> Cl. 35 #6-69, El Centro, Cartagena de Indias, Bolívar</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante Donde Magola -->
+                <div class="col-md-4 mb-3" data-price="economico" data-category="caribena">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-donde-magola.jpg') }}" class="card-img-top" alt="Restaurante Donde Magola">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurante Donde Magola</h5>
+                            <p class="card-text">Frituras típicas, comida local.</p>
+                            <p><strong>Precio por Persona:</strong> COP 25,000 - 40,000</p>
+                            <p><strong>Dirección:</strong> San Diego Cll Portobello #10-94, Centro, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- La Cocina de Pepina -->
+                <div class="col-md-4 mb-3" data-price="medio" data-category="caribena">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/la-cocina-de-pepina.jpg') }}" class="card-img-top" alt="La Cocina de Pepina">
+                        <div class="card-body">
+                            <h5 class="card-title">La Cocina de Pepina</h5>
+                            <p class="card-text">Comida Tradicional, Caribeña.</p>
+                            <p><strong>Precio por Persona:</strong> COP 35,000 - 40,000</p>
+                            <p><strong>Dirección:</strong> Cl. 25 #9a-06 local 2, Getsemaní, Cartagena de Indias</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante La Mulata -->
+                <div class="col-md-4 mb-3" data-price="medio" data-category="caribena">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-la-mulata.jpg') }}" class="card-img-top" alt="Restaurante La Mulata">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurante La Mulata</h5>
+                            <p class="card-text">Caribeña, Latina, Mariscos, Colombiana.</p>
+                            <p><strong>Precio por Persona:</strong> COP 40,000 - 60,000</p>
+                            <p><strong>Dirección:</strong> Cl. del Quero #9 58, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante Cande -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="colombiana">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-cande.jpg') }}" class="card-img-top" alt="Restaurante Cande">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurante Cande</h5>
+                            <p class="card-text">Comida Colombiana Contemporánea.</p>
+                            <p><strong>Precio por Persona:</strong> COP 80,000 - 100,000</p>
+                            <p><strong>Dirección:</strong> Calle de La Serrezuela, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante Cuba 1940 -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="latina">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-cuba-1940.jpg') }}" class="card-img-top" alt="Restaurante Cuba 1940">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuba 1940 – Plaza de San Diego</h5>
+                            <p class="card-text">Comida Latina, Internacional.</p>
+                            <p><strong>Precio por Persona:</strong> COP 100,000 - 120,000</p>
+                            <p><strong>Dirección:</strong> Plaza de San Diego, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante María Cocina Italiana -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="latina">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/maria-cocina-italiana.jpg') }}" class="card-img-top" alt="Restaurante María Cocina Italiana">
+                        <div class="card-body">
+                            <h5 class="card-title">María Cocina Italiana</h5>
+                            <p class="card-text">Comida Italiana, Caribeña.</p>
+                            <p><strong>Precio por Persona:</strong> COP 150,000 - 180,000</p>
+                            <p><strong>Dirección:</strong> Calle del Colegio #34-60, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante Celele -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="caribena">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-celele.jpg') }}" class="card-img-top" alt="Restaurante Celele">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurante Celele</h5>
+                            <p class="card-text">Innovación Caribeña.</p>
+                            <p><strong>Precio por Persona:</strong> COP 130,000 - 170,000</p>
+                            <p><strong>Dirección:</strong> Cl. del Espíritu Santo #29-128, Getsemaní, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante Carmen Cartagena -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="fusion">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-carmen.jpg') }}" class="card-img-top" alt="Restaurante Carmen Cartagena">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurante Carmen Cartagena</h5>
+                            <p class="card-text">Comida Fusión.</p>
+                            <p><strong>Precio por Persona:</strong> COP 140,000 - 200,000</p>
+                            <p><strong>Dirección:</strong> Calle de Cuartel #36-77, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Restaurante Harry's Cartagena -->
+                <div class="col-md-4 mb-3" data-price="alto" data-category="fusion">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/restaurante-harrys.jpg') }}" class="card-img-top" alt="Restaurante Harry's Cartagena">
+                        <div class="card-body">
+                            <h5 class="card-title">Harry's Cartagena</h5>
+                            <p class="card-text">Comida Fusión Contemporánea.</p>
+                            <p><strong>Precio por Persona:</strong> COP 150,000 - 200,000</p>
+                            <p><strong>Dirección:</strong> Hotel Charleston Santa Teresa, Cartagena</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-    function filterRestaurants(priceRange) {
-        const cards = document.querySelectorAll('.restaurant-card');
-        cards.forEach(card => {
-            if (priceRange === 'all' || card.classList.contains(priceRange)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-</script>
 {% endblock %}

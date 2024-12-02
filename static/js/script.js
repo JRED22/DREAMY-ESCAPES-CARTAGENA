@@ -1,16 +1,3 @@
-// Filtrar tarjetas según el rango de precios
-function filterRestaurants(priceRange) {
-    const cards = document.querySelectorAll('#restaurants .restaurant-card'); // Selección específica
-    cards.forEach(card => {
-        if (priceRange === 'all' || card.classList.contains(priceRange)) {
-            card.style.display = 'flex'; // 'flex' mantiene el diseño
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-
 //----------------------------------------------- Ajax para carga de Archivoa ------------------------------------------------
 
 async function cargar(pagina) {
@@ -142,9 +129,4 @@ async function cargar(pagina) {
         setTimeout(function(){
             $("#mensaje").fadeOut();  // Esto ocultará el div suavemente
         }, 3000); // 3000 milisegundos = 3 segundos
-        document.getElementById("filters-form").addEventListener("change", loadTours);
     });
-    
-    // $(document).ready(function(){
-        
-    // });

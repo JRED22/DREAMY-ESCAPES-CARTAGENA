@@ -702,32 +702,3 @@ background-color: #666;
   text-decoration: none !important;
   color: #333;
 }
-
-/* --------------------------------breadcrumb  -----------------------------------------------------------------*/
-.breadcrumb a{
-  text-decoration: none !important;;
-}
-.breadcrumb {
-  display: flex;
-  list-style: none;
-  padding: 10px 0;
-  background-color: #f8f9fa;
-}
-
-.breadcrumb li {
-  margin-right: 10px;
-}
-
-.breadcrumb li + li:before {
-  content: ">";
-  margin-right: 10px;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #757677;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
