@@ -154,14 +154,14 @@ function mostrarMensaje(mensaje, tipo) {
     mensajeDiv.innerHTML = `<div class="alert alert-${tipo}" role="alert">${mensaje}</div>`;
 }
 
-//------------------------------------------Sitios turisticos
+//------------------------------------------Sitios turisticos-----------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-    const filtersForm = document.getElementById('form_sitios_turisticos');
+    const filtersForm = document.getElementById('filters-form');
     const cards = document.querySelectorAll('.site-card'); // Selecciona todas las tarjetas
 
     filtersForm.addEventListener('change', () => {
-        const priceFilter = document.getElementById('precio_sitios').value;
-        const categoryFilter = document.getElementById('categorias_sitios').value;
+        const priceFilter = document.getElementById('price').value;
+        const categoryFilter = document.getElementById('category').value;
 
         cards.forEach(card => {
             const matchesPrice = !priceFilter || card.dataset.price <= priceFilter;
@@ -173,14 +173,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // Asegúrate de que el DOM esté cargado antes de ejecutar el código
-//------------------------------
+//------------------------------destinoa turisticos 
 document.addEventListener('DOMContentLoaded', () => {
-const filtersForm = document.getElementById('filters-form'); // Formulario de filtros
+const filtersForm = document.getElementById('form_sitios_turisticos'); // Formulario de filtros
 const cards = document.querySelectorAll('#sites-container .col-md-4'); // Tarjetas de sitios turísticos
 
 filtersForm.addEventListener('change', () => {
-    const priceFilter = document.getElementById('price').value; // Valor del filtro por precio
-    const categoryFilter = document.getElementById('category').value; // Valor del filtro por categoría
+    const priceFilter = document.getElementById('precio_sitios').value; // Valor del filtro por precio
+    const categoryFilter = document.getElementById('categorias_sitios').value; // Valor del filtro por categoría
 
     cards.forEach(card => {
         const matchesPrice = !priceFilter || card.dataset.price === priceFilter; // Coincidencia por precio
