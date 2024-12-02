@@ -237,6 +237,7 @@ background-color: #666;
 /* Carousel base class */
 .carousel {
     margin-bottom: 0rem;
+    background-color: #CCCCCC;
 
   
   }
