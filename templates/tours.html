@@ -31,32 +31,36 @@
                 <!-- Filtros en la columna izquierda -->
                 <div class="col-lg-3 col-12 filters shadow p-3 mb-5 bg-body rounded ">
                     <h5>Filtrar por</h5>
-                    <form id="filters-form" class="row">
+                    <form id="form-Tours-filtro" class="row">
                         <!-- Filtro por precio -->
                         <div class="mb-3">
-                            <label for="precio" class="form-label">Rango de Precios:</label>
-                            <select id="precio" class="form-select">
+                            <label for="precio_tour" class="form-label">Rango de Precios:</label>
+                            <select id="precio_tour" class="form-select">
                                 <option value="">Todos</option>
-                                <option value="low">$100.000-$200.000 COP</option>
-                                <option value="high">$200.000-$400.000 </option>
+                                <option value="p_menor_tours">$100.000-$200.000 COP</option>
+                                <option value="p_mayor_tours">$200.000-$400.000 </option>
                             </select>
                         </div>
                         <!-- Filtro por duración -->
                         <div class="mb-3">
-                            <label for="duration" class="form-label">Duración</label>
-                      <select id="duration" class="form-select">
+                            <label for="duracion_tours" class="form-label">Duración</label>
+                      <select id="duracion_tours" class="form-select">
                           <option value="">Todos</option>
-                          <option value="half-day">Medio Día</option>
-                          <option value="full-day">Día Completo</option>
+                          <option value="Medio Dia">Medio Día</option>
+                          <option value="Dia Completo">Día Completo</option>
                       </select>
                         </div>
                         <!-- Filtro por categoría -->
                         <div class="mb-3">
-                            <label for="category" class="form-label">Categoría</label>
-                            <select id="category" class="form-select">
-                                <option value="">Todas</option>
-                                <option value="beach">Playa</option>
-                                <option value="cultural">Cultural</option>
+                            <label for="categoria_tours" class="form-label">Categoría</label>
+                            <select id="categoria_tours" class="form-select">
+                           
+                            <option value="">Seleccionar</option>
+                            <option value="">Todas</option>
+                            <option value="historico">Histórico</option>
+                            <option value="playa">Playa</option>
+                            <option value="cultural">Cultural</option>
+                            <option value="naturaleza">Naturaleza</option>
                             </select>
                         </div>
                     </form>

@@ -98,27 +98,25 @@ def load_tours():
 def get_tours():
     
    
-     precio= request.args.get('precio', '')
-     duration = request.args.get('duration', '')
-     category = request.args.get('category', '')
+     precio_tour= request.args.get('precio_tour', '')
+     duracion_tours= request.args.get('duracion_tours', '')
+     categoria_tours = request.args.get('categoria_tours', '')
      
      tours = load_tours()
 
     # Filtrar por precio
-     if precio== 'low':
-         tours = [t for t in tours if int(t['price']) <= 8000]
-     elif precio== 'high':
-         tours = [t for t in tours if int(t['price']) > 120000]
+     if precio_tour== 'p_menor_tours':
+         tours = [t for t in tours if int(t['precio_tour']) <= 8000]
+     elif precio_tour== 'p_mayor_tours':
+         tours = [t for t in tours if int(t['precio_tour']) > 120000]
 
      # Filtrar por duración
-     if duration == 'half-day':
-          tours = [t for t in tours if t['duration'] == 'half-day']
-     elif duration == 'full-day':
-          tours = [t for t in tours if t['duration'] == 'full-day']
-
+     if duracion_tours :
+          tours = [t for t in tours if t['duracion_tours'] == duracion_tours ]
+     
       # Filtrar por categoría
-     if category:
-         tours = [t for t in tours if t['category'] == category]
+     if categoria_tours :
+         tours = [t for t in tours if t['categoria_tours'] == categoria_tours]
 
      return jsonify(tours)
  
@@ -133,20 +131,33 @@ def agregar_tour():
         return jsonify({'success': False, 'message': 'Datos inválidos.'}), 400
 
     # Archivo CSV donde se guardan los tours
-    archivo_csv = 'data/tours.csv'
+    archivo_tours_csv = 'data/tours.csv'
 
     # Verificar si el archivo ya existe
-    archivo_existe = os.path.isfile(archivo_csv)
+    archivo_existe = os.path.isfile(archivo_tours_csv)
 
-    # Escribir los datos en el archivo CSV
     try:
-        with open(archivo_csv, 'a', newline='', encoding='utf-8') as csvfile:
+        with open(archivo_tours_csv, 'a', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
+            
             # Si el archivo es nuevo, escribir la cabecera
             if not archivo_existe:
-                writer.writerow(['title', 'price', 'duration', 'category', 'image_url', 'description'])
-            writer.writerow([data['title'], data['price'], data['duration'], data['category'], data['image_url'], data['description']])
-        return jsonify({'success': True})
+                writer.writerow(['id', 'titulo', 'precio_tour', 'duracion_tours', 'categoria_tours', 'image_url', 'description'])
+            
+            # Leer el archivo para calcular el siguiente id
+            id_contador = 1
+            if archivo_existe:
+                with open(archivo_tours_csv, 'r', newline='', encoding='utf-8') as read_file:
+                    reader = csv.reader(read_file)
+                    next(reader, None)  # Saltar los encabezados
+                    # Contar las filas existentes y asignar el siguiente id
+                    id_contador = sum(1 for row in reader) + 1
+            
+            # Escribir la nueva fila con el id auto-incrementable
+            writer.writerow([id_contador, data['titulo_add'], data['precio_add'], data['duracion_add'], data['categoria_add'], data['image_url_add'], data['descripcion_add']])
+            
+        return jsonify({'success': True, 'message': f'Tour agregado con id {id_contador}.'})
+
     except Exception as e:
         print(f"Error al guardar los datos: {e}")
         return jsonify({'success': False, 'message': 'Error al guardar los datos.'}), 500

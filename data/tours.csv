@@ -1,11 +1,11 @@
-id,title,price,duration,category,image_url,description
-1,Islas del Rosario,150000,full-day,beach,/static/img/imgt1.jpg,Un tour inolvidable.
-2,City Tour,120000,half-day,cultural,/static/img/imgt2.jpg,Conoce la ciudad.
-3,Cholon VIP,200000,full-day,beach,/static/img/imgt4.jpg,Relájate en el paraíso.
-4,Castillo de San Felipe,80000,half-day,cultural,/static/img/img1.jpg,Descubre la historia.
-5,Patagonia Tour,170000,full-day,beach,/static/img/img3.jpg,Una experiencia única
-6,Montaña Rusa cartegana de indias,1200000,half-day,cultural,/static/img/imgt1.jpg,Conoce la montaña.
-7,España VIP,250000,full-day,cultural,/static/img/imgt2.jpg,Descubre España en det
+id,titulo,precio_tour,duracion_tours,categoria_tours,image_url,description
 
-Volcan del totumo,-3,12222,Histórico,qqq,sssss
-Tours castillo san felipe,20000,2 horas,Histórico,sssss,ssss
+2,cento de la ciudad,200000,Dia Completo,historico,/static/img/imgt2.jpg,es un tours privado
+3,playa blancas cartegana,100000,Medio Dia,historico,/static/img/imgt2.jpg,estamos melos
+4,Centro Hitorico de Cartagena ,200000,Medio Dia,playa,/static/img/imgt2.jpg,es un tours romantico
+5,Islas del Rosario,150000,Dia Completo,playa,/static/img/imgt1.jpg,Un tour inolvidable.
+7,City Tour,120000,Medio Dia,naturaleza,/static/img/imgt2.jpg,Conoce la ciudad.
+8,Cholon VIP,200000,Dia Completo,playa,/static/img/imgt4.jpg,Relájate en el paraíso.
+9,Castillo de San Felipe,80000,Medio Dia,cultural,/static/img/img1.jpg,Descubre la historia.
+10,Patagonia Tour,170000,Medio Dia,castillo,/static/img/img3.jpg,Una experiencia única
+11,Cienaga de la virgen ,120000,Dia Completo,naturaleza,img1,esta es 

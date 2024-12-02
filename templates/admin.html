@@ -8,46 +8,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <button type="button" class="btn btn-warning">
+        <a href="/" class="nav-item nav-link">Inicio</a>
+    </button>
+
     <div class="container mt-5">
         <h2 class="mb-4">Agregar Nuevo Tour</h2>
         <div class="card shadow-sm">
             <div class="card-body">
-                <form id="tour-form">
+                <form id="form_add_tours">
                     <!-- Title -->
                     <div class="mb-3">
-                        <label for="title" class="form-label">Título del Tour</label>
-                        <input type="text" id="title" class="form-control" placeholder="Nombre del tour" required>
+                        <label for="titulo_add" class="form-label">Título del Tour</label>
+                        <input type="text" id="titulo_add" class="form-control" placeholder="Nombre del tour" required>
                     </div>
                     <!-- Price -->
                     <div class="mb-3">
-                        <label for="price" class="form-label">Precio</label>
-                        <input type="number" id="price" class="form-control" placeholder="Precio en pesos" required>
+                        <label for="precio_add" class="form-label">Precio</label>
+                        <input type="number" id="precio_add" class="form-control" placeholder="Precio en pesos" required>
                     </div>
                     <!-- Duration -->
                     <div class="mb-3">
-                        <label for="duration" class="form-label">Duración</label>
-                        <input type="text" id="duration" class="form-control" placeholder="Ej. 2 horas, 1 día" required>
+                        <label for="duracion_add" class="form-label">Duración</label>
+                        <!-- <input type="text" id="duracion_add" class="form-control" placeholder="Ej. 2 horas, 1 día" required> -->
+                        <select id="duracion_add" class="form-select" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Medio Dia">Medio Día</option>
+                            <option value="Dia Completo">Día Completo</option>
+                        </select>
                     </div>
                     <!-- Category -->
                     <div class="mb-3">
-                        <label for="category" class="form-label">Categoría</label>
-                        <select id="category" class="form-select" required>
+                        <label for="categoria_add" class="form-label">Categoría</label>
+                        <select id="categoria_add" class="form-select" required>
                             <option value="">Seleccionar</option>
-                            <option value="Histórico">Histórico</option>
-                            <option value="Playa">Playa</option>
-                            <option value="Cultural">Cultural</option>
-                            <option value="Naturaleza">Naturaleza</option>
+                            <option value="historico">Histórico</option>
+                            <option value="playa">Playa</option>
+                            <option value="cultural">Cultural</option>
+                            <option value="naturaleza">Naturaleza</option>
                         </select>
                     </div>
                     <!-- Image URL -->
                     <div class="mb-3">
-                        <label for="image_url" class="form-label">URL de la Imagen</label>
-                        <input type="url" id="image_url" class="form-control" placeholder="Enlace a la imagen" required>
+                        <label for="image_url_add" class="form-label">URL de la Imagen</label>
+                        <input type="url" id="image_url_add" class="form-control" placeholder="Enlace a la imagen" required>
                     </div>
                     <!-- Description -->
                     <div class="mb-3">
-                        <label for="description" class="form-label">Descripción</label>
-                        <textarea id="description" class="form-control" rows="3" placeholder="Breve descripción del tour" required></textarea>
+                        <label for="descripcion_add" class="form-label">Descripción</label>
+                        <textarea id="descripcion_add" class="form-control" rows="3" placeholder="Breve descripción del tour" required></textarea>
                     </div>
                     <!-- Botón para enviar -->
                     <button type="button" id="guardar-btn" class="btn btn-primary w-100">Guardar</button>
@@ -55,7 +64,7 @@
             </div>
         </div>
         <!-- Mensaje de éxito o error -->
-        <div id="mensaje" class="mt-3"></div>
+        <div id="mensaje_add" class="mt-3"></div>
     </div>
 
     <!-- Bootstrap JS -->
