@@ -94,16 +94,16 @@ def load_tours():
 def get_tours():
     
    
-     price= request.args.get('price', '')
+     precio= request.args.get('precio', '')
      duration = request.args.get('duration', '')
      category = request.args.get('category', '')
      
      tours = load_tours()
 
     # Filtrar por precio
-     if price== 'low':
+     if precio== 'low':
          tours = [t for t in tours if int(t['price']) <= 8000]
-     elif price== 'high':
+     elif precio== 'high':
          tours = [t for t in tours if int(t['price']) > 120000]
 
      # Filtrar por duración
@@ -117,9 +117,35 @@ def get_tours():
          tours = [t for t in tours if t['category'] == category]
 
      return jsonify(tours)
-                 
-                 
-                
+ 
+@app.route('/admin', methods=['GET'])
+def mostrar_formulario():
+    return render_template('admin.html')
+ 
+@app.route('/agregar_tour', methods=['POST'])
+def agregar_tour():
+    data = request.get_json()
+    if not data:
+        return jsonify({'success': False, 'message': 'Datos inválidos.'}), 400
 
+    # Archivo CSV donde se guardan los tours
+    archivo_csv = 'data/tours.csv'
+
+    # Verificar si el archivo ya existe
+    archivo_existe = os.path.isfile(archivo_csv)
+
+    # Escribir los datos en el archivo CSV
+    try:
+        with open(archivo_csv, 'a', newline='', encoding='utf-8') as csvfile:
+            writer = csv.writer(csvfile)
+            # Si el archivo es nuevo, escribir la cabecera
+            if not archivo_existe:
+                writer.writerow(['title', 'price', 'duration', 'category', 'image_url', 'description'])
+            writer.writerow([data['title'], data['price'], data['duration'], data['category'], data['image_url'], data['description']])
+        return jsonify({'success': True})
+    except Exception as e:
+        print(f"Error al guardar los datos: {e}")
+        return jsonify({'success': False, 'message': 'Error al guardar los datos.'}), 500
+    
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)

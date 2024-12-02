@@ -35,7 +35,7 @@ async function cargar(pagina) {
         // Obtener los filtros seleccionados
      
         const filters = {
-            price: document.getElementById("price").value,
+             precio: document.getElementById("precio").value,
             duration: document.getElementById("duration").value,
             category: document.getElementById("category").value,
         };
@@ -65,10 +65,11 @@ async function cargar(pagina) {
                                     <div class="card-body">
                                         <h5 class="card-title">${tour.title}</h5>
                                         <p class="precio text-success">$${tour.price} COP</p>
+                                         <p class="card-text text-success">$${tour.price*4,374} USD</p>
                                         <p class="duracion"> ${tour.duration}</p>
                                         <p class="descripcion"> ${tour.description}</p>
                                        
-                                        <a href="#" class="btn btn-success w-100 btn-sm">Reservar</a>
+                                        <a href="#" class="btn btn-warning w-100 btn-sm">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -80,16 +81,70 @@ async function cargar(pagina) {
     }
     
 
+    document.getElementById('guardar-btn').addEventListener('click', () => {
+        // Capturar los valores del formulario
+        const title = document.getElementById('title').value;
+        const price = document.getElementById('price').value;
+        const duration = document.getElementById('duration').value;
+        const category = document.getElementById('category').value;
+        const image_url = document.getElementById('image_url').value;
+        const description = document.getElementById('description').value;
+    
+        // Validar los campos
+        if (!title || !price || !duration || !category || !image_url || !description) {
+            mostrarMensaje('Por favor, complete todos los campos.', 'danger');
+            return;
+        }
+    
+        // Crear un objeto con los datos
+        const data = {
+            title,
+            price: parseFloat(price),
+            duration,
+            category,
+            image_url,
+            description
+        };
+    
+        // Enviar los datos al servidor usando fetch
+        fetch('/agregar_tour', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                mostrarMensaje('Tour agregado con éxito.', 'success');
+                document.getElementById('tour-form').reset();
+            } else {
+                mostrarMensaje('Hubo un error al agregar el tour.', 'danger');
+            }
+        })
+        .catch(() => {
+            mostrarMensaje('Error al conectar con el servidor.', 'danger');
+        });
+    });
+    
+    // Función para mostrar mensajes
+    function mostrarMensaje(mensaje, tipo) {
+        const mensajeDiv = document.getElementById('mensaje');
+        mensajeDiv.innerHTML = `<div class="alert alert-${tipo}" role="alert">${mensaje}</div>`;
+    }
+    
 
 
     // Cargar tours al inicio y cuando cambien los filtros
     document.addEventListener("DOMContentLoaded", () => {
         loadTours();
-        document.getElementById("filters-form").addEventListener("change", loadTours);
-    });
-    
-    $(document).ready(function(){
         setTimeout(function(){
             $("#mensaje").fadeOut();  // Esto ocultará el div suavemente
         }, 3000); // 3000 milisegundos = 3 segundos
+        document.getElementById("filters-form").addEventListener("change", loadTours);
     });
+    
+    // $(document).ready(function(){
+        
+    // });

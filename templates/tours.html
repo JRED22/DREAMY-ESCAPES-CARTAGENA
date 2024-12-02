@@ -4,12 +4,12 @@
 
 
 {% block content %}
-<div style="padding-top: 3rem;"></div>
-<div class="container py-5">
+<div style="padding-top: 5rem;"></div>
+<div class="container">
     <header class="text-center mb-0">
-        <h1 class="display-4">Explora Cartagena</h1>
-        <p class="lead">¡Los mejores tours a precios insuperables!</p>
-        <a href="#tours" class="btn btn-warning btn-lg">Ver Tours</a>
+        <h1 class="display-6 lead">Explora Cartagena</h1>
+        <!-- <p class="lead">¡Los mejores tours a precios insuperables!</p>
+        <a href="#tours" class="btn btn-warning btn-lg">Ver Tours</a> -->
     </header>
   </div>
   
@@ -17,7 +17,7 @@
     <div class="container">
     
         <ol class="breadcrumb justify-content-left mb-0">
-            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="/">Inicio</a></li>
             <li class="breadcrumb-item"><a href="#">{{titulo }}</a></li>
         </ol>    
           <!-- <p class="lead text-body-secondary px-5 " style="text-align: justify;">
@@ -26,19 +26,19 @@
        
     </div> 
   
-        <div class="container py-5">
+        <div class="container py-5" style="background-color:#FFFFFF;">
             <div class="row " >
                 <!-- Filtros en la columna izquierda -->
-                <div class="col-lg-3 col-12 filters">
+                <div class="col-lg-3 col-12 filters shadow p-3 mb-5 bg-body rounded ">
                     <h5>Filtrar por</h5>
                     <form id="filters-form" class="row">
                         <!-- Filtro por precio -->
                         <div class="mb-3">
-                            <label for="priceRange" class="form-label">Rango de Precios:</label>
-                            <select id="price" class="form-select">
+                            <label for="precio" class="form-label">Rango de Precios:</label>
+                            <select id="precio" class="form-select">
                                 <option value="">Todos</option>
-                                <option value="low">Bajo</option>
-                                <option value="high">Alto</option>
+                                <option value="low">$100.000-$200.000 COP</option>
+                                <option value="high">$200.000-$400.000 </option>
                             </select>
                         </div>
                         <!-- Filtro por duración -->
@@ -64,8 +64,8 @@
     
                 <!-- Cards de tours en la columna derecha -->
                 <div class="col-lg-9 col-12">
-                    <div class="row">
-                        <div class="row"id="tours-container" >
+                    <div class="row shadow-sm p-3 mb-5 bg-body rounded">
+                        <div class="row"id="tours-container"  >
                                    
                   
                  

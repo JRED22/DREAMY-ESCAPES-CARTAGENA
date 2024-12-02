@@ -328,7 +328,7 @@ background-color: #666;
       }
       
       /* rtl:end:remove */
-    /*-------------------------------------------- Estilo de las tarjetas------------------------------------------------- */
+    /*------------------------------------Estilo de las tarjetas- formulario- tours  ----------------------------------------------- */
    
     #filters-form {
       max-width: 600px;
@@ -337,6 +337,7 @@ background-color: #666;
   #filters-form .form-select {
       background-color: #f8f9fa; /* Fondo claro para el selector */
       transition: border-color 0.3s ease-in-out;
+      font-weight: lighter;
   }
   #filters-form .form-select:focus {
       border-color: #0d6efd; /* Color de borde azul al enfocar */
@@ -349,7 +350,7 @@ background-color: #666;
   #filters-form .btn-primary:hover {
       background-color: #0056b3;
   }
-  
+ 
   .tour-card img {
       height: 150px;
       object-fit: cover;
@@ -372,22 +373,25 @@ background-color: #666;
      font-weight: 400;
     }
     .tour-card .card-text {
-     background-color: #ff8c00;
+     font-weight:700;
+      font-size: 1.3 rem;
     }
     .tour-card .precio {
-
       font-weight:700;
-      font-size: 1.5 rem;
+      font-size: 1.3 rem;
+      margin-bottom: 0;
      }
      .tour-card .duracion {
 
       font-weight:lighter;
       font-size: 0.9rem;
+      margin-bottom: 0;
      }
      .tour-card .descripcion {
 
       font-weight:lighter;
       font-size: 0.9rem;
+   
      }
 
     
@@ -697,4 +701,33 @@ background-color: #666;
 .contact-section a{
   text-decoration: none !important;
   color: #333;
+}
+
+/* --------------------------------breadcrumb  -----------------------------------------------------------------*/
+.breadcrumb a{
+  text-decoration: none !important;;
+}
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
+
+.breadcrumb li {
+  margin-right: 10px;
+}
+
+.breadcrumb li + li:before {
+  content: ">";
+  margin-right: 10px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #757677;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
