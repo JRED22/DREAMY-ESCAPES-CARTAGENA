@@ -18,7 +18,7 @@
             
             <h1 class="display-3"> Dreamy Escapes + Cartagena. </h1>
             <p>"Vive la magia de la ciudad amurallada, donde cada rincón cuenta una historia inolvidable."</p>
-            <p><a class="btn btn-sm btn-warning" style="background-color: #f85959;" href="#">Mas Info...</a></p>
+            <p><a class="btn btn-sm btn-warning"  href="#">Mas Info...</a></p>
           </div>
         </div>
       </div>
@@ -112,9 +112,257 @@
       </div>
     </nav>
   </section>  -->
-  <!-- Sección de tarjetas -->       
+  <!-- Sección de tarjetas --> 
+  <section id="ofertas" class="container my-5">
+    <h2 class="text-center mb-4">Ofertas Destacadas</h2>
+    <div class="row">
+      <!-- Tarjeta 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+          <div class="position-relative">
+            <img src="{{ url_for('static', filename='img/playa.jpg') }}" class="card-img-top" alt="Tour a las Islas">
+            <span class="badge bg-warning position-absolute top-0 start-0 m-2">20% OFF</span>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Tour a las Islas del Rosario</h5>
+            <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> Desde Cartagena</p>
+            <p class="card-text"><span class="text-warning fw-bold">$30 USD</span> por persona</p>
+            <a href="#" class="btn btn-primary">Reservar Ahora</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="position-relative">
+            <img src="{{ url_for('static', filename='img/imgt4.jpg') }}" class="card-img-top" alt="Tour por la Ciudad">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2">¡Nuevo!</span>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Tour por la Ciudad Amurallada</h5>
+            <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> En el corazón histórico</p>
+            <p class="card-text"><span class="text-warning fw-bold">$20 USD</span> por persona</p>
+            <a href="#" class="btn btn-primary">Reservar Ahora</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="position-relative">
+            <img src="{{ url_for('static', filename='img/comid1.jpeg') }}" class="card-img-top" alt="Tour Gastronómico">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">Recomendado</span>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Tour Gastronómico</h5>
+            <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> Platos típicos y exóticos</p>
+            <p class="card-text"><span class="text-warning fw-bold">$40 USD</span> por persona</p>
+            <a href="#" class="btn btn-primary">Reservar Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+<!-- ------------------------------------fin section ------------------------------------------------------------->
+  <br><br>
+  <div class="container">
+    <div class="row justify-content-start mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate fadeInUp ftco-animated">
+        <span class="subheading">Ofertas Especiales</span>
+        <h2 class="mb-4"><strong>Paquetes</strong>  turísticos  </h2>
+      </div>
+    </div>    		
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm col-md-6 col-lg ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center">
+            <!-- <img src="{{ url_for('static', filename='img/mompox-tr.png') }}" class="card-img-top" alt="Imagen 1"> -->
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-search2"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Paris, Italy</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star-o"></i>
+                  <span>8 Rating</span>
+                </p>
+              </div>
+              <div class="two">
+                <span class="price">$200</span>
+              </div>
+            </div>
+            <p>Far far away, behind the word mountains, far from the countries</p>
+            <p class="days"><span>2 days 3 nights</span></p>
+            <hr>
+            <p class="bottom-area d-flex">
+              <span><i class="icon-map-o"></i> San Franciso, CA</span> 
+              <span class="ml-auto"><a href="#">Discover</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" >
+            
+          </a>
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-search2"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Paris, Italy</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star-o"></i>
+                  <span>8 Rating</span>
+                </p>
+              </div>
+              <div class="two">
+                <span class="price">$200</span>
+              </div>
+            </div>
+            <p>Far far away, behind the word mountains, far from the countries</p>
+            <p class="days"><span>2 days 3 nights</span></p>
+            <hr>
+            <p class="bottom-area d-flex">
+              <span><i class="icon-map-o"></i> San Franciso, CA</span> 
+              <span class="ml-auto"><a href="#">Discover</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-3.jpg);">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-search2"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Paris, Italy</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star-o"></i>
+                  <span>8 Rating</span>
+                </p>
+              </div>
+              <div class="two">
+                <span class="price">$200</span>
+              </div>
+            </div>
+            <p>Far far away, behind the word mountains, far from the countries</p>
+            <p class="days"><span>2 days 3 nights</span></p>
+            <hr>
+            <p class="bottom-area d-flex">
+              <span><i class="icon-map-o"></i> San Franciso, CA</span> 
+              <span class="ml-auto"><a href="#">Discover</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-4.jpg);">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-search2"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Paris, Italy</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star-o"></i>
+                  <span>8 Rating</span>
+                </p>
+              </div>
+              <div class="two">
+                <span class="price">$200</span>
+              </div>
+            </div>
+            <p>Far far away, behind the word mountains, far from the countries</p>
+            <p class="days"><span>2 days 3 nights</span></p>
+            <hr>
+            <p class="bottom-area d-flex">
+              <span><i class="icon-map-o"></i> San Franciso, CA</span> 
+              <span class="ml-auto"><a href="#">Discover</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate fadeInUp ftco-animated">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-5.jpg);">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-search2"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Paris, Italy</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star-o"></i>
+                  <span>8 Rating</span>
+                </p>
+              </div>
+              <div class="two">
+                <span class="price">$200</span>
+              </div>
+            </div>
+            <p>Far far away, behind the word mountains, far from the countries</p>
+            <p class="days"><span>2 days 3 nights</span></p>
+            <hr>
+            <p class="bottom-area d-flex">
+              <span><i class="icon-map-o"></i> San Franciso, CA</span> 
+              <span class="ml-auto"><a href="#">Discover</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
   <!-- Card - index -->
-  <div class="container mt-5">
+  <!-- <div class="container mt-5">
     <div class="row">
         <div class="col-md-4">
             <div class="card custom-index">
@@ -162,27 +410,27 @@
             </div>
         </div>
     </div>
-  </div>
+  </div> -->
   <!-- fin card index -->
   <!-- START THE FEATURETTES -->      
   <div class="container mt-5">  
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-0" style="margin:0 auto">La Muralla de Cartagena <span class="text-body-secondary">Un legado histórico que te cautivará.</span></h2>
-            <p class="lead">
-              La famosa Muralla de Cartagena te transporta al pasado con su imponente estructura que ha resistido siglos de historia. 
-              Un recorrido por sus rincones te lleva a descubrir la historia detrás de esta fortaleza, mientras disfrutas de vistas impresionantes al mar Caribe. ¡Una visita obligada para todos los viajeros!
-            </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <!-- Imagen de la Muralla de Cartagena -->
-            <img src="{{ url_for('static', filename='img/muralla-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Muralla de Cartagena" width="500" height="500">
-          </div>
-        </div>
+    <!-- <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-0" style="margin:0 auto">La Muralla de Cartagena <span class="text-body-secondary">Un legado histórico que te cautivará.</span></h2>
+        <p class="lead">
+          La famosa Muralla de Cartagena te transporta al pasado con su imponente estructura que ha resistido siglos de historia. 
+          Un recorrido por sus rincones te lleva a descubrir la historia detrás de esta fortaleza, mientras disfrutas de vistas impresionantes al mar Caribe. ¡Una visita obligada para todos los viajeros!
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+       Imagen de la Muralla de Cartagena 
+        <img src="{{ url_for('static', filename='img/muralla-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Muralla de Cartagena" width="500" height="500">
+      </div>
+    </div> -->
     
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <!-- <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">Cartagena de Noche <span class="text-body-secondary">La ciudad se ilumina de magia.</span></h2>
             <p class="lead">
@@ -190,14 +438,14 @@
             </p>
           </div>
           <div class="col-md-5">
-            <!-- Imagen de Cartagena de Noche -->
+             Imagen de Cartagena de Noche 
             <img src="{{ url_for('static', filename='img/noche-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="Cartagena de Noche" width="500" height="500">
           </div>
-        </div>
+        </div> -->
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <!-- <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">La Palenquera <span class="text-body-secondary">Una tradición que endulza el alma.</span></h2>
             <p class="lead">
@@ -205,10 +453,10 @@
             </p>
           </div>
           <div class="col-md-5">
-            <!-- Imagen de la Palenquera -->
+            Imagen de la Palenquera 
             <img src="{{ url_for('static', filename='img/palenquera-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Palenquera" width="500" height="500">
           </div>
-        </div>
+        </div> -->
 
 
         <hr class="featurette-divider">

@@ -242,4 +242,3 @@ function mostrarMensaje(mensaje, tipo) {
     mensajeDiv.innerHTML = `<div class="alert alert-${tipo}" role="alert">${mensaje}</div>`;
 }
 // -----------------------------------------------------------restaurantes 
-

@@ -209,23 +209,6 @@ body {
   }
 }
 
-/* -------------------------------NAV INFERIOR ------------------------------------------------- */
-#nav-med{
-background-color: #666;
-
-
-}
-#bottomMenu .nav-link {
-  font-size: 16px;
-  text-align: center;
-  transition: color 0.3s ease;
-  color: #CCCCCC;
-}
-
-#bottomMenu .nav-link:hover {
-  color: #f0a500; /* Color dorado al pasar el mouse */
-}
-
 
 /*** ----------------------------------------------------------Topbar Start ***/
 .fixed-top .container {
@@ -296,7 +279,7 @@ background-color: #666;
    
    } 
   .carousel-caption .btn-warning {
-    background-color: #ff8c00; /* Naranja vibrante */
+    background-color:#f85959; /* Naranja vibrante */
     color: #fff; /* Texto blanco */
     font-size: 1rem; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
@@ -304,6 +287,7 @@ background-color: #666;
     padding: 5px 20px; /* Espaciado interno */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto hover */
+    border: #000408;
   }
   .carousel-caption .btn-warning:hover {
     background-color: #f9d423; /* Cambio a amarillo vibrante al pasar el mouse */
@@ -745,3 +729,117 @@ color: #757677;
 .breadcrumb a:hover {
 text-decoration: underline;
 }
+/* ----------------------------------------------destinos */
+.destination {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px; }
+  @media (max-width: 991.98px) {
+    .destination {
+      margin-bottom: 30px; } }
+ 
+ 
+  .destination .icon {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    opacity: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .destination .icon span {
+      color: #000000; }
+  .destination:hover .icon {
+    opacity: 1; }
+  .destination .text {
+    border: 1px solid #e6e6e6;
+    border-top: 1px solid transparent;
+    background: #fff; }
+    .destination .text h3 {
+      font-size: 18px; }
+      .destination .text h3 a {
+        color: #000000; }
+    .destination .text span.listing {
+      font-size: 14px; }
+    .destination .text .rate i {
+      font-size: 10px;
+      color: #f85959; }
+    .destination .text .rate span {
+      padding-left: 5px;
+      font-size: 10px; }
+    .destination .text .one {
+      width: calc(100% - 70px); }
+    .destination .text .two {
+      width: 70px;
+      text-align: right; }
+      .destination .text .two .price {
+        font-weight: 400;
+        font-size: 18px;
+        color: #2f89fc; }
+      .destination .text .two .per-price {
+        font-size: 20px;
+        line-height: 1.4; }
+        .destination .text .two .per-price small {
+          font-size: 12px; }
+    .destination .text .days span {
+      font-size: 13px;
+      color: black; }
+    .destination .text .bottom-area {
+      margin-bottom: 0; }
+      .destination .text .bottom-area span {
+        font-size: 14px; }
+        @media (min-width: 768px) {
+          .destination .text .bottom-area span:last-child {
+            margin-left: 5px; } }
+        .destination .text .bottom-area span:last-child a {
+          background: #8bc34a;
+          color: #fff;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          border-radius: 4px;
+          padding: 3px 5px; }
+          .destination .text .bottom-area span:last-child a:hover {
+            background: #8bc34a;
+            color: #fff; }
+
+  /* ----------------------------------------------------estiquetas*/
+ 
+ 
+  #ofertas h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+  }
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .btn-primary {
+    background-color: #007BFF;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+
