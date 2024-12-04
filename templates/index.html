@@ -1,62 +1,69 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-
-<!-- Carrusel que abarca toda la página -->
-<div id="myCarousel" class="carousel slide mt-0" data-bs-ride="carousel">
+<div id="myCarousel" class="carousel slide mt-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
-    <div class="carousel-item active">
-        <img src="{{ url_for('static', filename='img/img1.jpg') }}" class="d-block w-100" alt="Imagen 1">
-        <div class="overlay"></div>
-        <div class="carousel-caption">
-            <h1 class="display-3">Dreamy Escapes + Cartagena</h1>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url_for ('static',filename = 'img/bg_1.jpg') }}"   class="d-block w-100" alt="Imagen 1"> 
+        <div class="overlay"></div>     
+          <div class="container">
+          <div class="carousel-caption text-start">
+            
+            <h1 class="display-3"> Dreamy Escapes + Cartagena. </h1>
             <p>"Vive la magia de la ciudad amurallada, donde cada rincón cuenta una historia inolvidable."</p>
-            <!-- Botón enlazado a la página 'tours.html' -->
-            <a class="btn btn-sm btn-warning" href="{{ url_for('tours') }}">Ir a Tours</a>
+            <p><a class="btn btn-sm btn-warning" style="background-color: #f85959;" href="#">Mas Info...</a></p>
+          </div>
         </div>
-    </div>
-        <div class="carousel-item">
-        <img src="{{ url_for ('static',filename = 'img/img2.jpg') }}" class="d-block w-100" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for ('static',filename = 'img/img_c.jpg') }}" class="d-block w-100" alt="Imagen 1">    
         <div class="overlay"></div>
-        <div class="container">
-            <div class="carousel-caption text-end">
-                <h1 class="display-3">Playa Relax</h1>
-                <p>"Sumérgete en las aguas cristalinas de las Islas del Rosario y disfruta del lujo que solo Dreamy Escapes puede ofrecerte."</p>
-                <!-- Botón enlazado a la página 'destino.html' -->
-            <a class="btn btn-sm btn-warning" href="{{ url_for('destino') }}">Ir a destinos</a>
-                
-            </div>
+                <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 class="display-3">Playa Relax </h1>
+            <p>"Sumérgete en las aguas cristalinas de las Islas del Rosario y disfruta del lujo que solo Dreamy Escapes puede ofrecerte."</p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
+          </div>
         </div>
-    </div>
-        <div class="carousel-item">
-        <img src="{{ url_for ('static', filename='img/img4.jpg') }}" class="d-block w-100" alt="Imagen 1">
-        <div class="overlay"></div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for ('static',filename = 'img/img-sl.jpeg') }}"     class="d-block w-100" alt="Imagen 1">   
+        <div class="overlay"></div> 
         <div class="container">
-            <div class="carousel-caption text-end">
-                <h1 class="display-3">Gastronomía y Cultura</h1>
-                <p>"Saborea los sabores únicos del Caribe colombiano. Te llevamos a los mejores rincones gastronómicos y culturales."</p>
-                <!-- Botón enlazado a la página 'restaurantes.html' -->
-                <p><a class="btn btn-sm btn-warning" href="{{ url_for('restaurantes') }}">Ir a Restaurantes</a></p>
-            </div>
+          <div class="carousel-caption text-end">
+            <h1 class="display-3">Patrimonio Histórico</h1>
+            <p>"Descubre la historia detrás de cada piedra en Cartagena, te llevaremos al corazón del Caribe"</p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
+          </div>
         </div>
-    </div>
-    <div class="carousel-item">
-        <img src="{{ url_for('static', filename='img/img6.jpg') }}" class="d-block w-100" alt="Imagen 6">
-        <div class="overlay"></div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for ('static',filename = 'img/pez_sl.jpg') }}"      class="d-block w-100" alt="Imagen 1">   
+        <div class="overlay"></div> 
         <div class="container">
-            <div class="carousel-caption text-end">
-                <h1 class="display-3">La Mejor Rumba</h1>
-                <p>"Tu próxima aventura comienza aquí. Reserva con Dreamy Escapes Cartagena y vive momentos inolvidables."</p>
-                <!-- Botón enlazado a la página 'bardisco.html' -->
-                <a class="btn btn-sm btn-warning" href="{{ url_for('bardisco') }}">Ir a BarDisco</a>
-            </div>
+          <div class="carousel-caption text-end">
+            <h1 class="display-3">Gastronomía y Cultura</h1>
+            <p>"Saborea los sabores únicos del Caribe colombiano. Te llevamos a los mejores rincones gastronómicos y culturales."</p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for ('static',filename = 'img/img6.jpg') }}"    class="d-block w-100" alt="Imagen 1">   
+        <div class="overlay"></div> 
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 class="display-3">Reserva Ahora</h1>
+            <p>"Tu próxima aventura comienza aquí. Reserva con Dreamy Escapes Cartagena y vive momentos inolvidables."</p>
+            <p><a class="btn btn-sm btn-warning" href="#">Mas Info...</a></p>
+          </div>
         </div>
       </div>
     </div>
@@ -69,13 +76,13 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <section style="display: none;">
+ <!-- <section >
     <nav class="navbar navbar-expand-lg navbar-dark mb-1  nav col-12 col-md-auto mb-2 justify-content-center mb-md-" id="nav-med"> 
       <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Dreamy</a>
+        <a class="navbar-brand" href="#">Dreamy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button> -->
+        </button> 
         <div class="collapse navbar-collapse" id="bottomMenu">
           <div class="navbar-nav pl-5">
             <li class="nav-item dropdown">
@@ -104,10 +111,10 @@
         </div>
       </div>
     </nav>
-</section> 
-
-<!-- Sección de tarjetas -->
-<div class="container mt-5">
+  </section>  -->
+  <!-- Sección de tarjetas -->       
+  <!-- Card - index -->
+  <div class="container mt-5">
     <div class="row">
         <div class="col-md-4">
             <div class="card custom-index">
@@ -115,10 +122,12 @@
                 <div class="card-body">
                     <h5 class="card-title">¿Qué Hacer fuera de Cartagena?</h5>
                     <h6 class="card-subtitle  text-muted">Santa Cruz de Mompox, Bolívar</h6>
-                    <p class="card-text">Descubre los templos históricos de Mompox, como la Iglesia de San Francisco y la Casa de los Apóstoles, y explora sus talleres de filigrana. En octubre, disfruta del Festival de Jazz, que celebra la música, la cultura y la gastronomía local.</p>
-                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    <p class="card-text">Descubre los templos históricos de Mompox, como la Iglesia de San Francisco y la Casa de los Apóstoles, y explora sus talleres de filigrana. En octubre, disfruta del Festival de Jazz, que celebra la música, la cultura y la gastronomía local.
+                      .</p>
+                      <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         Ver más
                     </button>
+                    
                 </div>
             </div>
         </div>
@@ -126,33 +135,84 @@
             <div class="card custom-index">
                 <img src="{{ url_for('static', filename='img/cienaga-tr.png') }}" class="card-img-top" alt="Imagen 2">
                 <div class="card-body">
-                    <h5 class="card-title">Biodiversidad y Naturaleza</h5>
-                    <h6 class="card-subtitle text-muted">La Ciénaga de Zapatos</h6>
-                    <p class="card-text">
-                        Ubicada en el corazón del Magdalena, esta ciénaga es un paraíso para los amantes de la naturaleza. Ideal para avistamiento de aves, disfrutar de un ecosistema único y realizar paseos en lancha por sus aguas tranquilas.
-                    </p>
-                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                        Ver más
-                    </button>
+                  <h5 class="card-title">Biodiversidad y Naturaleza</h5>
+                  <h6 class="card-subtitle text-muted">La Ciénaga de Zapatos</h6>
+                  <p class="card-text">
+                    Ubicada en el corazón del Magdalena, esta ciénaga es un paraíso para los amantes de la naturaleza. Ideal para avistamiento de aves, disfrutar de un ecosistema único y realizar paseos en lancha por sus aguas tranquilas.
+                  </p>
+                  <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    Ver más
+                </button>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card custom-index">
-                <img src="{{ url_for('static', filename='img/corales-tr.png') }}" class="card-img-top" alt="Imagen 3">
+                <img src="{{ url_for('static', filename='img/corales-tr.png') }}"  class="card-img-top" alt="Imagen 3">
                 <div class="card-body">
-                    <h5 class="card-title">Aventura Acuática</h5>
-                    <h6 class="card-subtitle text-muted">Islas del Rosario</h6>
-                    <p class="card-text">
-                        Un conjunto de islas ideales para el buceo, el esnórquel y otras actividades acuáticas. Vive la experiencia única de nadar entre los corales más impresionantes del Caribe colombiano.
-                    </p>
-                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                        Ver más
-                    </button>
+                  <h5 class="card-title">Aventura Acuática</h5>
+                  <h6 class="card-subtitle  text-muted">Parque Nacional Natural Corales del Rosario</h6>
+                  <p class="card-text">
+                    Disfruta de un paraíso tropical lleno de vida marina. Navega entre las islas y explora los hermosos arrecifes coralinos. Un destino ideal para el buceo, snorkeling y relajarse en sus tranquilas playas de arena blanca.
+                  </p>
+                  <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    Ver más
+                </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+  </div>
+  <!-- fin card index -->
+  <!-- START THE FEATURETTES -->      
+  <div class="container mt-5">  
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-0" style="margin:0 auto">La Muralla de Cartagena <span class="text-body-secondary">Un legado histórico que te cautivará.</span></h2>
+            <p class="lead">
+              La famosa Muralla de Cartagena te transporta al pasado con su imponente estructura que ha resistido siglos de historia. 
+              Un recorrido por sus rincones te lleva a descubrir la historia detrás de esta fortaleza, mientras disfrutas de vistas impresionantes al mar Caribe. ¡Una visita obligada para todos los viajeros!
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <!-- Imagen de la Muralla de Cartagena -->
+            <img src="{{ url_for('static', filename='img/muralla-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Muralla de Cartagena" width="500" height="500">
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
 
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">Cartagena de Noche <span class="text-body-secondary">La ciudad se ilumina de magia.</span></h2>
+            <p class="lead">
+              Al caer la noche, Cartagena se transforma. Las calles empedradas y las plazas se llenan de vida, música y color. La brisa fresca del Caribe te acompaña mientras disfrutas de la gastronomía local y la vista a la bahía iluminada. ¡Un espectáculo que no puedes perderte!
+            </p>
+          </div>
+          <div class="col-md-5">
+            <!-- Imagen de Cartagena de Noche -->
+            <img src="{{ url_for('static', filename='img/noche-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="Cartagena de Noche" width="500" height="500">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1" style="margin:0 auto">La Palenquera <span class="text-body-secondary">Una tradición que endulza el alma.</span></h2>
+            <p class="lead">
+              La figura de la Palenquera es un símbolo icónico de Cartagena. Con sus coloridos trajes y su sonrisa radiante, esta mujer representa la cultura, la tradición y la calidez del pueblo cartagenero. No dejes de conocer a estas mujeres que, con su fruta fresca, mantienen viva una tradición ancestral.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <!-- Imagen de la Palenquera -->
+            <img src="{{ url_for('static', filename='img/palenquera-ad.png') }}" class="featurette-image img-fluid mx-auto" alt="La Palenquera" width="500" height="500">
+          </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+  </div>     
+  <!-- /END THE FEATURETTES -->
+</div><!-- /.container -->
 {% endblock %}
