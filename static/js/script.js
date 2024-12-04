@@ -14,18 +14,6 @@
  //  });
 
 
-// Filtrar tarjetas según el rango de precios
-function filterRestaurants(priceRange) {
-    const cards = document.querySelectorAll('#restaurants .restaurant-card'); // Selección específica
-    cards.forEach(card => {
-        if (priceRange === 'all' || card.classList.contains(priceRange)) {
-            card.style.display = 'flex'; // 'flex' mantiene el diseño
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
 
 //----------------------------------------------- Ajax para carga de Archivoa ------------------------------------------------
 
@@ -96,9 +84,109 @@ async function cargar(pagina) {
             .catch(error => console.error("Error al cargar los tours:", error));
     }
     
- 
+    // --------------------------------------------------------------------restaurantes 
+    function filtrar_restaurantes() {
+        // Obtener valores de los filtros
+        const categoria = document.getElementById('categoria_restaurantes').value;
+        const precioMax = document.getElementById('precio_restaurantes').value;
+    //alert(precioMax);
+        // Obtener todas las tarjetas
+        const tarjetas = document.querySelectorAll('.card-item');
+    
+        tarjetas.forEach(tarjeta => {
+            // Obtener atributos de cada tarjeta
+            const tarjetaCategoria = tarjeta.getAttribute('data-category');
+            const tarjetadiscoprecio = tarjeta.getAttribute('data-price');
+      //alert(tarjetaCategoria);
+            // Condiciones de filtrado
+            const cumpleCategoria = categoria === "" || tarjetaCategoria === categoria;
+            const cumplePrecio = precioMax === "" || tarjetadiscoprecio == precioMax;
+    
+            // Mostrar u ocultar tarjetas según las condiciones
+            if (cumpleCategoria && cumplePrecio) {
+                tarjeta.style.display = 'block';
+            } else {
+                tarjeta.style.display = 'none';
+            }
+        });
+    }
+    
+    // Asociar eventos de cambio a los filtros
+    //document.getElementById('filterCategory').addEventListener('change', filtrarTarjetas);
+    //document.getElementById('filterPrice').addEventListener('change', filtrarTarjetas);
+    
     
    
+// --------------------------------------------------------------------bar disco 
+function filtrarbardisco() {
+    
+    // Obtener valores de los filtros
+    // const categoria = document.getElementById('filterCategory').value;
+    const precio_bar= document.getElementById('precio_bar').value;
+    
+    // Obtener todas las tarjetas
+    const tarjetas_sitios = document.querySelectorAll('.card_bardisco');
+
+   
+       
+       tarjetas_sitios.forEach(tarjetas_sitios => {
+        // Obtener atributos de cada tarjeta
+        
+        //const tarjetaCategoria = tarjeta.getAttribute('data-category');
+        const tarjetadiscoprecio = tarjetas_sitios.getAttribute('data-preciodisco');
+        //alert(tarjetadiscoprecio);
+        // Condiciones de filtrado
+        const cumplePrecio = precio_bar === "" || tarjetadiscoprecio==(precio_bar);
+
+        // Mostrar u ocultar tarjetas según las condiciones
+        if ( cumplePrecio) {
+            tarjetas_sitios.style.display = 'block';
+        } else {
+            tarjetas_sitios.style.display = 'none';
+        }
+    });
+}
+
+// Asociar eventos de cambio a los filtros
+//document.getElementById('filterCategory').addEventListener('change', filtrarTarjetas);
+//document.getElementById('filterPrice').addEventListener('change', filtrarTarjetas);
+
+// --------------------------------------------------------------------sitios turisticos
+function filtrarsitios() {
+    
+    // Obtener valores de los filtros
+    const categoria_sitios = document.getElementById('categorias_sitios').value;
+    const precio_sitios= document.getElementById('precio_sitios').value;
+    
+    
+    // Obtener todas las tarjetas
+    const tarjetas_sitios = document.querySelectorAll('.card_sitios_t');
+
+    //alert (tarjetas_sitios);
+       
+       tarjetas_sitios.forEach(tarjetas_sitios => {
+        // Obtener atributos de cada tarjeta
+        
+        const tarjetaCategoriasitios = tarjetas_sitios.getAttribute('data-categoriasitios');
+        const tarjetapreciositio = tarjetas_sitios.getAttribute('data-preciositios');
+      
+        // Condiciones de filtrado
+        const cumpleCategoria = categoria_sitios  === "" || tarjetaCategoriasitios  === categoria_sitios;
+        const cumplePrecio = precio_sitios === "" || tarjetapreciositio==(precio_sitios);
+
+        // Mostrar u ocultar tarjetas según las condiciones
+        if ( cumpleCategoria && cumplePrecio) {
+            tarjetas_sitios.style.display = 'block';
+        } else {
+            tarjetas_sitios.style.display = 'none';
+        }
+    });
+}
+
+// Asociar eventos de cambio a los filtros
+//document.getElementById('filterCategory').addEventListener('change', filtrarTarjetas);
+//document.getElementById('filterPrice').addEventListener('change', filtrarTarjetas);
+
 
 // //-------------------------agregar un tours
 document.getElementById('guardar-btn').addEventListener('click', () => {
@@ -153,55 +241,5 @@ function mostrarMensaje(mensaje, tipo) {
     const mensajeDiv = document.getElementById('mensaje_add');
     mensajeDiv.innerHTML = `<div class="alert alert-${tipo}" role="alert">${mensaje}</div>`;
 }
+// -----------------------------------------------------------restaurantes 
 
-//------------------------------------------Sitios turisticos-----------------------------------
-document.addEventListener('DOMContentLoaded', () => {
-    const filtersForm = document.getElementById('filters-form');
-    const cards = document.querySelectorAll('.site-card'); // Selecciona todas las tarjetas
-
-    filtersForm.addEventListener('change', () => {
-        const priceFilter = document.getElementById('price').value;
-        const categoryFilter = document.getElementById('category').value;
-
-        cards.forEach(card => {
-            const matchesPrice = !priceFilter || card.dataset.price <= priceFilter;
-            const matchesCategory = !categoryFilter || card.dataset.category === categoryFilter;
-
-            // Mostrar u ocultar la tarjeta dependiendo de los filtros seleccionados
-            card.style.display = matchesPrice && matchesCategory ? 'block' : 'none';
-        });
-    });
-});
-// Asegúrate de que el DOM esté cargado antes de ejecutar el código
-//------------------------------destinoa turisticos 
-document.addEventListener('DOMContentLoaded', () => {
-const filtersForm = document.getElementById('form_sitios_turisticos'); // Formulario de filtros
-const cards = document.querySelectorAll('#sites-container .col-md-4'); // Tarjetas de sitios turísticos
-
-filtersForm.addEventListener('change', () => {
-    const priceFilter = document.getElementById('precio_sitios').value; // Valor del filtro por precio
-    const categoryFilter = document.getElementById('categorias_sitios').value; // Valor del filtro por categoría
-
-    cards.forEach(card => {
-        const matchesPrice = !priceFilter || card.dataset.price === priceFilter; // Coincidencia por precio
-        const matchesCategory = !categoryFilter || card.dataset.category === categoryFilter; // Coincidencia por categoría
-
-        // Mostrar u ocultar la tarjeta dependiendo de los filtros
-        card.style.display = matchesPrice && matchesCategory ? 'block' : 'none';
-    });
-});
-});
-document.addEventListener('DOMContentLoaded', () => {
-const filtersForm = document.getElementById('filters-form');
-const cards = document.querySelectorAll('#bars-container .col-md-4');
-
-filtersForm.addEventListener('change', () => {
-    const priceFilter = document.getElementById('price').value;
-
-    cards.forEach(card => {
-        const matchesPrice = !priceFilter || card.dataset.price === priceFilter;
-
-        card.style.display = matchesPrice ? 'block' : 'none';
-    });
-});
-});

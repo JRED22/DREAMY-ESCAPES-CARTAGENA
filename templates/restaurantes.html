@@ -12,7 +12,7 @@
                 <!-- Filtro por precio -->
                 <div class="mb-3">
                     <label for="precio_restaurantes" class="form-label">Precio</label>
-                    <select id="precio_restaurantes" class="form-select">
+                    <select id="precio_restaurantes" class="form-select" onchange="filtrar_restaurantes()">
                         <option value="">Todos</option>
                         <option value="economico">Económico</option>
                         <option value="medio">Medio</option>
@@ -21,8 +21,8 @@
                 </div>
                 <!-- Filtro por categoría -->
                 <div class="mb-3">
-                    <label for="restaurants-container" class="form-label">Categoría</label>
-                    <select id="restaurants-container" class="form-select">
+                    <label for="categoria_restaurantes" class="form-label">Categoría</label>
+                    <select id="categoria_restaurantes" class="form-select" onchange="filtrar_restaurantes()">
                         <option value="">Todas</option>
                         <option value="caribena">Caribeña</option>
                         <option value="latina">Latina</option>
@@ -36,9 +36,9 @@
 
         <!-- Restaurantes -->
         <div class="col-lg-9 col-12">
-            <div class="row" id="restaurants-container">
+            <div class="row" id="cards-container">
                 <!-- Restaurante Espíritu Santo -->
-                <div class="col-md-4 mb-3" data-price="economico" data-category="caribena">
+                <div class="col-md-4 mb-3 card-item" data-price="economico" data-category="mariscos">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/restaurante-espiritu-santo.jpg') }}" class="card-img-top" alt="Restaurante Espíritu Santo">
                         <div class="card-body">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <!-- Restaurante Donde Magola -->
-                <div class="col-md-4 mb-3" data-price="economico" data-category="caribena">
+                <div class="col-md-4 mb-3 card-item" data-price="economico" data-category="latina">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/restaurante-donde-magola.jpg') }}" class="card-img-top" alt="Restaurante Donde Magola">
                         <div class="card-body">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <!-- La Cocina de Pepina -->
-                <div class="col-md-4 mb-3" data-price="medio" data-category="caribena">
+                <div class="col-md-4 mb-3 card-item" data-price="medio" data-category="caribena">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/la-cocina-de-pepina.jpg') }}" class="card-img-top" alt="La Cocina de Pepina">
                         <div class="card-body">
@@ -74,8 +74,8 @@
                     </div>
                 </div>
                 <!-- Restaurante La Mulata -->
-                <div class="col-md-4 mb-3" data-price="medio" data-category="caribena">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="medio" data-category="fusion">
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/restaurante-la-mulata.jpg') }}" class="card-img-top" alt="Restaurante La Mulata">
                         <div class="card-body">
                             <h5 class="card-title">Restaurante La Mulata</h5>
@@ -86,8 +86,8 @@
                     </div>
                 </div>
                 <!-- Restaurante Cande -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="colombiana">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="alto" data-category="colombiana">
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/restaurante-cande.jpg') }}" class="card-img-top" alt="Restaurante Cande">
                         <div class="card-body">
                             <h5 class="card-title">Restaurante Cande</h5>
@@ -98,8 +98,8 @@
                     </div>
                 </div>
                 <!-- Restaurante Cuba 1940 -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="latina">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="alto" data-category="latina" >
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/restaurante-cuba-1940.jpg') }}" class="card-img-top" alt="Restaurante Cuba 1940">
                         <div class="card-body">
                             <h5 class="card-title">Cuba 1940 – Plaza de San Diego</h5>
@@ -110,8 +110,8 @@
                     </div>
                 </div>
                 <!-- Restaurante María Cocina Italiana -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="latina">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="alto" data-category="latina">
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/maria-cocina-italiana.jpg') }}" class="card-img-top" alt="Restaurante María Cocina Italiana">
                         <div class="card-body">
                             <h5 class="card-title">María Cocina Italiana</h5>
@@ -122,8 +122,8 @@
                     </div>
                 </div>
                 <!-- Restaurante Celele -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="caribena">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="alto" data-category="caribena">
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/restaurante-celele.jpg') }}" class="card-img-top" alt="Restaurante Celele">
                         <div class="card-body">
                             <h5 class="card-title">Restaurante Celele</h5>
@@ -134,8 +134,8 @@
                     </div>
                 </div>
                 <!-- Restaurante Carmen Cartagena -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="fusion">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="economico" data-category="fusion">
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/restaurante-carmen.jpg') }}" class="card-img-top" alt="Restaurante Carmen Cartagena">
                         <div class="card-body">
                             <h5 class="card-title">Restaurante Carmen Cartagena</h5>
@@ -146,8 +146,8 @@
                     </div>
                 </div>
                 <!-- Restaurante Harry's Cartagena -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="fusion">
-                    <div class="card">
+                <div class="col-md-4 mb-3 card-item" data-price="medio" data-category="fusion">
+                    <div class="card ">
                         <img src="{{ url_for('static', filename='img/restaurante-harrys.jpg') }}" class="card-img-top" alt="Restaurante Harry's Cartagena">
                         <div class="card-body">
                             <h5 class="card-title">Harry's Cartagena</h5>

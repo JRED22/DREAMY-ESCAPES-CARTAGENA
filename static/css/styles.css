@@ -32,7 +32,7 @@ body {
     font-weight: 400;
     outline: none;
     transition: .5s;
-    color: #4d4d4d;
+    color: #ffffff;
    
 }
 
@@ -159,9 +159,10 @@ body {
         width: 100%;
         top: 0;
         left: 0;
-        border-bottom: 2px solid rgba(12, 12, 12, 0.1);
+        border-bottom: 1px solid rgba(12, 12, 12, 0.1);
         z-index: 999;
-        background-color: #ffffff;
+       
+       background-color: #7c0e0e; 
      
     }
     

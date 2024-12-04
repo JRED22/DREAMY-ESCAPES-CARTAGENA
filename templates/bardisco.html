@@ -11,7 +11,7 @@
                 <!-- Filtro por precio -->
                 <div class="mb-3">
                     <label for="precio_bar" class="form-label">Precio</label>
-                    <select id="precio_bar" class="form-select">
+                    <select id="precio_bar" class="form-select" onchange=" filtrarbardisco()">
                         <option value="">Todos</option>
                         <option value="economico">Económico</option>
                         <option value="medio">Medio</option>
@@ -25,7 +25,7 @@
         <div class="col-lg-9 col-12">
             <div class="row" id="bars-container">
                 <!-- Alquímico -->
-                <div class="col-md-4 mb-3" data-price="medio">
+                <div class="col-md-4 mb-3 card_bardisco" data-preciodisco="medio" >
                     <div class="card">
                         <img src="/static/img/alquimico.jpg" class="card-img-top" alt="Alquímico Bar">
                         <div class="card-body">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <!-- El Barón -->
-                <div class="col-md-4 mb-3" data-price="medio">
+                <div class="col-md-4 mb-3 card_bardisco" data-preciodisco="economico">
                     <div class="card">
                         <img src="/static/img/el-baron.jpg" class="card-img-top" alt="El Barón">
                         <div class="card-body">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <!-- Cafe Havana -->
-                <div class="col-md-4 mb-3" data-price="medio">
+                <div class="col-md-4 mb-3 card_bardisco" data-preciodisco="alto">
                     <div class="card">
                         <img src="/static/img/cafe-havana.jpg" class="card-img-top" alt="Cafe Havana">
                         <div class="card-body">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <!-- Arsenal -->
-                <div class="col-md-4 mb-3" data-price="medio">
+                <div class="col-md-4 mb-3 card_bardisco" data-preciodisco="medio">
                     <div class="card">
                         <img src="/static/img/arsenal.jpg" class="card-img-top" alt="Arsenal: The Rum Box">
                         <div class="card-body">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <!-- Mondo -->
-                <div class="col-md-4 mb-3" data-price="economico">
+                <div class="col-md-4 mb-3 card_bardisco" data-preciodisco="economico">
                     <div class="card">
                         <img src="/static/img/mondo.jpg" class="card-img-top" alt="Mondo Cocktail Bar">
                         <div class="card-body">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <!-- El Mirador -->
-                <div class="col-md-4 mb-3" data-price="medio">
+                <div class="col-md-4 mb-3 card_bardisco" data-preciodisco="economico">
                     <div class="card">
                         <img src="/static/img/mirador.jpg" class="card-img-top" alt="El Mirador">
                         <div class="card-body">

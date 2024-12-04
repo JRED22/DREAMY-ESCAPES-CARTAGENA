@@ -12,7 +12,7 @@
                 <!-- Filtro por precio -->
                 <div class="mb-3">
                     <label for="precio_sitios" class="form-label">Precio</label>
-                    <select id="precio_sitios" class="form-select">
+                    <select id="precio_sitios" class="form-select" onchange=" filtrarsitios()">
                         <option value="">Todos</option>
                         <option value="gratis">Gratis</option>
                         <option value="economico">Económico</option>
@@ -23,7 +23,7 @@
                 <!-- Filtro por categoría -->
                 <div class="mb-3">
                     <label for="categorias_sitios" class="form-label">Categoría</label>
-                    <select id="categorias_sitios" class="form-select">
+                    <select id="categorias_sitios" class="form-select" onchange=" filtrarsitios()">
                         <option value="">Todas</option>
                         <option value="historia">Historia</option>
                         <option value="playa">Playa</option>
@@ -38,7 +38,7 @@
         <div class="col-lg-9 col-12">
             <div class="row" id="sites-container">
                 <!-- Ciudad Amurallada -->
-                <div class="col-md-4 mb-3" data-price="gratis" data-category="historia">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="gratis" data-categoriasitios="historia">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/ciudad-amurallada.jpg') }}" class="card-img-top" alt="Ciudad Amurallada">
                         <div class="card-body">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <!-- Castillo de San Felipe -->
-                <div class="col-md-4 mb-3" data-price="economico" data-category="historia">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="economico" data-categoriasitios="historia">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/castillo-san-felipe.jpg') }}" class="card-img-top" alt="Castillo de San Felipe">
                         <div class="card-body">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <!-- Islas del Rosario -->
-                <div class="col-md-4 mb-3" data-price="alto" data-category="playa">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="alto" data-categoriasitios="playa">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/islas-del-rosario.jpg') }}" class="card-img-top" alt="Islas del Rosario">
                         <div class="card-body">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <!-- Playa Blanca -->
-                <div class="col-md-4 mb-3" data-price="gratis" data-category="playa">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="gratis" data-categoriasitios="playa">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/playa-blanca.jpg') }}" class="card-img-top" alt="Playa Blanca">
                         <div class="card-body">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <!-- Cerro de La Popa -->
-                <div class="col-md-4 mb-3" data-price="medio" data-category="historia">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="medio" data-categoriasitios="historia">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/cerro-de-la-popa.jpg') }}" class="card-img-top" alt="Cerro de La Popa">
                         <div class="card-body">
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <!-- Volcán de Lodo El Totumo -->
-                <div class="col-md-4 mb-3" data-price="medio" data-category="aventura">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="medio" data-categoriasitios="aventura">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/volcan-totumo.jpg') }}" class="card-img-top" alt="Volcán El Totumo">
                         <div class="card-body">
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <!-- Muelle de Los Pegasos -->
-                <div class="col-md-4 mb-3" data-price="gratis" data-category="cultura">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="gratis" data-categoriasitios="cultura">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/muelle-pegasos.jpg') }}" class="card-img-top" alt="Muelle de Los Pegasos">
                         <div class="card-body">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <!-- Centro de Convenciones -->
-                <div class="col-md-4 mb-3" data-price="medio" data-category="cultura">
+                <div class="col-md-4 mb-3 card_sitios_t" data-preciositios="medio" data-categoriasitios="cultura">
                     <div class="card">
                         <img src="{{ url_for('static', filename='img/centro-convenciones.jpg') }}" class="card-img-top" alt="Centro de Convenciones">
                         <div class="card-body">
