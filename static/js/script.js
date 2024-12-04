@@ -46,14 +46,14 @@ async function cargar(pagina) {
     }
 
     }
-    // ---------------------------------   funcion ajax tours
+    // ---------------------------------   funcion ajax tours------------------------------------------
     function loadTours() {
         // Obtener los filtros seleccionados
-     
+    //print("Loading");
         const filters = {
-             precio: document.getElementById("precio").value,
-            duration: document.getElementById("duration").value,
-            category: document.getElementById("category").value,
+            precio_tour: document.getElementById("precio_tour").value,
+            duracion_tours: document.getElementById("duracion_tours").value,
+            categoria_tours: document.getElementById("categoria_tours").value,
         };
        
         // Crear query string para la solicitud
@@ -77,12 +77,12 @@ async function cargar(pagina) {
                  
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card tour-card">
-                                    <img src="${tour.image_url}" class="card-img-top" alt="${tour.title}">
+                                    <img src="${tour.image_url}" class="card-img-top" alt="${tour.titulo}">
                                     <div class="card-body">
-                                        <h5 class="card-title">${tour.title}</h5>
-                                        <p class="precio text-success">$${tour.price} COP</p>
-                                         <p class="card-text text-success">$${tour.price*4,374} USD</p>
-                                        <p class="duracion"> ${tour.duration}</p>
+                                        <h5 class="card-title">${tour.titulo}</h5>
+                                        <p class="precio text-success">$${tour.precio_tour} COP</p>
+                                         <p class="card-text text-success">$${tour.precio_tour*4,374} USD</p>
+                                        <p class="duracion"> ${tour.duracion_tours}</p>
                                         <p class="descripcion"> ${tour.description}</p>
                                        
                                         <a href="#" class="btn btn-warning w-100 btn-sm">Reservar</a>
