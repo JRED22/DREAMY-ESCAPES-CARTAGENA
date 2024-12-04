@@ -196,509 +196,533 @@ body {
 }
 
 /* -------------------------------NAV INFERIOR ------------------------------------------------- */
-#nav-med{
-background-color: #666;
-
-
+#nav-med {
+  background-color: #666;
 }
+
 #bottomMenu .nav-link {
-    font-size: 16px;
-    text-align: center;
-    transition: color 0.3s ease;
-    color: #CCCCCC;
+  font-size: 16px;
+  text-align: center;
+  transition: color 0.3s ease;
+  color: #CCCCCC;
 }
 
 #bottomMenu .nav-link:hover {
-    color: #f0a500; /* Color dorado al pasar el mouse */
+  color: #f0a500; /* Color dorado al pasar el mouse */
 }
-
 
 /*** ----------------------------------------------------------Topbar Start ***/
 .fixed-top .container {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .topbar {
-    padding: 2px 10px 2px 20px;
-    background: var(--bs-primary) !important;
+  padding: 2px 10px 2px 20px;
+  background: var(--bs-primary) !important;
 }
 
 .topbar a,
 .topbar a i {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .topbar a:hover,
 .topbar a i:hover {
-    color: var(--bs-secondary) !important;
+  color: var(--bs-secondary) !important;
 }
+
 /* -------------------------------CONFIGURACION CARRUSEL-------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-    margin-bottom: 0rem;
+  margin-bottom: 0rem;
+}
 
-  
-  }
-  /*-------------------------------- letras caption imagenes myCarousel-------------------------------------- */
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  .carousel-item {
-    height: 30rem;
-    background-color: #ffffff;
-    
-  }
-  /*--------------------------------oscurecer las imagenes  -----------------------------------------------*/
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    z-index: 1; /* Asegura que quede encima de la imagen */
-   
-  }
-    /*-------------------------------- Estilo general del texto */
-    .carousel-caption h1 {
-      /*font-size: 3rem; /* Tamaño llamativo */
-      /* font-weight: bold; /* Negrita */
-      /* text-transform: uppercase; /* Mayúsculas */
-       color: #f9d423; /* Color vibrante */
-      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);/* Sombra difusa */ 
-      /* font-family: 'Poppins', sans-serif; Cambia según la fuente deseada */
-       letter-spacing: 2px;/* Espaciado entre letras */
-       animation: fadeInDown 1s ease-in-out;/* Animación suave */
-       color: #fff;
-    } 
-     .carousel-caption p {
-      /* color: #ffffff; Color blanco */
-       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /*Sombra suave */
-       font-family: 'Roboto', sans-serif; /*Fuente moderna */
-      animation: fadeInUp 1.2s ease-in-out;/* Animación para párrafos */
-     
-     } 
-    .carousel-caption .btn-warning {
-      background-color: #ff8c00; /* Naranja vibrante */
-      color: #fff; /* Texto blanco */
-      font-size: 1rem; /* Tamaño del texto */
-      font-weight: bold; /* Negrita */
-      border-radius: 5px; /* Botón redondeado */
-      padding: 5px 20px; /* Espaciado interno */
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-      transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto hover */
-    }
-    .carousel-caption .btn-warning:hover {
-      background-color: #f9d423; /* Cambio a amarillo vibrante al pasar el mouse */
-      transform: scale(1.1); /* Efecto de ampliación */
-    }
-    /* Animaciones carru whatsapp-icon*/
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    /*----------------------- Featurettes---------------------------------------------------------------------------------- */
+/*-------------------------------- letras caption imagenes myCarousel-------------------------------------- */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
 
-    .featurette-divider {
-        margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-      }
-      /* Thin out the marketing headings */
-      /* rtl:begin:remove */
-      .featurette-heading {
-        letter-spacing: -.05rem;
-      }
-      
-      /* rtl:end:remove */
-    /*------------------------------------Estilo de las tarjetas- formulario- tours  ----------------------------------------------- */
-   
-    #filters-form {
-      max-width: 600px;
-      margin: 20px auto; /* Centra el formulario */
-  }
-  #filters-form .form-select {
-      background-color: #f8f9fa; /* Fondo claro para el selector */
-      transition: border-color 0.3s ease-in-out;
-      font-weight: lighter;
-  }
-  #filters-form .form-select:focus {
-      border-color: #0d6efd; /* Color de borde azul al enfocar */
-      box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
-  }
-  #filters-form .btn-primary {
-      background-color: #0d6efd;
-      border: none;
-  }
-  #filters-form .btn-primary:hover {
-      background-color: #0056b3;
-  }
- 
-  .tour-card img {
-      height: 150px;
-      object-fit: cover;
-  }
-  .tour-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .tour-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-    .tour-card .card-body {
-      font-family: "Roboto Condensed", sans-serif;
-    }
-    
-    .tour-card .card-title{
-    
-     height: 3rem;
-     font-size: 1rem;
-     font-weight: 400;
-    }
-    .tour-card .card-text {
-     font-weight:700;
-      font-size: 1.3 rem;
-    }
-    .tour-card .precio {
-      font-weight:700;
-      font-size: 1.3 rem;
-      margin-bottom: 0;
-     }
-     .tour-card .duracion {
+.carousel-item {
+  height: 30rem;
+  background-color: #ffffff;
+}
 
-      font-weight:lighter;
-      font-size: 0.9rem;
-      margin-bottom: 0;
-     }
-     .tour-card .descripcion {
+/*--------------------------------oscurecer las imagenes  -----------------------------------------------*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  z-index: 1; /* Asegura que quede encima de la imagen */
+}
 
-      font-weight:lighter;
-      font-size: 0.9rem;
-   
-     }
+/*-------------------------------- Estilo general del texto */
+.carousel-caption h1 {
+  color: #f9d423; /* Color vibrante */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Sombra difusa */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  animation: fadeInDown 1s ease-in-out; /* Animación suave */
+  color: #fff;
+}
 
-    
-  /* tarjetas del index */
-  .custom-index {
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Para que no se salga el contenido */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 0 5.4rem 0;
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
-    
-  }
-  
-  .custom-index img {
-    width: 100%; /* Ancho completo del contenedor */
-    height: 200px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
-  }
-  .custom-index .card-body {
-    background-color: #ffffff;
-    padding: 1.5rem;
-  }
-  
-  .custom-index:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
-  }
-  .custom-index .card-title {
-    font-size: 1.3rem; /* Tamaño de la fuente del título */
-    color: #333; /* Color del texto */
-    font-weight: 500;
-    padding-bottom: 3em;
-    height: 2rem;
-    text-align:left;
-    /* background-color: #f9d423; */
-    
-  }
-  .custom-index .card-text {
-    font-size: 0.8rem; /* Tamaño de la fuente del texto */
-    color: #666; /* Color del texto */
-    text-align: justify;
-    padding: 1rem;
-    height: 8rem;
-  }
-  .custom-index .card-subtitle{
-    font-weight: 600;
-    text-align:left;
-    font-size: 0.8rem; /* Tamaño de la fuente del texto */
-    height: 1rem;
-    padding-left: 16px;
-  
-    /*background-color: #6528e0;*/
-  }
-  
-  .custom-index .btn {
-    margin-left: 1rem;
-    padding: 0.25rem 2rem ;
-  
-  }
-   /* PAginas header navbarNav */
-  
-   .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img9.jpg), no-repeat center center;
-    background-size: cover;
-  }
-  
-  .page-header-teams{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img10.jpg), no-repeat center center;
-    background-size: cover;
-    
-  }
-  .page-header-transportes{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img11.jpg), no-repeat center center;
-    background-size: cover;
-    object-position: bottom; /* Muestra la parte inferior de la imagen */
-    
-  }
-  /* Estilo para los botones de precio */
-  .price-buttons .btn-price {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* -------------------------------------------------------------Estilo para la imagen dentro del botón */
-  .price-buttons .btn-price img.price-icon {
-    width: 16px;
-    height: auto;
-    margin-right: 8px;
-  }
-  
-  /* --------------------------------------------------------Estilo cuando el usuario pasa el mouse sobre el botón */
-  .price-buttons .btn-price:hover {
-    background-color: #0056b3;
-  }
-  /* -------------------------------------------------------------------------Botón "Mostrar Todos" centrado */
-  /* Revisar este elemento ojo .text-center {   
-    display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-    /* margin-top: 20px; Espaciado superior */
-    /* margin-bottom: 20px; Espaciado inferior */
- /* } */
- .btn-center {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-center:hover {
-    background-color: #e0e0e0; /* Cambia el color al pasar el mouse */
-  }
-  
-  .restaurant-img {
-    width: 20%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  /* .card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    margin: 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  } */
-  
-  .info {
-    flex: 1;
-  }
-  
-  .restaurant-img {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .btn-center {
-    margin: 20px auto; /* Espaciado adicional */
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn-center:hover {
-    background-color: #0056b3;
-  }
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-  
-  .whatsapp-icon {
-    width: 50px;
-    height: 50px;
-  }
+.carousel-caption p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /*Sombra suave */
+  font-family: 'Roboto', sans-serif; /*Fuente moderna */
+  animation: fadeInUp 1.2s ease-in-out; /* Animación para párrafos */
+}
 
-  /* custom Teams */
-.custom-teams{
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 0px;
-    margin-right: 1.2em;
-    height: 18rem;
-   
-  }
-  .custom-teams:hover{
-  
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
-  transform: scale(1.15); /* Aumenta el tamaño al 105% */
-  
-  }
-  .custom-teams .card-header {
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;   /* Centra verticalmente */
+.carousel-caption .btn-warning {
+  background-color: #ff8c00; /* Naranja vibrante */
+  color: #fff; /* Texto blanco */
+  font-size: 1rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  border-radius: 5px; /* Botón redondeado */
+  padding: 5px 20px; /* Espaciado interno */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto hover */
+}
+
+.carousel-caption .btn-warning:hover {
+  background-color: #f9d423; /* Cambio a amarillo vibrante al pasar el mouse */
+  transform: scale(1.1); /* Aumenta el tamaño */
+}
+
+/* -----------------------------------BANNER Y BOTONES-------------------------------------- */
+
+.price-buttons .btn-price {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price-buttons .btn-price:hover {
+  background-color: #0056b3;
+}
+
+.price-buttons .btn-price img.price-icon {
+  width: 16px;
+  height: auto;
+  margin-right: 8px;
+}
+
+/* -------------------------------Botón "Mostrar Todos" centrado */
+.btn-center {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-center:hover {
+  background-color: #e0e0e0;
+}
+
+.restaurant-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* ----------------------------------Equipos y Card------------------------------------------- */
+
+.custom-teams {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0px;
+  margin-right: 1.2em;
+  height: 18rem;
+}
+
+.custom-teams:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.15);
+}
+
+.custom-teams .card-header {
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   border: none;
-  
-  }
-  
-  .custom-teams .card-header img {
-  box-shadow: none; /* Elimina cualquier sombra aplicada */
-  object-fit: contain; /* Escala la imagen para que quepa dentro */
-  width: 7.5rem; /* Ajusta el tamaño de la imagen */
+}
+
+.custom-teams .card-header img {
+  box-shadow: none;
+  object-fit: contain;
+  width: 7.5rem;
   height: 7.5rem;
   margin-top: 0.25rem;
   border: #00A7D0 1px solid;
-  
-  }
-  .custom-teams .card-body {
-    margin-bottom: 3rem;
-    padding: 0 2rem 0 3rem;
-    background-color: #ffffff;
-    font-family: "Roboto Condensed", sans-serif;
-    height: 3rem;
-  }
-  
-  .custom-teams .card-title{
-    text-align: center;
-    padding-top: 0.5rem;
-    font-size: 1.2rem;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight:450;
-    height: 2rem;
-    text-align: center;
-    /* background-color:#00A7D0; */
-  
-  }
-  .custom-teams .card-text{
-    height: 0.1rem;
-    text-align:center;
-    font-size: 0.85rem;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight:180;
-  
-  }
-  .teams-container{
-    background-color: #E5E5E5;
-  
-    padding-bottom: 3rem;
-  }
-  /* .teams-container h1{
-    text-align: center;
-    font-size: 4rem;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight:300;
-    padding-top: 3rem;
-    color: #0B5ED7;
-  } */
-  
-  /* paquete toursauxiliar */
-.package-item {
-    transition: .5s;
-  
-  }
-  
-  .package-item:hover {
-    box-shadow: 0 0 30px #CCCCCC;
-  }
-  .package-item img{
-    height: 3rem;
-    padding-left: 20px;
-  }
-  
-/*** Footer Start ***/
-.footer {
-    background: var(--bs-dark);
 }
+
+.custom-teams .card-body {
+  margin-bottom: 3rem;
+  padding: 0 2rem 0 3rem;
+  background-color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 3rem;
+}
+
+.custom-teams .card-title {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 450;
+  height: 2rem;
+}
+
+.custom-teams .card-text {
+  height: 0.1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 180;
+}
+
+.teams-container {
+  background-color: #E5E5E5;
+  padding-bottom: 3rem;
+}
+
+/* --------------------------Paquete Tours Auxiliar ---------------------------- */
+.package-item {
+  transition: .5s;
+}
+
+.package-item:hover {
+  box-shadow: 0 0 30px #CCCCCC;
+}
+
+.package-item img {
+  height: 3rem;
+  padding-left: 20px;
+}
+
+/* --------------------------Footer------------------------------ */
+.footer {
+  background: var(--bs-dark);
+}
+
 .footer .footer-item a {
-    line-height: 30px;
-    color: var(--bs-white);
-    transition: 0.5s;
+  line-height: 30px;
+  color: var(--bs-white);
+  transition: 0.5s;
 }
 
 .footer .footer-item a:hover {
-    letter-spacing: 2px;
-    color: var(--bs-primary);
+  letter-spacing: 2px;
+  color: var(--bs-primary);
 }
 
-/*** Footer End ***/
-
-/*** copyright Start ***/
+/* --------------------------Copyright----------------------------- */
 .copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark) !important; 
-    padding-left: 15rem;
-    text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bs-dark) !important;
+  padding-left: 15rem;
+  text-align: center;
 }
-/*** copyright end ***/
 
-/*  ---------------------------------------------contactanos----------------------------- */
-.contact-section a{
+/* --------------------------Contactanos----------------------------- */
+.contact-section a {
   text-decoration: none !important;
   color: #333;
+}
+/* General */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+#nav-med {
+  background-color: #343a40;
+}
+#nav-med .nav-link {
+  color: white;
+}
+#nav-med .nav-link:hover {
+  color: #ffc107;
+}
+
+/* Carrusel: pantalla completa */
+#myCarousel {
+  width: 100vw; /* Ancho total */
+  height: 100vh; /* Altura total */
+  position: relative; /* Contenedor relativo */
+  overflow: hidden; /* Ocultar desbordes */
+}
+
+/* Estilo de las imágenes */
+.carousel-item img {
+  width: 100%; /* Ancho total */
+  height: 100vh; /* Altura completa de la ventana */
+  object-fit: cover; /* Ajustar sin deformar */
+}
+
+/* Fondo para destacar contenido */
+.carousel-inner {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)); /* Degradado */
+}
+
+/* Texto sobre el carrusel */
+.carousel-caption {
+  position: absolute;
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Color del texto */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+}
+
+.carousel-caption h1 {
+  font-size: 4rem; /* Títulos grandes */
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem; /* Tamaño del texto */
+}
+
+/* Botones del carrusel */
+.carousel-caption .btn {
+  background-color: #ff5733; /* Botón con color impactante */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.carousel-caption .btn:hover {
+  background-color: #c13d22; /* Oscurecer al pasar */
+}
+
+/* Ocultar bordes no deseados */
+.carousel-indicators {
+  bottom: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Oscurecer imágenes ligeramente */
+  z-index: 1;
+}
+/* Para mejorar la visibilidad de los textos si el fondo es transparente */
+.navbar-nav .nav-link,
+.topbar a {
+  color: rgba(26, 25, 25, 0.8); /* Color blanco con opacidad */
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.topbar a:hover {
+  color: #000805; /* Color de resaltado en hover */
+}
+/* Estilo para el Topbar */
+.topbar {
+  background-color: #000000; /* Fondo negro */
+}
+
+.topbar a {
+  color: #CC9B2B; /* Texto amarillo ocre */
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  color: #131212; /* Enlaces en blanco al pasar el cursor */
+}
+
+/* Estilo para el Navbar */
+.navbar-custom {
+  background-color: #CC9B2B; /* Fondo ocre */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #000000; /* Texto negro */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #ffffff; /* Texto blanco al pasar el cursor */
+}
+
+/* Separa las barras cuando la pantalla es grande */
+@media (min-width: 992px) {
+  .topbar {
+    margin-bottom: 20px; /* Añade margen entre el topbar y navbar en pantallas grandes */
+  }
+}
+
+@media (max-width: 991px) {
+  .topbar {
+    padding-bottom: 10px; /* Menos padding en pantallas pequeñas */
+  }
+
+  .navbar {
+    padding-top: 15px; /* Ajustamos el navbar */
+  }
+}
+
+/* Aseguramos que los elementos dentro del topbar no se monten */
+.topbar .container-fluid,
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Si el navbar sigue colapsando, ajustamos los tamaños de los items */
+.navbar-nav .nav-item {
+  padding-right: 10px; /* Ajusta la separación entre los elementos de la navbar */
+}
+/* Elimina las líneas y bordes no deseados */
+.topbar, .navbar {
+  border: none !important;  /* Asegura que no haya bordes visibles */
+}
+
+/* Fondo transparente para el topbar y navbar */
+.topbar {
+  background-color: transparent !important; /* Asegura que el fondo sea transparente */
+  padding: 1px 0;
+}
+
+.navbar {
+  background-color: transparent !important; /* Asegura que el fondo sea transparente */
+  padding: 20px 0;
+}
+
+/* Separa las barras cuando la pantalla es grande */
+@media (min-width: 992px) {
+  .topbar {
+    margin-bottom: 0px; 
+  }
+}
+
+@media (max-width: 991px) {
+  .topbar {
+    padding-bottom: 5px; /* Menos padding en pantallas pequeñas */
+  }
+
+  .navbar {
+    padding-top: 5px; /* Ajustamos el navbar */
+  }
+}
+
+
+
+.page-header-teams {
+
+  height: 150px; /* Altura del contenedor */
+  display: flex; /* Para centrar contenido con flexbox */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  color: rgb(3, 3, 3); /* Asegura que el texto sea visible */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra al texto */
+}
+
+/* Color general de texto para todo el sitio */
+body {
+  color: #333333; /* Un gris oscuro para texto general */
+  font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente según tu preferencia */
+}
+
+/* Color de texto en el Topbar */
+.topbar {
+  color: #ffffff; /* Blanco en el texto del topbar */
+}
+
+/* Color de texto en la Navbar */
+.navbar {
+  color: #ffffff; /* Blanco en el texto del navbar */
+}
+
+.navbar-nav .nav-item a {
+  color: #ffffff; /* Blanco en los enlaces de la navbar */
+}
+
+.navbar-nav .nav-item a:hover {
+  color: #FFD700; /* Un color dorado cuando el usuario pase el mouse por encima */
+}
+
+/* Personaliza el texto en otras secciones si es necesario */
+h1, h2, h3, h4, h5, h6 {
+  color: #000000; /* Asegura que los encabezados sean de color negro */
+}
+
+a {
+  color: #dddb43; 
+}
+
+a:hover {
+  color: #003366; /* Un tono de azul más oscuro cuando el usuario pase el mouse */
+}
+
+/* Botones */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+.btn-warning:hover {
+  background-color: #ffcc29;
+}
+
+/* Tarjetas */
+.card.custom-index {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card.custom-index:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card-title {
+  color: #343a40;
+}
+.card-subtitle {
+  color: #6c757d;
+}
+
+/* Featurettes */
+.featurette-divider {
+  margin: 2rem 0;
+  border-color: #ffc107;
+}
+.featurette-heading {
+  font-size: 2rem;
+}
+.featurette .lead {
+  color: #6c757d;
 }

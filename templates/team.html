@@ -2,108 +2,51 @@
 
 {% block content %}
 <div class="container-fluid page-header-teams">
-    <div class="container ">
-    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-        <h3 class="display-4 text-white text-uppercase" >{{ titulo }}</h3>
-        <div class="d-inline-flex text-white">
-            <!-- <p class="m-0 text-uppercase" ><a class="text-white" href="">Home</a></p>
-            <i class="fa fa-angle-double-right pt-1 px-3"></i>
-            <p class="m-0 text-uppercase" >Services</p> -->
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <h3 class="display-4 text-black text-uppercase">{{ titulo }}</h3>
+            <div class="d-inline-flex text-white">
+                <!-- Aquí puedes agregar enlaces adicionales si lo necesitas -->
+            </div>
         </div>
-    </div>
     </div>
 </div>
 <div class="container teams-container">
-      
-    <!-- <h1>Teams Talento Tech</h1> -->
-    <!-- <p>En Dreamy Escape + Cartagena , creemos que el verdadero corazón de nuestra innovación reside en nuestro excepcional equipo de programadores. Con una combinación única de creatividad y habilidades técnicas, nuestro equipo trabaja incansablemente para transformar ideas en soluciones digitales efectivas.</p> -->
     <div class="container pt-4">
         <div class="card-group">
             <div class="card text-center custom-teams border rounded-3">   
                 <div class="card-header fs-0">
-                <img src="{{ url_for ('static',filename = 'img/foto2.png') }}" class="card-img-top rounded-circle mx-auto" alt="Foto de perfil">  
+                    <img src="{{ url_for('static', filename='img/foto2.png') }}" class="card-img-top rounded-circle mx-auto" alt="Foto de perfil">  
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title" >Yurani G.</h5>
+                    <h5 class="card-title">Yurani G.</h5>
                     <p class="card-text">CONTADOR PUBLICO</p>
-                    <p >Web Design</p>
+                    <p>Web Design</p>
                     <div class="social-icons">
-                        <a href="#" class=""><i class="bi bi-facebook fs-0"></i></a>
-                        <a href="#" class=""><i class="bi bi-twitter fs-0"></i> </a>
-                        <a href="#" class=""><i class="bi bi-instagram fs-0"></i></a>
-                    <a href="#" class=""><i class="bi bi-whatsapp fs-0 "></i> </a>
+                        <a href="#"><i class="bi bi-facebook fs-0"></i></a>
+                        <a href="#"><i class="bi bi-twitter fs-0"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-0"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp fs-0"></i></a>
                     </div>
                 </div>
             </div>
             <div class="card text-center custom-teams border rounded-3">   
                 <div class="card-header fs-0">
-                <img src="{{ url_for ('static',filename = 'img/foto1.png') }}" class="card-img-top rounded-circle mx-auto" alt="Foto de perfil">  
+                    <img src="{{ url_for('static', filename='img/foto5.png') }}" class="card-img-top rounded-circle mx-auto" alt="Foto de perfil">  
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title" >Thalina C.</h5>
-                    <p class="card-text">ADMINISTRADORA</p>
-                    <p >Web Design</p>
-                    <div class="social-icons">
-                        <a href="#" class=""><i class="bi bi-facebook fs-0"></i></a>
-                        <a href="#" class=""><i class="bi bi-twitter fs-0"></i> </a>
-                        <a href="#" class=""><i class="bi bi-instagram fs-0"></i></a>
-                    <a href="#" class=""><i class="bi bi-whatsapp fs-0 "></i> </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card text-center custom-teams border rounded-3">   
-                <div class="card-header fs-0">
-                <img src="{{ url_for ('static',filename = 'img/foto4.png') }}" class="card-img-top rounded-circle mx-auto" alt="Foto de perfil">  
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title" >Karoly T.</h5>
-                    <p class="card-text">INGENIERA</p>
-                    <p >Web Design</p>
-                    <div class="social-icons">
-                        <a href="#" class=""><i class="bi bi-facebook fs-0"></i></a>
-                        <a href="#" class=""><i class="bi bi-twitter fs-0"></i> </a>
-                        <a href="#" class=""><i class="bi bi-instagram fs-0"></i></a>
-                    <a href="#" class=""><i class="bi bi-whatsapp fs-0 "></i> </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card text-center custom-teams border rounded-3">   
-                <div class="card-header fs-0">
-                <img src="{{ url_for ('static',filename = 'img/foto3.png') }}" class="card-img-top rounded-circle mx-auto" alt="Foto de perfil">  
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title" >Angelica M.</h5>
-                    <p class="card-text">DOCENTE.</p>
-                    <p >Web Design</p>
-                    <div class="social-icons">
-                        <a href="#" class=""><i class="bi bi-facebook fs-0"></i></a>
-                        <a href="#" class=""><i class="bi bi-twitter fs-0"></i> </a>
-                        <a href="#" class=""><i class="bi bi-instagram fs-0"></i></a>
-                    <a href="#" class=""><i class="bi bi-whatsapp fs-0 "></i> </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card text-center custom-teams border rounded-3">   
-                <div class="card-header fs-0">
-                <img src="{{ url_for ('static',filename = 'img/foto5.png') }}" class="card-img-top rounded-circle mx-auto " alt="Foto de perfil">  
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title" >Jhon Rojo</h5>
+                    <h5 class="card-title">Jhon Rojo</h5>
                     <p class="card-text">TECNOLOGO.</p>
-                    <p >Web Design</p>
+                    <p>Web Design</p>
                     <div class="social-icons">
-                        <a href="#" class=""><i class="bi bi-facebook fs-0"></i></a>
-                        <a href="#" class=""><i class="bi bi-twitter fs-0"></i> </a>
-                        <a href="#" class=""><i class="bi bi-instagram fs-0"></i></a>
-                    <a href="#" class=""><i class="bi bi-whatsapp fs-0 "></i> </a>
+                        <a href="#"><i class="bi bi-facebook fs-0"></i></a>
+                        <a href="#"><i class="bi bi-twitter fs-0"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-0"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp fs-0"></i></a>
                     </div>
                 </div>
             </div>
-
+        </div>
     </div>
- </div>
 </div>
 {% endblock %}
