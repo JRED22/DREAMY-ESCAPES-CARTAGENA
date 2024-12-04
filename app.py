@@ -7,9 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html", titulo="Página de Inicio")
 
+
 @app.route('/destinos')
-def destino():
-   
+def destino():  
     return render_template("destinos.html")
 
 
