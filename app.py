@@ -1,7 +1,43 @@
-from flask import Flask, render_template,request,jsonify
+from flask import Flask, render_template,request,jsonify, session
 import json, os,csv
 
 app = Flask(__name__)
+app.secret_key = "yWb2f@QOf77R9hhEX@sFYdt8cc7&LC2S"
+
+# Función para revisar si el usuario está autenticado
+def revisar_sesion():
+  if ('usuario' in session):
+    return True
+  else:
+    return False
+@app.route('/login', methods=['GET'])
+def login_formulario():
+  if revisar_sesion():
+    return render_template("dashboard.html", titulo="Usuarios autenticados")
+  
+  return render_template("login.html", titulo="Ingreso a usuarios")
+
+@app.route('/login', methods=['POST'])
+def login_validar():
+  if revisar_sesion():
+    return render_template("dashboard.html", titulo="Usuarios autenticados")
+  
+  if request.form.get("login") == "admin" and request.form.get(
+      "password") == "123456":
+    session['usuario'] = "admin"
+    return render_template("dashboard.html", titulo="Usuarios autenticados")
+  else:
+    return render_template("login.html", titulo="Usuario no autenticado")
+
+@app.route('/logout')
+def logout():
+  session.pop('usuario', None)
+  return render_template("index.html", titulo="Página de Inicio")
+
+
+
+
+
 
 @app.route('/')
 def index():

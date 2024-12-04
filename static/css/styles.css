@@ -671,7 +671,9 @@ border: #00A7D0 1px solid;
 
 /*** Footer Start ***/
 .footer {
-  background: var(--bs-dark);
+ /* background: var(--bs-dark);*/
+ background-color:#07387D ;
+ 
 }
 .footer .footer-item a {
   line-height: 30px;
@@ -682,6 +684,10 @@ border: #00A7D0 1px solid;
 .footer .footer-item a:hover {
   letter-spacing: 2px;
   color: var(--bs-primary);
+}
+.link_footer a{
+  color: #efb810;
+  display: block !important;
 }
 
 /*** Footer End ***/
