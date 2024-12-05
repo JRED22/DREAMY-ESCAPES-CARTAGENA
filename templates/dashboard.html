@@ -1,7 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Zona de Usuarios Registrados</h1>
-<p>Este espacio es solo para usuarios registrados.</p>
-<a href="/logout">Cerrar sesión</a>
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 sidebar_dashboard d-md-block p-3">
+        <h5 class="text-center">Dashboard Menu</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu1">
+              <li><a class="dropdown-item" href="#" onclick="cargar_servicio('add_tours')">Agregar Tours</a></li>
+              <li><a class="dropdown-item" href="#" onclick="cargar_servicio('listar_tours')">Listar Tours</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Reportes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menu2">
+              <li><a class="dropdown-item" href="#">Generar Reporte</a></li>
+              <li><a class="dropdown-item" href="#">Historial</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Configuración</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-4" id="container_servicios">            
+       
+        
+       </main>
+    </div>
+  </div>
+  
 {% endblock%}

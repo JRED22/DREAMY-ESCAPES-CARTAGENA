@@ -28,7 +28,7 @@ body {
   position: relative;
   padding: 15px 15px;
   /*color: var(--bs-white) !important; /*color letras menu superior fijo*/ 
-  color: #d1bf21 !important;;
+  color: #d1bf21 !important;
   font-size: 17px;
   font-family: "Lato", sans-serif;
   font-weight: 500;
@@ -37,8 +37,10 @@ body {
   transition: .5s;
   margin: 0.5rem;
   
- 
- 
+}
+.fondo_menu {
+  background-color: #07387D;
+  height: 4rem;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -174,9 +176,16 @@ body {
       left: 0;
       border-bottom: 0px solid rgba(12, 12, 12, 0.1);
       z-index: 999;
-     
-   
+    
   }
+  .navbar-light_ {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 0px solid rgba(12, 12, 12, 0.1);
+    z-index: 999;
+}
   
   .sticky-top.navbar-light {
       position: fixed;
@@ -863,3 +872,5 @@ text-decoration: underline;
   .btn-primary:hover {
     background-color: #0056b3;
   }
+
+

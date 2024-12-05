@@ -1,5 +1,6 @@
-from flask import Flask, render_template,request,jsonify, session
-import json, os,csv
+from flask import Flask, render_template,request,jsonify, session,send_from_directory,redirect
+import os,csv
+from PIL import Image
 
 app = Flask(__name__)
 app.secret_key = "yWb2f@QOf77R9hhEX@sFYdt8cc7&LC2S"
@@ -34,14 +35,9 @@ def logout():
   session.pop('usuario', None)
   return render_template("index.html", titulo="Página de Inicio")
 
-
-
-
-
-
 @app.route('/')
 def index():
-    return render_template("index.html", titulo="Página de Inicio")
+    return render_template("index.html", titulo="Página de Inicio",menu="none")
 
 
 @app.route('/destinos')
@@ -118,10 +114,6 @@ def bardisco():
 @app.route('/saludo/<nombre>')
 def saludo_nombre(nombre):
     return "hola, {nombre}"
-
-
-    
-   
 def load_tours():
     tours = []
     with open('data/tours.csv', 'r') as file:
@@ -159,7 +151,7 @@ def get_tours():
 @app.route('/admin', methods=['GET'])
 def mostrar_formulario():
     return render_template('admin.html')
- 
+ #---------------------------------------------------------------------------------tour-----------------------------
 @app.route('/agregar_tour', methods=['POST'])
 def agregar_tour():
     data = request.get_json()
@@ -197,6 +189,13 @@ def agregar_tour():
     except Exception as e:
         print(f"Error al guardar los datos: {e}")
         return jsonify({'success': False, 'message': 'Error al guardar los datos.'}), 500
-    
+@app.route('/add_tours')
+def add_tours():
+    return render_template("add_servicio.html")
+@app.route('/listar_tours')
+def listartours():
+    return render_template("listar_servicio.html")
+
+#------------------------------------------------------------------------------------redimencionar imagenes
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)
