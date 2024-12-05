@@ -28,7 +28,7 @@ body {
   position: relative;
   padding: 15px 15px;
   /*color: var(--bs-white) !important; /*color letras menu superior fijo*/ 
-  color: #F5F4F5 !important;;
+  color: #d1bf21 !important;;
   font-size: 17px;
   font-family: "Lato", sans-serif;
   font-weight: 500;
@@ -211,7 +211,7 @@ body {
 
 
 /*** ----------------------------------------------------------Topbar Start ***/
-.fixed-top .container {
+/*.fixed-top .container {
   transition: 0.5s;
 }
 
@@ -686,11 +686,12 @@ border: #00A7D0 1px solid;
 /*** Footer Start ***/
 .footer {
  /* background: var(--bs-dark);*/
- background-color:#07387D ;
+ background-color:#0e0f01 ;
+ padding: 20px 0;
  
 }
 .footer .footer-item a {
-  line-height: 30px;
+  line-height: 0px;
   color: var(--bs-white);
   transition: 0.5s;
 }
@@ -700,7 +701,7 @@ border: #00A7D0 1px solid;
   color: var(--bs-primary);
 }
 .link_footer a{
-  color: #efb810;
+  color: #d8ae2f;
   display: block !important;
 }
 
@@ -708,6 +709,7 @@ border: #00A7D0 1px solid;
 
 /*** copyright Start ***/
 .copyright {
+  padding: 10px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   background: var(--bs-dark) !important; 
   padding-left: 15rem;

@@ -105,59 +105,59 @@
     </nav>
   </section>  -->
   <!-- Sección de tarjetas --> 
-  <section id="ofertas" class="container my-5">
-    <h2 class="text-center mb-4">Ofertas Destacadas</h2>
-    <div class="row">
-      <!-- Tarjeta 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
-          <div class="position-relative">
-            <img src="{{ url_for('static', filename='img/playa.jpg') }}" class="card-img-top" alt="Tour a las Islas">
-            <span class="badge bg-warning position-absolute top-0 start-0 m-2">20% OFF</span>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Tour a las Islas del Rosario</h5>
-            <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> Desde Cartagena</p>
-            <p class="card-text"><span class="text-warning fw-bold">$30 USD</span> por persona</p>
-            <a href="#" class="btn btn-primary">Reservar Ahora</a>
-          </div>
+<section id="ofertas" class="container my-5">
+  <h2 class="text-center mb-4">Ofertas Destacadas</h2>
+  <div class="row">
+    <!-- Tarjeta 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+        <div class="position-relative">
+          <img src="{{ url_for('static', filename='img/playa.jpg') }}" class="card-img-top" alt="Tour a las Islas">
+          <span class="badge bg-warning position-absolute top-0 start-0 m-2">20% OFF</span>
         </div>
-      </div>
-  
-      <!-- Tarjeta 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="position-relative">
-            <img src="{{ url_for('static', filename='img/imgt4.jpg') }}" class="card-img-top" alt="Tour por la Ciudad">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">¡Nuevo!</span>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Tour por la Ciudad Amurallada</h5>
-            <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> En el corazón histórico</p>
-            <p class="card-text"><span class="text-warning fw-bold">$20 USD</span> por persona</p>
-            <a href="#" class="btn btn-primary">Reservar Ahora</a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Tarjeta 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="position-relative">
-            <img src="{{ url_for('static', filename='img/comid1.jpeg') }}" class="card-img-top" alt="Tour Gastronómico">
-            <span class="badge bg-success position-absolute top-0 start-0 m-2">Recomendado</span>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Tour Gastronómico</h5>
-            <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> Platos típicos y exóticos</p>
-            <p class="card-text"><span class="text-warning fw-bold">$40 USD</span> por persona</p>
-            <a href="#" class="btn btn-primary">Reservar Ahora</a>
-          </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">Tour a las Islas del Rosario</h5>
+          <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> Desde Cartagena</p>
+          <p class="card-text"><span class="text-warning fw-bold">Desde $30 USD</span> por persona</p>
+          <a class="btn btn-sm btn-warning" href="{{ url_for('destino') }}">Compara Precios</a>
         </div>
       </div>
     </div>
-  </section>
-  
+
+    <!-- Tarjeta 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="position-relative">
+          <img src="{{ url_for('static', filename='img/imgt4.jpg') }}" class="card-img-top" alt="Tour por la Ciudad">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">¡Nuevo!</span>
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">Tour por la Ciudad Amurallada</h5>
+          <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> En el corazón histórico</p>
+          <p class="card-text"><span class="text-warning fw-bold">Desde $20 USD</span> por persona</p>
+          <a class="btn btn-sm btn-warning" href="{{ url_for('tours') }}">Compara Precios</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="position-relative">
+          <img src="{{ url_for('static', filename='img/comid1.jpeg') }}" class="card-img-top" alt="Tour Gastronómico">
+          <span class="badge bg-success position-absolute top-0 start-0 m-2">Recomendado</span>
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">Tour Gastronómico</h5>
+          <p class="card-text"><i class="bi bi-geo-alt-fill text-danger"></i> Platos típicos y exóticos</p>
+          <p class="card-text"><span class="text-warning fw-bold">Desde $40 USD</span> por persona</p>
+          <a class="btn btn-sm btn-warning" href="{{ url_for('restaurantes') }}">Compara Precios</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -232,7 +232,7 @@
       </div>
     </div> -->
     
-        <hr class="featurette-divider">
+       
 
         <!-- <div class="row featurette">
           <div class="col-md-7">
@@ -247,7 +247,7 @@
           </div>
         </div> -->
 
-        <hr class="featurette-divider">
+        
 
         <!-- <div class="row featurette">
           <div class="col-md-7">
@@ -263,7 +263,7 @@
         </div> -->
 
 
-        <hr class="featurette-divider">
+    
   </div>     
   <!-- /END THE FEATURETTES -->
 </div><!-- /.container -->
