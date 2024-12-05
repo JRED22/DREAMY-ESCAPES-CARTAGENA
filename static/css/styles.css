@@ -174,7 +174,7 @@ body {
       left: 0;
       border-bottom: 0px solid rgba(12, 12, 12, 0.1);
       z-index: 999;
-      
+     
    
   }
   
@@ -250,12 +250,11 @@ body {
 }
 /*--------------------------------oscurecer las imagenes  -----------------------------------------------*/
 .overlay {
-  position: absolute;
+
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  /*background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  height: 4rem;
+
   z-index: 1; /* Asegura que quede encima de la imagen */
  
 }
@@ -450,16 +449,18 @@ body {
   padding: 0.25rem 2rem ;
 
 }
- /* PAginas header navbarNav */
+ /* PAginas header navbarNav  */
 
  .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img9.jpg), no-repeat center center;
   background-size: cover;
+  height: 30rem;
 }
 
 .page-header-teams{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/img10.jpg), no-repeat center center;
   background-size: cover;
+  height: 15rem;
   
 }
 .page-header-transportes{
@@ -570,17 +571,30 @@ body {
 .btn-center:hover {
   background-color: #0056b3;
 }
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
+/*------------------------------------------------------- whatsapp */
+.whatsapp-button {
+  display: inline-flex; /* Alinea el icono y el texto en línea */
+  align-items: center; /* Centra verticalmente el contenido */
+  background-color: #25D366; /* Color verde característico de WhatsApp */
+  color: white; /* Color del texto e icono */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 20px; /* Espacio desde el fondo de la pantalla */
+  right: 20px; /* Espacio desde el lado derecho de la pantalla */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
 }
 
-.whatsapp-icon {
-  width: 50px;
-  height: 50px;
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Color más oscuro al pasar el ratón */
 }
+
+
+
 
 /* custom Teams */
 .custom-teams{
