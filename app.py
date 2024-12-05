@@ -41,7 +41,7 @@ def logout():
 
 @app.route('/')
 def index():
-    return render_template("index.html", titulo="Página de Inicio")
+    return render_template("index.html", titulo="Página de Inicio",menu="none")
 
 
 @app.route('/destinos')

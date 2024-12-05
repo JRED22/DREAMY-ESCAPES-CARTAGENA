@@ -1,16 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container-fluid page-header-teams">
-    <div class="container">
-        <div class="d-flex flex-column align-items-center justify-content-center">
-            <h3 class="display-4 text-black text-uppercase">{{ titulo }}</h3>
-            <div class="d-inline-flex text-white">
-                <!-- Aquí puedes agregar enlaces adicionales si lo necesitas -->
-            </div>
-        </div>
-    </div>
-</div>
             <h1>Ingreso a usuarios</h1>
 
             <form class="row g-3" id="formulario" action="/login" method="post">
@@ -26,5 +16,21 @@
                     <input type="submit" id="enviar" class="btn btn-primary mb-4" name="enviar" value="Enviar">
                 </div>
             </form>
+
+
+            <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <form class="border p-4 rounded shadow" style="width: 300px;">
+                    <h2 class="text-center">Iniciar Sesión</h2>
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                </form>
+            </div>
 
 {% endblock %}
