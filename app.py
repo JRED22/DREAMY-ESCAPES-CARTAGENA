@@ -1,5 +1,6 @@
-from flask import Flask, render_template,request,jsonify, session
-import json, os,csv
+from flask import Flask, render_template,request,jsonify, session,send_from_directory,redirect
+import os,csv
+from PIL import Image
 
 app = Flask(__name__)
 app.secret_key = "yWb2f@QOf77R9hhEX@sFYdt8cc7&LC2S"
@@ -33,11 +34,6 @@ def login_validar():
 def logout():
   session.pop('usuario', None)
   return render_template("index.html", titulo="Página de Inicio")
-
-
-
-
-
 
 @app.route('/')
 def index():
@@ -159,7 +155,7 @@ def get_tours():
 @app.route('/admin', methods=['GET'])
 def mostrar_formulario():
     return render_template('admin.html')
- 
+ #---------------------------------------------------------------------------------tour-----------------------------
 @app.route('/agregar_tour', methods=['POST'])
 def agregar_tour():
     data = request.get_json()
@@ -197,6 +193,69 @@ def agregar_tour():
     except Exception as e:
         print(f"Error al guardar los datos: {e}")
         return jsonify({'success': False, 'message': 'Error al guardar los datos.'}), 500
-    
+@app.route('/add_tours')
+def add_tours():
+    return render_template("add_servicio.html")
+@app.route('/listar_tours')
+def listartours():
+    return render_template("listar_servicio.html")
+
+#------------------------------------------------------------------------------------redimencionar imagenes
+
+# Configuración
+app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['RESIZED_FOLDER'] = 'resized'
+app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}
+app.secret_key = 'secretkey'  # Para mensajes flash
+
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+os.makedirs(app.config['RESIZED_FOLDER'], exist_ok=True)
+
+# Validar extensiones permitidas
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+# Redimensionar imagen
+def resize_image(input_path, output_path, size):
+    with Image.open(input_path) as img:
+        img = img.resize(size, Image.ANTIALIAS)
+        img.save(output_path)
+
+# Ruta principal
+@app.route('/none', methods=['GET', 'POST'])
+def index():
+    flash='none'
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash("No se envió ningún archivo.", "danger")
+            return redirect(request.url)
+
+        file = request.files['file']
+        if file.filename == '':
+            flash("No se seleccionó ningún archivo.", "warning")
+            return redirect(request.url)
+
+        if file and allowed_file(file.filename):
+            filename = file.filename
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
+
+            # Redimensionar la imagen
+            resized_path = os.path.join(app.config['RESIZED_FOLDER'], filename)
+            resize_image(file_path, resized_path, (300, 300))
+
+            flash("Imagen subida y redimensionada con éxito.", "success")
+            return render_template('index.html', resized_image=filename)
+        else:
+            flash("Archivo no permitido.", "danger")
+            return redirect(request.url)
+
+    return render_template('index.html', resized_image=None)
+
+# Ruta para servir imágenes redimensionadas
+@app.route('/resized/<filename>')
+def resized_image(filename):
+    return send_from_directory(app.config['RESIZED_FOLDER'], filename)
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)

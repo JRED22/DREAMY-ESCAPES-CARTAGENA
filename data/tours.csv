@@ -9,3 +9,4 @@ id,titulo,precio_tour,duracion_tours,categoria_tours,image_url,description
 9,Castillo de San Felipe,80000,Medio Dia,cultural,/static/img/img1.jpg,Descubre la historia.
 10,Patagonia Tour,170000,Medio Dia,castillo,/static/img/img3.jpg,Una experiencia única
 11,Cienaga de la virgen ,120000,Dia Completo,naturaleza,img1,esta es 
+11,Ciudad Mandela,200000,Medio Dia,historico,ssss,ssss

@@ -189,56 +189,77 @@ function filtrarsitios() {
 
 
 // //-------------------------agregar un tours
-document.getElementById('guardar-btn').addEventListener('click', () => {
-    // Capturar los valores del formulario
-    const titulo_add = document.getElementById('titulo_add').value;
-    const precio_add = document.getElementById('precio_add').value;
-    const duracion_add = document.getElementById('duracion_add').value;
-    const categoria_add = document.getElementById('categoria_add').value;
-    const image_url_add = document.getElementById('image_url_add').value;
-    const descripcion_add = document.getElementById('descripcion_add').value;
 
-    // Validar los campos
-    if (!titulo_add || !precio_add || !duracion_add || !categoria_add || !image_url_add || !descripcion_add) {
-        mostrarMensaje('Por favor, complete todos los campos.', 'danger');
-        return;
-    }
+function guardarTour(){
+ // Capturar los valores del formulario
+ const titulo_add = document.getElementById('titulo_add').value;
+ const precio_add = document.getElementById('precio_add').value;
+ const duracion_add = document.getElementById('duracion_add').value;
+ const categoria_add = document.getElementById('categoria_add').value;
+ const image_url_add = document.getElementById('image_url_add').value;
+ const descripcion_add = document.getElementById('descripcion_add').value;
 
-    // Crear un objeto con los datos
-    const data = {
-        titulo_add,
-        precio_add: parseFloat(precio_add),
-        duracion_add,
-        categoria_add,
-        image_url_add,
-        descripcion_add
-    };
+ // Validar los campos
+ if (!titulo_add || !precio_add || !duracion_add || !categoria_add || !image_url_add || !descripcion_add) {
+     mostrarMensaje('Por favor, complete todos los campos.', 'danger');
+     return;
+ }
 
-    // Enviar los datos al servidor usando fetch
-    fetch('/agregar_tour', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.success) {
-            mostrarMensaje('Tour agregado con éxito.', 'success');
-            document.getElementById('form_add_tours').reset();
-        } else {
-            mostrarMensaje('Hubo un error al agregar el tour.', 'danger');
-        }
-    })
-    .catch(() => {
-        mostrarMensaje('Error al conectar con el servidor.', 'danger');
-    });
-});
+ // Crear un objeto con los datos
+ const data = {
+     titulo_add,
+     precio_add: parseFloat(precio_add),
+     duracion_add,
+     categoria_add,
+     image_url_add,
+     descripcion_add
+ };
 
+ // Enviar los datos al servidor usando fetch
+ fetch('/agregar_tour', {
+     method: 'POST',
+     headers: {
+         'Content-Type': 'application/json'
+     },
+     body: JSON.stringify(data)
+ })
+ .then(response => response.json())
+ .then(result => {
+     if (result.success) {
+         mostrarMensaje('Tour agregado con éxito.', 'success');
+         document.getElementById('form_add_tours').reset();
+     } else {
+         mostrarMensaje('Hubo un error al agregar el tour.', 'danger');
+     }
+ })
+ .catch(() => {
+     mostrarMensaje('Error al conectar con el servidor.', 'danger');
+ });
+
+}
 // Función para mostrar mensajes
 function mostrarMensaje(mensaje, tipo) {
     const mensajeDiv = document.getElementById('mensaje_add');
     mensajeDiv.innerHTML = `<div class="alert alert-${tipo}" role="alert">${mensaje}</div>`;
 }
-// -----------------------------------------------------------restaurantes 
+//----------------------------------------------- Ajax para cargas Servicio_ppls------------------------------------------------
+
+async function cargar_servicio(servicio_ppl) {
+ 
+  
+    //const navlinks = document.querySelectorAll('.menu-activo');
+    //navlinks.forEach(link => {
+    // //link.classList.remove('menu-activo');
+    // //})
+
+    const servicio = await fetch(`/${servicio_ppl}`);
+    
+    //alert (servicio );
+  
+             if (servicio.ok) {
+        document.getElementById("container_servicios").innerHTML = await servicio.text()
+     } else {
+        document.getElementById("container_servicios").innerHTML = "Error al cargar los datos";
+    }
+
+    }

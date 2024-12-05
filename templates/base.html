@@ -92,9 +92,30 @@
             <a class="nav-item nav-link disabled" href="/promociones">Promociones</a>
             <a class="nav-item nav-link" href="/team" id="team">Team</a>
             <a class="nav-item nav-link" href="/contacto" id="contacto">Contactanos</a>
-            <a class="nav-item nav-link" href="/login" id="login">
-              <i class="bi bi-person-add"></i>&nbsp;Registrar
-            </a>    
+            {% if session.get('usuario') %}
+                
+            <a id="dshboard" href="/login" class="nav-item nav-link">Dashboard</a>
+             {% else %}
+
+             {% endif %}
+             
+
+          
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Usuarios</a>
+              <div class="dropdown-menu m-0">
+                {% if session.get('usuario') %}
+                
+                <a id="Cerrar" href="/logout" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>&nbsp;Cerrar Sesion</a>
+                 {% else %}
+                 <a class="dropdown-item" href="/login" id="login"><i class="bi bi-box-arrow-in-left"></i>&nbsp;Ingresar</a> 
+
+                 {% endif %}
+                 
+                <a class="dropdown-item" href="#" id="tours"><i class="bi bi-person-add"></i> &nbsp;Registrar</a>
+             
+              </div>
+            </div>
           </div>
         </div>
       </nav>
