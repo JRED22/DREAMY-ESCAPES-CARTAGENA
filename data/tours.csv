@@ -2,16 +2,10 @@ id,titulo,precio_tour,duracion_tours,categoria_tours,image_url,description
 2,cento de la ciudad,200000,Dia Completo,historico,/static/img/imgt2.jpg,es un tours privado
 3,playa blancas cartegana,100000,Medio Dia,historico,/static/img/imgt2.jpg,estamos melos
 4,Centro Hitorico de Cartagena ,200000,Medio Dia,playa,/static/img/imgt2.jpg,es un tours romantico
-5,Islas del Rosario,150000,Dia Completo,playa,/static/img/imgt1.jpg,Un tour inolvidable.
 7,City Tour,120000,Medio Dia,naturaleza,/static/img/imgt2.jpg,Conoce la ciudad.
 8,Cholon VIP,200000,Dia Completo,playa,/static/img/imgt4.jpg,Relájate en el paraíso.
 9,Castillo de San Felipe,80000,Medio Dia,cultural,/static/img/img1.jpg,Descubre la historia.
-10,Patagonia Tour,170000,Medio Dia,castillo,/static/img/img3.jpg,Una experiencia única
-
-11,fkktok,-2,Dia Completo,naturaleza,/static/uploads/WhatsApp_Image_2024-11-30_at_9.02.27_AM.jpeg,dddd
-12,espaciales,200000,Medio Dia,historico,/static/uploads/WhatsApp_Image_2024-11-30_at_9.02.38_AM.jpeg,este es el propio
-13,espaciales,200000,Medio Dia,historico,/static/uploads/WhatsApp_Image_2024-11-30_at_9.02.38_AM.jpeg,este es el propio
-14,espaciales,200000,Medio Dia,historico,/static/uploads/historico_este_es_el.jpeg,este es el propio
+10,Patagonia Tour,170000,Medio Dia,castillo,/static/img/img3.jpg,Una experiencia únic
 15,este tema ,2222,Medio Dia,cultural,/static/uploads/cultural_ya_esta_ah.jpeg,ya esta ahi
 16,Casa del centro,-12222,Medio Dia,historico,/static/uploads/historico_ddd.jpeg,ddd
 17,playa blanca,2000,Medio Dia,playa,/static/uploads/playa_aqui_veras.jpg,aqui veras los mejores peces
