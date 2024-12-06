@@ -1,0 +1,36 @@
+<h1>Listado de Usuarios</h1>
+
+
+
+<table class="table table-striped table-condensed table-hover table-bordered">
+    <tr>
+        <td valingn="top" colspan="6">
+        <a href='#' title='Agregar Usuario' onclick="cargar_servicio('add_user')"><img src="/static/img/add.png" alt="Agregar Usuario" width="40" height="40" title="Agregar Usuario"/></a>
+        <a href='salir.php' title='Agregar Usuario'><img src="/static/img/exit.png"alt="salir" width="40" height="40" title="Salir"/></a>
+        <hr />
+        </td>
+    </tr>
+    <tr style="text-align: center;">
+        <th width="120">Nombre</th> 
+        <th width="130">Apellido</th>
+         <th width="130">correo</th>
+         <th width="100">Perfil</th>
+        <th width="70">estado</th>		         
+        <th width="100">Fecha Registro</th>
+    </tr>
+
+    {% for item in data %}
+    <tr style="text-align: center;">
+        <td>{{ item[1] }}</td>
+        <td>{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+        <td>{{ item[5] }}</td>
+        <td>{{ item[7] }}</td>
+        <td><a style="text-decoration: none;color: black;" href="/edit/{{ item[0] }}"><i class="bi bi-pencil"></i></a> <a style="text-decoration: none; color: black;" href="/delete/{{ item[0] }}"><i class="bi bi-trash"></i></a></td>
+    </tr>
+    {% endfor %}
+     <tr >
+        <td colspan="6" style="display: none;">No se encontraron resultados</td>
+    </tr>
+
+</table>

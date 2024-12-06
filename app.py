@@ -1,8 +1,19 @@
 from flask import Flask, render_template,request,jsonify, session,send_from_directory,redirect
 import os,csv
 from werkzeug.utils import secure_filename
+from flask_mysqldb import MySQL
 
+import mysql.connector
+from mysql.connector import Error
 app = Flask(__name__)
+# Configuración de la base de datos
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'dreamyescapes'
+
+mysql = MySQL(app)
+
 app.secret_key = "yWb2f@QOf77R9hhEX@sFYdt8cc7&LC2S"
 archivo_add__csv = "data/tours.csv"
 # Función para revisar si el usuario está autenticado
@@ -259,9 +270,47 @@ def guardar_tours():
       return render_template("dashboard.html",titulo="Pronto te contactaremos.",
                           validacion=filename)
     #return "<h1>Archivo subido exitosamente</h1>"
+#--------------------------------------------------------------------------base de datos ojo 
+@app.route('/listar')
+def listar_servicios():
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM usuarios")
+    data = cur.fetchall()
+    return render_template('listar_user.html', data=data)
+@app.route('/add_user')
+def cargar_formuser():
+ return render_template('add_user.html')
 
+@app.route('/add_user', methods=['POST'])
+def add():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO usuarios (nombre) VALUES (%s)", (nombre,))
+        # cur.execute("INSERT INTO usuarios (nombre, apellido, email, edad) VALUES (%s, %s, %s, %s)", 
+        #     (nombre, apellido, email, edad))
+        mysql.connection.commit()
+        return redirect('/dashboard.html')
 
+@app.route('/edit/<id>', methods=['GET', 'POST'])
+def edit(id):
+    cur = mysql.connection.cursor()
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        cur.execute("UPDATE tu_tabla SET nombre = %s WHERE id = %s", (nombre, id))
+        mysql.connection.commit()
+        return redirect('/')
+    cur.execute("SELECT * FROM tu_tabla WHERE id = %s", (id,))
+    data = cur.fetchone()
+    return render_template('dashboard.html', data=data)
 
-
+@app.route('/delete/<id>')
+def delete(id):
+    cur = mysql.connection.cursor()
+    cur.execute("DELETE FROM tu_tabla WHERE id = %s", (id,))
+    mysql.connection.commit()
+    return redirect('/dashboard.html')
+ 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)
