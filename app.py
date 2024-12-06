@@ -284,14 +284,18 @@ def cargar_formuser():
 @app.route('/add_user', methods=['POST'])
 def add():
     if request.method == 'POST':
-        nombre = request.form['nombre']
-        
+        nombre_user = request.form['nombre_user']
+        apellido_user = request.form['apellido_user']
+        email_user = request.form['email_user']
+        contrasena_user = request.form['contrasena_user']
+    
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO usuarios (nombre) VALUES (%s)", (nombre,))
+        cur.execute("INSERT INTO usuarios (nombre, apellido, correo , perfil) VALUES (%s, %s,%s, %s)", (nombre_user, apellido_user,email_user,contrasena_user))
+        
         # cur.execute("INSERT INTO usuarios (nombre, apellido, email, edad) VALUES (%s, %s, %s, %s)", 
         #     (nombre, apellido, email, edad))
         mysql.connection.commit()
-        return redirect('/dashboard.html')
+        return render_template('/dashboard.html',message="Operación realizada con éxito")
 
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
@@ -305,12 +309,12 @@ def edit(id):
     data = cur.fetchone()
     return render_template('dashboard.html', data=data)
 
-@app.route('/delete/<id>')
+@app.route('/delete/<int:id>')
 def delete(id):
     cur = mysql.connection.cursor()
-    cur.execute("DELETE FROM tu_tabla WHERE id = %s", (id,))
+    cur.execute("DELETE FROM usuarios WHERE id_usuario = %s", (id,))
     mysql.connection.commit()
-    return redirect('/dashboard.html')
+    return render_template('dashboard.html',message="Usuario Eliminado con éxito")
  
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)

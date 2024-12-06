@@ -19,3 +19,15 @@ body {
     background-color: #495057;
   }
 .superior{margin-top: 5rem;}
+.message {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}

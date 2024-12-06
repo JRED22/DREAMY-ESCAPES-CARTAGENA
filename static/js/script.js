@@ -264,3 +264,10 @@ async function cargar_servicio(servicio_ppl) {
     }
 
     }
+
+    const messageBox = document.getElementById('messageBox');
+    if (messageBox) {
+        setTimeout(() => {
+            messageBox.classList.add('hidden');
+        }, 3000);
+    }
