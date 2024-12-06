@@ -1,13 +1,15 @@
 id,titulo,precio_tour,duracion_tours,categoria_tours,image_url,description
-1,Dia completo en las Islas Rosario incluyendo Baru, Cholon y Playa Blanca,430.000,Dia Completo,playa,/static/uploads/playa_excursion.jpg,Excursi�n de 8 horas explorando las principales islas cercanas a Cartagena.
-2,Tour en Cuatrimoto por Cartagena,280.000,Medio Dia,naturaleza,/static/uploads/naturaleza_aventura_e.jpg,Aventura en cuatrimoto explorando los alrededores de Cartagena. 
+1,Dia completo en las Islas Rosario incluyendo Baru,430000,Dia Completo,playa,/static/uploads/playa_excursion.jpg,Excursion de 8 horas explorando las principales islas cercanas a Cartagena
+2,Tour en Cuatrimoto por Cartagena,280000,Medio Dia,naturaleza,/static/uploads/naturaleza_aventura_e.jpg,Aventura en cuatrimoto explorando los alrededores de Cartagena 
+3,Tour 5 Islas con Cholon,320000,Dia Completo,playa,/static/uploads/playa_recorrido.jpg,Recorrido por las Islas del Rosario
+4,Tour Aviario e Isla Baru en Bus,125000,Medio Dia,naturaleza,/static/uploads/naturaleza_descubre_l.jpg,Descubre la belleza del Archipielago de San Bernardo con transporte en lancha rapida
+5,Tour a Isla de Mucura,270000,Dia Completo,playa,/static/uploads/playa_descubre_l.jpg,Descubre la belleza del Archipielago de San Bernardo con transporte en lancha rapida
+6,Tour de 5 Islas con Cholon,175000,Dia Completo,playa,/static/uploads/playa_este_tour.jpg,Este tour incluye visitas a Cholon 
+7,Tour a Isla Bora Bora Club (Isla Privada),260000,Dia Completo,playa,/static/uploads/playa_vive_una_e.jpg,Vive una experiencia exclusiva con cama de playa
+8,Tour a las Islas del Rosario y Baru en lancha,80000,Medio Dia,playa,/static/uploads/playa_realiza_un.jpg,Realiza un recorrido panoramico por las islas
+9,City Tour en Chiva por Cartagena,60000,Medio Dia,cultural,/static/uploads/cultural_explora_lo.jpg,Explora los principales atractivos turisticos de la ciudad a bordo de una tradicional chiva
+10,Tour a Playa Blanca en Isla Baru,50000,Medio Dia,playa,/static/uploads/playa_disfruta_d.jpg,Disfruta de un dia en una de las playas mas hermosas de Cartagena
+11,playa blanca - Islas del Rosario,200000,Medio Dia,historico,/static/uploads/historico_esta_lleno.webp,esta lleno de sorpresas en el mar
 
 
-3,Tour 5 Islas con Cholon,320.000,Dia Completo,playa,/static/uploads/playa_recorrido.jpg,Recorrido por las Islas del Rosario, incluyendo Cholon, con actividades acu�ticas y almuerzo.
-4,Tour Aviario e Isla Baru en Bus,125.000,Medio Dia,naturaleza,/static/uploads/naturaleza_descubre_l.jpg,Descubre la belleza del Archipi�lago de San Bernardo con transporte en lancha r�pida, almuerzo y acceso a las instalaciones de la isla
-5,Tour a Isla de Mucura,270.000,Dia Completo,playa,/static/uploads/playa_descubre_l.jpg,Descubre la belleza del Archipielago de San Bernardo con transporte en lancha r�pida, almuerzo y acceso a las instalaciones de la isla
-6,Tour de 5 Islas con Cholon,175.000,Dia Completo,playa,/static/uploads/playa_este_tour.jpg,Este tour incluye visitas a Cholon, Agua Azul en Isla Grande e Isla Baru, con actividades como snorkel y recorrido por manglares. 
-7,Tour a Isla Bora Bora Club (Isla Privada),260.000,Dia Completo,playa,/static/uploads/playa_vive_una_e.jpg,Vive una experiencia exclusiva con cama de playa, coctel de bienvenida, transporte en lancha y almuerzo tipico
-8,Tour a las Islas del Rosario y Baru en lancha,80.000,Medio Dia,playa,/static/uploads/playa_realiza_un.jpg,Realiza un recorrido panoramico por las islas, con transporte en lancha ida y regreso, almuerzo variado y gaseosa
-9,City Tour en Chiva por Cartagena,60.000,Medio Dia,cultural,/static/uploads/cultural_explora_lo.jpg,Explora los principales atractivos turisticos de la ciudad a bordo de una tradicional chiva
-10,Tour a Playa Blanca en Isla Baru,50.000,Medio Dia,playa,/static/uploads/playa_disfruta_d.jpg,Disfruta de un d�a en una de las playas mas hermosas de Cartagena
+

@@ -142,7 +142,7 @@ def get_tours():
      categoria_tours = request.args.get('categoria_tours', '')
      
      tours = load_tours()
-
+     
     # Filtrar por precio
      if precio_tour== 'p_menor_tours':
          tours = [t for t in tours if int(t['precio_tour']) <= 8000]

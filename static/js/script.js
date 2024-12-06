@@ -2,6 +2,7 @@
  document.addEventListener("DOMContentLoaded", () => {
         
     document.getElementById("form-Tours-filtro").addEventListener("change", loadTours);
+
          loadTours();
      setTimeout(function(){
          $("#mensaje").fadeOut();  // Esto ocultará el div suavemente
@@ -37,13 +38,14 @@ async function cargar(pagina) {
     // ---------------------------------   funcion ajax tours------------------------------------------
     function loadTours() {
         // Obtener los filtros seleccionados
-    //print("Loading");
+    
+  
         const filters = {
             precio_tour: document.getElementById("precio_tour").value,
             duracion_tours: document.getElementById("duracion_tours").value,
             categoria_tours: document.getElementById("categoria_tours").value,
         };
-       
+       // print(precio_tour);
         // Crear query string para la solicitud
         const queryString = new URLSearchParams(filters).toString();
       
@@ -82,7 +84,7 @@ async function cargar(pagina) {
                     container.insertAdjacentHTML("beforeend", card);
                 });
             })
-            .catch(error => console.error("Error al cargar los tours:", error));
+      .catch(error => console.error("Error al cargar los tours:", error));
     }
     
     // --------------------------------------------------------------------restaurantes 
