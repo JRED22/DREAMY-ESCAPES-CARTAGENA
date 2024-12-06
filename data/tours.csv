@@ -14,3 +14,4 @@ id,titulo,precio_tour,duracion_tours,categoria_tours,image_url,description
 14,espaciales,200000,Medio Dia,historico,/static/uploads/historico_este_es_el.jpeg,este es el propio
 15,este tema ,2222,Medio Dia,cultural,/static/uploads/cultural_ya_esta_ah.jpeg,ya esta ahi
 16,Casa del centro,-12222,Medio Dia,historico,/static/uploads/historico_ddd.jpeg,ddd
+17,playa blanca,2000,Medio Dia,playa,/static/uploads/playa_aqui_veras.jpg,aqui veras los mejores peces
