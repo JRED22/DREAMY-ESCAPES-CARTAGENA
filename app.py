@@ -1,10 +1,10 @@
 from flask import Flask, render_template,request,jsonify, session,send_from_directory,redirect
 import os,csv
-from PIL import Image
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.secret_key = "yWb2f@QOf77R9hhEX@sFYdt8cc7&LC2S"
-
+archivo_add__csv = "data/tours.csv"
 # Función para revisar si el usuario está autenticado
 def revisar_sesion():
   if ('usuario' in session):
@@ -196,6 +196,72 @@ def add_tours():
 def listartours():
     return render_template("listar_servicio.html")
 
-#------------------------------------------------------------------------------------redimencionar imagenes
+#------------------------------------------------------------------------------------imagenes con formulario
+    
+def obtener_ultimo_id(archivo_add__csv):
+    if not os.path.exists(archivo_add__csv):
+        return 0  # Si el archivo no existe, el ID empieza en 0
+    with open(archivo_add__csv, "r") as archivo:
+        lineas = archivo.readlines()
+        if len(lineas) <= 1:  # Solo tiene la cabecera o está vacío
+            return 0
+        # Filtrar líneas no vacías y no cabeceras
+        for linea in reversed(lineas[1:]):  # Leer desde la última línea hacia atrás, omitiendo la cabecera
+            if linea.strip():  # Verificar que la línea no esté vacía
+                try:
+                    ultimo_id = int(linea.split(",")[0])  # Extraer el ID
+                    return ultimo_id
+                except ValueError:
+                    continue  # Saltar líneas inválidas
+        return 0  # Si no se encuentra un ID válido
+
+
+@app.route('/add_tours', methods=['POST'])
+def guardar_tours():
+    app.config['UPLOAD_FOLDER'] = 'static/uploads'
+    #poner id a linea
+    ultimo_id = obtener_ultimo_id(archivo_add__csv)
+    nuevo_id = ultimo_id + 1  # Incrementar el ID
+    if request.method == 'POST':
+  # obtenemos el archivo del input "archivo"
+     titulo_add = request.form.get("titulo_add")
+    precio_add = request.form.get("precio_add")
+    duracion_add = request.form.get("duracion_add")
+    categoria_add = request.form.get("categoria_add")
+    # image_url_add = request.form.get("image_url_add")
+    descripcion_add = request.form.get("descripcion_add")
+    f = request.files['image_url_add']
+    filename = secure_filename(f.filename) 
+    
+    extension = os.path.splitext(filename)[1]
+    nuevo_nombre = f"{categoria_add}_{secure_filename(descripcion_add[:10])}".lower()  # Usa la categoría y una parte de la descripción
+    nombre_completo = f"{nuevo_nombre}{extension}"
+    
+    # Guardamos el archivo en el directorio "Archivos PDF"
+    f.save(os.path.join(app.config['UPLOAD_FOLDER'],  nombre_completo ))
+    ruta= ('/static/uploads/')+nombre_completo
+    
+  # Retornamos una respuesta satisfactoria
+#   # Validaciones
+    if  titulo_add == "" or precio_add == ""  or duracion_add == "" or categoria_add== "" or descripcion_add== "" :
+     validacion = "Error: No hay datos para contacto."
+    else:
+    # La información se almacenará en la base de datos
+     validacion = "Gracias por contactarnos, pronto nos pondremos en contacto con usted." 
+#     # Crear el archivo si no existe, adicionando la cabecera
+     if os.path.exists(archivo_add__csv) == False:
+       with open(archivo_add__csv, "w") as archivo:
+         archivo.write("id,titulo,precio_tour,duracion_tours,categoria_tours,image_url,description\n")  
+#     # Adicionar la información al archivo desde el formulario de tours.
+      
+    with open(archivo_add__csv, "a") as archivo:
+      archivo.write(f"{nuevo_id},{titulo_add},{precio_add},{duracion_add},{categoria_add},{ruta},{descripcion_add}\n") 
+      return render_template("dashboard.html",titulo="Pronto te contactaremos.",
+                          validacion=filename)
+    #return "<h1>Archivo subido exitosamente</h1>"
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)

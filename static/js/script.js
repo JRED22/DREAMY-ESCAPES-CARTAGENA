@@ -64,6 +64,7 @@ async function cargar(pagina) {
                     const card = `
                  
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                           
                                 <div class="card tour-card">
                                     <img src="${tour.image_url}" class="card-img-top" alt="${tour.titulo}">
                                     <div class="card-body">

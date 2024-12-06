@@ -3,22 +3,22 @@
     <div class="card shadow-sm mb-4">
         <div class="card-body">
             <div id="mensaje_add" class="mt-3"></div>
-            <form id="form_add_tours">
+            <form id="form_add_tours" action="/add_tours" method="post" enctype="multipart/form-data">
                 <!-- Title -->
                 <div class="mb-3">
                     <label for="titulo_add" class="form-label">Título del Tour</label>
-                    <input type="text" id="titulo_add" class="form-control" placeholder="Nombre del tour" required>
+                    <input type="text" id="titulo_add"  name="titulo_add" class="form-control" placeholder="Nombre del tour" required>
                 </div>
                 <!-- Price -->
                 <div class="mb-3">
                     <label for="precio_add" class="form-label">Precio</label>
-                    <input type="number" id="precio_add" class="form-control" placeholder="Precio en pesos" required>
+                    <input type="number" id="precio_add" name="precio_add"  class="form-control" placeholder="Precio en pesos" required>
                 </div>
                 <!-- Duration -->
                 <div class="mb-3">
                     <label for="duracion_add" class="form-label">Duración</label>
                     <!-- <input type="text" id="duracion_add" class="form-control" placeholder="Ej. 2 horas, 1 día" required> -->
-                    <select id="duracion_add" class="form-select" required>
+                    <select id="duracion_add" name="duracion_add"  class="form-select" required>
                         <option value="">Seleccionar</option>
                         <option value="Medio Dia">Medio Día</option>
                         <option value="Dia Completo">Día Completo</option>
@@ -27,7 +27,7 @@
                 <!-- Category -->
                 <div class="mb-3">
                     <label for="categoria_add" class="form-label">Categoría</label>
-                    <select id="categoria_add" class="form-select" required>
+                    <select id="categoria_add" class="form-select" required name="categoria_add">
                         <option value="">Seleccionar</option>
                         <option value="historico">Histórico</option>
                         <option value="playa">Playa</option>
@@ -38,16 +38,18 @@
                 <!-- Image URL -->
                 <div class="mb-3">
                     <label for="image_url_add" class="form-label">URL de la Imagen</label>
-                    <input type="url" id="image_url_add" class="form-control" placeholder="Enlace a la imagen" required>
+            <input type="file" name ="image_url_add" id="image_url_add" class="form-control" placeholder="Enlace a la imagen"  required>
+ 
                 </div>
                 <!-- Description -->
                 <div class="mb-3">
                     <label for="descripcion_add" class="form-label">Descripción</label>
-                    <textarea id="descripcion_add" class="form-control" rows="3" placeholder="Breve descripción del tour" required></textarea>
+                    <textarea id="descripcion_add" name="descripcion_add" class="form-control" rows="3" placeholder="Breve descripción del tour" required></textarea>
                 </div>
                 <!-- Botón para enviar -->
-                <button type="button" id="guardar-btn" class="btn btn-primary w-100" onclick="guardarTour()">Guardar</button>
-            </form>
+                <!-- <button type="button" id="guardar-btn" class="btn btn-primary w-100" onclick="guardarTour()">Guardar</button> -->
+                <input type="submit" id="add_tour" class="btn btn-primary mb-2" name="add_tour" value="Enviar">  
+                      </form>
         </div>
     </div>
     <!-- Mensaje de éxito o error -->
