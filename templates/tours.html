@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 
 
@@ -12,79 +11,79 @@
         <!-- <p class="lead">¡Los mejores tours a precios insuperables!</p>
         <a href="#tours" class="btn btn-warning btn-lg">Ver Tours</a> -->
     </header>
-  </div>
-  
-  <div style="padding-top: 0rem;"></div>
-    <div class="container">
-    
-        <ol class="breadcrumb justify-content-left mb-0">
-            <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#">{{titulo }}</a></li>
-        </ol>    
-          <!-- <p class="lead text-body-secondary px-5 " style="text-align: justify;">
+</div>
+
+<div style="padding-top: 0rem;"></div>
+<div class="container">
+
+    <ol class="breadcrumb justify-content-left mb-0">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="#">{{titulo }}</a></li>
+    </ol>
+    <!-- <p class="lead text-body-secondary px-5 " style="text-align: justify;">
             Descubre la magia de Cartagena con nuestras experiencias únicas.
         </p>   -->
-       
-    </div> 
-  
-        <div class="container py-5" style="background-color:#FFFFFF;">
-            <div class="row " >
-                <!-- Filtros en la columna izquierda -->
-                <div class="col-lg-3 col-12 filters shadow p-3 mb-5 bg-body rounded ">
-                    <h5>Filtrar por</h5>
-                    <form id="form-Tours-filtro" class="row">
-                        <!-- Filtro por precio -->
-                        <div class="mb-3">
-                            <label for="precio_tour" class="form-label">Rango de Precios:</label>
-                            <select id="precio_tour" class="form-select">
-                                <option value="">Todos</option>
-                                <option value="p_menor_tours">$100.000-$200.000 COP</option>
-                                <option value="p_mayor_tours">$200.000-$400.000 </option>
-                            </select>
-                        </div>
-                        <!-- Filtro por duración -->
-                        <div class="mb-3">
-                            <label for="duracion_tours" class="form-label">Duración</label>
-                      <select id="duracion_tours" class="form-select">
-                          <option value="">Todos</option>
-                          <option value="Medio Dia">Medio Día</option>
-                          <option value="Dia Completo">Día Completo</option>
-                      </select>
-                        </div>
-                        <!-- Filtro por categoría -->
-                        <div class="mb-3">
-                            <label for="categoria_tours" class="form-label">Categoría</label>
-                            <select id="categoria_tours" class="form-select">
-                           
-                            <option value="">Seleccionar</option>
-                            <option value="">Todas</option>
-                            <option value="historico">Histórico</option>
-                            <option value="playa">Playa</option>
-                            <option value="cultural">Cultural</option>
-                            <option value="naturaleza">Naturaleza</option>
-                            </select>
-                        </div>
-                    </form>
+
+</div>
+
+<div class="container py-5" style="background-color:#FFFFFF;">
+    <div class="row ">
+        <!-- Filtros en la columna izquierda -->
+        <div class="col-lg-3 col-12 filters shadow p-3 mb-5 bg-body rounded ">
+            <h5>Filtrar por</h5>
+            <form id="form-Tours-filtro" class="row">
+                <!-- Filtro por precio -->
+                <div class="mb-3">
+                    <label for="precio_tour" class="form-label">Rango de Precios:</label>
+                    <select id="precio_tour" class="form-select">
+                        <option value="">Todos</option>
+                        <option value="p_menor_tours">$100.000-$200.000 COP</option>
+                        <option value="p_mayor_tours">$200.000-$400.000 </option>
+                    </select>
                 </div>
-    
-                <!-- Cards de tours en la columna derecha -->
-                <div class="col-lg-9 col-12">
-                    <div class="row shadow-sm p-3 mb-5 bg-body rounded">
-                        <div class="row"id="tours-container"  >
-                                   
-                  
-                 
-                        </div>
-               
-                        
-                    </div>
+                <!-- Filtro por duración -->
+                <div class="mb-3">
+                    <label for="duracion_tours" class="form-label">Duración</label>
+                    <select id="duracion_tours" class="form-select">
+                        <option value="">Todos</option>
+                        <option value="Medio Dia">Medio Día</option>
+                        <option value="Dia Completo">Día Completo</option>
+                    </select>
                 </div>
+                <!-- Filtro por categoría -->
+                <div class="mb-3">
+                    <label for="categoria_tours" class="form-label">Categoría</label>
+                    <select id="categoria_tours" class="form-select">
+
+                        <option value="">Seleccionar</option>
+                        <option value="">Todas</option>
+                        <option value="historico">Histórico</option>
+                        <option value="playa">Playa</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="naturaleza">Naturaleza</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Cards de tours en la columna derecha -->
+        <div class="col-lg-9 col-12">
+            <div class="row shadow-sm p-3 mb-5 bg-body rounded">
+                <div class="row" id="tours-container">
+
+
+
+                </div>
+
+
             </div>
         </div>
-    
+    </div>
+</div>
+
 <!-- -------------------------------------final codigo de prueba ajax flask ----------------------------------->
 
-   
+
 
 
 {% endblock %}
