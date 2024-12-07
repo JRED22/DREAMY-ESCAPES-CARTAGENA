@@ -23,7 +23,34 @@
 
 <div class="container .transportes" style="padding-top: 3rem; padding-bottom: 2rem;">
     <h2>Precios Fijos para Desplazamientos</h2>
+  
     <p>Conoce las tarifas oficiales para los destinos más populares de Cartagena. Estas tarifas son reguladas por el Departamento Administrativo de Tránsito y Transporte (DATT) para garantizar un precio justo y transparente para turistas.</p>
+  <br>
+  
+    <div class="container">
+    <label for="origen">Selecciona el Origen:</label>
+    <select id="origen">
+        <option value="">--Selecciona--</option>
+        <option value="Centro Histórico">Centro Histórico</option>
+        <option value="Bocagrande">Bocagrande</option>
+        <option value="Castillo San Felipe">Castillo San Felipe</option>
+        <option value="La Boquilla">La Boquilla</option>
+    </select>
+
+    <label for="destino">Selecciona el Destino:</label>
+    <select id="destino">
+        <option value="">--Selecciona--</option>
+        <option value="Playa Blanca">Playa Blanca</option>
+        <option value="Islas del Rosario">Islas del Rosario</option>
+        <option value="Parque de la Marina">Parque de la Marina</option>
+        <option value="Museo del Oro">Museo del Oro</option>
+    </select>
+
+    <input type="text" id="resultado" placeholder="Origen y Destino" readonly>
+
+    <button onclick="mostrarResultado()">buscar Precio </button>
+</div>
+<br>
 
     <table class="table table-striped table-condensed table-hover table-bordered  table-sm">
       <thead>

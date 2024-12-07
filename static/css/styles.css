@@ -913,5 +913,17 @@ table .transportes th {
     background-color: #e7f3ff;
     border-left: 6px solid #007bff;
 }
+.dropdowns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.dropdowns select {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
 
