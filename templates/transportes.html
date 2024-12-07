@@ -29,7 +29,7 @@
   
     <div class="container">
     <label for="origen">Selecciona el Origen:</label>
-    <select id="origen">
+    <select id="origen"  class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"type="button" data-bs-toggle="dropdown" aria-expanded="false">
         <option value="">--Selecciona--</option>
         <option value="Centro Histórico">Centro Histórico</option>
         <option value="Bocagrande">Bocagrande</option>
@@ -38,7 +38,7 @@
     </select>
 
     <label for="destino">Selecciona el Destino:</label>
-    <select id="destino">
+    <select id="destino"class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         <option value="">--Selecciona--</option>
         <option value="Playa Blanca">Playa Blanca</option>
         <option value="Islas del Rosario">Islas del Rosario</option>
@@ -46,9 +46,9 @@
         <option value="Museo del Oro">Museo del Oro</option>
     </select>
 
-    <input type="text" id="resultado" placeholder="" readonly>
+    <input type="text" id="resultado" placeholder=""  clareadonly  disabled>
 
-    <button onclick="mostrarResultado()">buscar Precio </button>
+    <button onclick="mostrarResultado()" class="btn btn-primary ">buscar Precio </button>
 </div>
 <br>
 
@@ -119,5 +119,9 @@
         <strong>Nota:</strong> Estos precios son aplicables únicamente para servicios de taxi. Se recomienda confirmar la tarifa antes de iniciar el viaje.
     </div>
 </div>
+
+
+
+
  {% endblock %}
 

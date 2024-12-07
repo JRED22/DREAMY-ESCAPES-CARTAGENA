@@ -273,14 +273,17 @@ async function cargar_servicio(servicio_ppl) {
             messageBox.classList.add('hidden');
         }, 3000);
     }
-    function mostrarResultado() {
+    async function consultarPrecio() {
         const origen = document.getElementById('origen').value;
         const destino = document.getElementById('destino').value;
-        const resultado = document.getElementById('resultado');
 
-        if (origen && destino) {
-            resultado.value = `$20000`;
+        const response = await fetch(`/precio_transporte?origen=${origen}&destino=${destino}`);
+        const data = await response.json();
+
+        if (response.ok) {
+            document.getElementById('resultado').innerText = `El precio de ${origen} a ${destino} es: $${data.precio}`;
         } else {
-            resultado.value = 'Por favor, selecciona un origen y un destino.';
+            document.getElementById('resultado').innerText = data.error;
         }
     }
+    

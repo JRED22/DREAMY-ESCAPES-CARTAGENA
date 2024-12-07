@@ -2,6 +2,7 @@ from flask import Flask, render_template,request,jsonify, session,send_from_dire
 import os,csv
 from werkzeug.utils import secure_filename
 from flask_mysqldb import MySQL
+import pandas as pd
 
 import mysql.connector
 from mysql.connector import Error
@@ -320,6 +321,25 @@ def delete(id):
     cur.execute("DELETE FROM usuarios WHERE id_usuario = %s", (id,))
     mysql.connection.commit()
     return render_template('dashboard.html',message="Usuario Eliminado con éxito")
+
+
+
+# Cargar el archivo CSV
+archivo_csv = 'data/precios.csv'
+df = pd.read_csv(archivo_csv)
+@app.route('/precio_transporte', methods=['GET'])
+def precio_transporte():
+    origen = request.args.get('origen')
+    destino = request.args.get('destino')
+    
+    resultado = df[(df['origen'].str.lower() == origen.lower()) & (df['destino'].str.lower() == destino.lower())]
+    
+    if not resultado.empty:
+        precio = resultado['Precio'].values[0]
+        return jsonify({'precio': precio})
+    else:
+        return jsonify({'error': 'Ruta no disponible.'}), 404
+
  
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)
