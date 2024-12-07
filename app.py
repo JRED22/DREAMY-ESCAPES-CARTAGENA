@@ -31,11 +31,16 @@ def login_formulario():
 
 @app.route('/login', methods=['POST'])
 def login_validar():
+    
   if revisar_sesion():
     return render_template("dashboard.html", titulo="Usuarios autenticados")
   
   if request.form.get("login") == "admin" and request.form.get(
       "password") == "123456":
+      
+      
+      
+      
     session['usuario'] = "admin"
     return render_template("dashboard.html", titulo="Usuarios autenticados")
   else:
