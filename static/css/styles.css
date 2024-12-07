@@ -875,4 +875,43 @@ text-decoration: underline;
     background-color: #0056b3;
   }
 
+/* -------------------------------------------------------------------trasportrd  */
+  .header .transportes {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.container .transportes {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #007bff;
+}
+table .transportes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table .transportes th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+table .transportes th {
+    background-color: #007bff;
+    color: white;
+}
+.info .transportes {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e7f3ff;
+    border-left: 6px solid #007bff;
+}
+
 
