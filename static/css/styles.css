@@ -925,5 +925,10 @@ table .transportes th {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
 
 

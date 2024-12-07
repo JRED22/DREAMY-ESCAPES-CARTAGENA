@@ -273,3 +273,14 @@ async function cargar_servicio(servicio_ppl) {
             messageBox.classList.add('hidden');
         }, 3000);
     }
+    function mostrarResultado() {
+        const origen = document.getElementById('origen').value;
+        const destino = document.getElementById('destino').value;
+        const resultado = document.getElementById('resultado');
+
+        if (origen && destino) {
+            resultado.value = `$20000`;
+        } else {
+            resultado.value = 'Por favor, selecciona un origen y un destino.';
+        }
+    }
